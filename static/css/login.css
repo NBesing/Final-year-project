@@ -1,0 +1,51 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.main-container {
+    background-color: #427CD4;
+    padding-top: 45px;
+    padding-right: 70px;
+    padding-bottom: 45px;
+    padding-left: 70px;
+   
+}
+
+.inner-row {
+    background-color: white;
+    border-radius: 24px;
+}
+
+.image-col {
+    color: white;
+    height: 580px;
+    width: 600px;
+    padding-top: 150px!important;
+    background-image: url("loginn.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px 0 0 24px;
+}.h1{
+    font-weight: 700;
+}
+.headline{
+    color: #FAC906;
+}
+
+/* .form{
+    height: 200px;
+} */
+.btn-primary {
+    background-color: #427CD4!important;
+    border-color: #427CD4;
+}
+.signup{
+    font-weight: 700;
+}
+.label{
+    font-size: 14px;
+}
+.btn-primary:hover {
+    background-color: #3569ad;
+    border-color: #3569ad;
+}

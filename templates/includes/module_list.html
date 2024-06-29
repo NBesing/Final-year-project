@@ -1,0 +1,39 @@
+<!-- {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/module_list.css' %}">
+{% endblock %} -->
+
+<div class="row course-title d-flex justify-content-center pt-2 pb-2">
+    <h3>Course Modules</h3>
+</div>
+<div class="accordion sidebar p-4 " id="chaptersAccordion">
+ 
+    <!-- Loop through modules -->
+    {% for module in modules %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button"
+                        data-toggle="collapse" data-target="#chapter{{ module.id }}Collapse"
+                        aria-expanded="false" aria-controls="chapter{{ module.id }}Collapse">
+                    {{ module.title }}
+                </button>
+            </h5>
+        </div>
+        <div id="chapter{{ module.id }}Collapse" class="collapse"
+            aria-labelledby="chapter{{ module.id }}Heading" data-parent="#chaptersAccordion">
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <!-- Placeholder list items for now -->
+                    {% for lesson in module.lessons.all %}
+                    <li><a href="#">{{ lesson.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    
+</div>
+

@@ -1,0 +1,36 @@
+<!-- {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/module_list.css' %}">
+{% endblock %} -->
+
+<div class="row title-row pt-2 pb-2">
+    <div
+      class="col-md-8 btn-group"
+      role="group"
+      aria-label="Button group with three buttons"
+    >
+      <button type="button" class="btn  active ">
+        Lectures
+      </button>
+      <button type="button" class="btn ">Exercises</button>
+      <button type="button" class="btn ">Talk to your tutor</button>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-end">
+      <button class="btn editor-button"> Try the editor</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.btn-group .btn').click(function() {
+            // Remove active class from all buttons
+            $('.btn-group .btn').removeClass('active');
+            
+            // Add active class to the clicked button
+            $(this).addClass('active');
+        });
+    });
+</script>
+

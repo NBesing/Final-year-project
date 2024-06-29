@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Selection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="{% static 'css/level_selection.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid card-container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-4">
+                        <h2 style="font-weight: 800;">What Level do you want to enroll in?</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- Card 1 -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card" id="card1">
+                            <img src="{% static 'images/beginner.svg' %}" class="card-img-top" alt="Illustration">
+                            <div class="card-body">
+                                <h5 class="card-title">Beginner</h5>
+                                <input type="radio" id="radio1" name="card" value="beginner">
+                                <label for="radio1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card" id="card2">
+                            <img src="{% static 'images/intermediate.svg' %}" class="card-img-top" alt="Illustration">
+                            <div class="card-body">
+                                <h5 class="card-title">Intermediate</h5>
+                                <input type="radio" id="radio2" name="card" value="intermediate">
+                                <label for="radio2"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card" id="card3">
+                            <img src="{% static 'images/advanced.svg' %}" class="card-img-top" alt="Illustration">
+                            <div class="card-body">
+                                <h5 class="card-title">Advanced</h5>
+                                <input type="radio" id="radio3" name="card" value="advanced">
+                                <label for="radio3"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <a href=""  class="btn w-50">Enroll</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    cards.forEach(card => card.classList.remove('selected'));
+                    this.closest('.card').classList.add('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+}
+/* .logo-row{
+    position: fixed;
+} */
+.logo{
+    height: 50px;
+    width: 100px;
+}
+.nav{
+    border-bottom: 1px solid #D7D7D7;
+}
+.level-row{
+    background-color:#365B9A; 
+}
+.level-row h3{
+    color: white;
+}
+.quiz-button{
+    background-color: #FFBB00;
+    border-radius: 6px;
+}
+.quiz-button:hover{
+    background-color: #dfa505;
+    border-radius: 6px;
+}
+
+.sidebar {
+  
+    /* background-color: #fdfdfdd3; */
+    /* padding: 20px; */
+    margin: 20px!important;
+    position: fixed;
+    overflow-y: auto;
+    /* border-right: 1px solid #D7D7D7; */
+  
+   
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+
+}
+
+.sidebar ul li a {
+    box-shadow: none;
+    text-decoration: none;
+    color: #333!important;
+    display: block;
+    padding: 10px;
+    /* border-radius: 4px; */
+    transition: background-color 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #FFBB00;
+    border-left: 4px solid #FFBB00;
+}
+.sidebar ul li a::after{
+    color: #FFBB00;
+    border-left: 4px solid #FFBB00;
+}
+.btn-link:focus {
+    box-shadow: none;
+    
+}
+
+
+.content h2 {
+    margin-top: 0;
+}
+.btn-group {
+    display: flex;
+}
+
+
+
+    .btn-group .btn {
+        flex: 1;
+        text-align: center;
+        border: none;
+        text-decoration: none;
+        position: relative;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 0;
+        cursor: pointer;
+        background: none;
+        color: white; /* Default text color */
+    }
+
+    .btn-group .btn.active {
+        color: #FFBB00 !important; /* Text color for active button */
+    }
+
+    .btn-group .btn.active::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -4px; /* Adjust this value to control the underline position */
+        left: 0;
+        width: 100%;
+        height: 4px; /* Thickness of the underline */
+        background-color: #FFBB00; /* Color of the underline */
+    }
+
+
+.btn-group .btn:focus {
+    text-decoration: none;
+    box-shadow: none;
+
+}.editor-button{
+    background-color: #1c1c1c;
+    color: white;
+}
+.title-row{
+        border-bottom: 1px solid #D7D7D7;
+        background-color: #427CD4;
+}
+.exercise-list-button{
+    background-color: #FFBB00;
+    border-radius: 6px;
+}
+
+
+.quiz-button:hover{
+    background-color: #dfa505;
+    border-radius: 6px;
+}

@@ -1,0 +1,29 @@
+<!-- chat.html (located in the root folder) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with OpenAI</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <!-- Additional stylesheets or scripts -->
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-history">
+            <!-- Messages will be dynamically added here -->
+        </div>
+        <form id="chat-form" method="post">
+            {% csrf_token %}
+            <input type="text" id="user_input" name="user_input" placeholder="Type your message...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Additional scripts -->
+</body>
+</html>
