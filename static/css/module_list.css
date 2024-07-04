@@ -10,19 +10,26 @@ body {
 .container {
     display: flex;
 }
+/* .navbar{
+    background-color: #427CD4;
+} */
 /* .logo-row{
     position: fixed;
 } */
+.header{
+    background-color: #365B9A!important;
+}
 .logo{
     height: 50px;
     width: 100px;
+    margin-right: 50px!important;
 }
 .nav{
     border-bottom: 1px solid #D7D7D7;
 }
-.level-row{
+/* .level-row{
     background-color:#365B9A; 
-}
+} */
 .level-row h3{
     color: white;
 }
@@ -84,7 +91,9 @@ body {
     
 }
 
-
+.topnav{
+    border-bottom: 1px solid #D7D7D7;
+}
 .content h2 {
     margin-top: 0;
 }
@@ -134,8 +143,9 @@ body {
 }
 .title-row{
         border-bottom: 1px solid #D7D7D7;
-        background-color: #427CD4;
+            border: 1px solid #427CD4;
 }
+
 .exercise-list-button{
     background-color: #FFBB00;
     border-radius: 6px;

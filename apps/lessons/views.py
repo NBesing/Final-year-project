@@ -7,8 +7,8 @@ def lesson_list(request):
 
 def lesson_detail(request, pk):
     lesson = get_object_or_404(Lesson, pk=pk)
-    return render(request, 'lessons/lesson_detail.html', {'lesson': lesson})
+    subtopics = lesson.content.get('subtopics', [])  # Accessing subtopics from content field
+    return render(request, 'lesson_detail.html', {'lesson': lesson, 'subtopics': subtopics})
 
 def level_selection(request):
     return render(request, 'level_selection.html')
-

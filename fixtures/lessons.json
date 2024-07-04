@@ -1,0 +1,93 @@
+[
+   {
+      "model": "lessons.lesson",
+      "pk": 1,
+      "fields": {
+          "module_id": 1,
+          "title": "JS Overview",
+          "description": "In this lesson we'll talk about JavaScript, its history, client-side and server-side usage, advantages, limitations, imperative vs. declarative programming, development tools, and its current state.",
+          "content": {
+              "subtopics": [
+                  {
+                      "title": "What is JavaScript?",
+                      "notes": "JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities. JavaScript was first known as LiveScript, but Netscape changed its name to JavaScript."
+                  },
+                  {
+                      "title": "History of JavaScript",
+                      "notes": "JavaScript is developed by Brendan Eich, a computer scientist and programmer at Netscape Communications Corporation. The initial name of the JavaScript was 'Mocha'. It was later renamed to 'LiveScript', and then 'JavaScript'. ECMAScript standardized JavaScript in 1996-1997, with subsequent revisions leading up to ECMAScript 2023."
+                  },
+                  {
+                      "title": "Client-Side JavaScript",
+                      "notes": "Client-side JavaScript is the most common form used in web development. It runs in the user's web browser and allows interactive behavior like form validation, dynamic content updates, and event handling."
+                  },
+                  {
+                      "title": "Server-Side JavaScript",
+                      "notes": "JavaScript's server-side usage gained prominence with the advent of Node.js. It allows JavaScript to be used beyond the browser, enabling server-side scripting for web applications."
+                  },
+                  {
+                      "title": "Advantages of JavaScript",
+                      "notes": "JavaScript offers benefits such as reduced server interaction, immediate user feedback, increased interactivity, and the ability to create richer user interfaces."
+                  },
+                  {
+                      "title": "Limitations of JavaScript",
+                      "notes": "JavaScript has limitations such as lack of file system access, no built-in networking capabilities, and absence of multi-threading support."
+                  },
+                  {
+                      "title": "Imperative vs. Declarative JavaScript",
+                      "notes": "JavaScript supports both imperative (step-by-step) and declarative (what should be done) programming paradigms. It provides flexibility in coding styles."
+                  },
+                  {
+                      "title": "JavaScript Development Tools",
+                      "notes": "Development tools like Visual Studio Code and Chrome DevTools are widely used for JavaScript development. These tools enhance productivity and aid in debugging and optimizing code."
+                  },
+                  {
+                      "title": "Where is JavaScript Today?",
+                      "notes": "JavaScript has evolved significantly, with ES6 (2015) introducing modern features and ES14 (2023) continuing to enhance the language. It remains a pivotal technology in web development."
+                  }
+              ]
+          }
+      }
+  },
+
+   {
+       "model": "lessons.lesson",
+       "pk": 2,
+       "fields": {
+           "module_id": 1,
+           "title": "JS Enabling",
+           "description": "All modern browsers come with built-in support for JavaScript, and it has enabled JavaScript by default. Frequently, you may need to enable or disable this support manually. This chapter explains how to turn JavaScript support on and off in your browsers: Chrome, Microsoft Edge, Firefox, Safari, and Opera.",
+           "content": {
+               "subtopics": [
+                   {
+                       "title": "JavaScript in Chrome",
+                       "notes": "\n\nHere are the steps to turn on or turn off JavaScript in Chrome −\n\n<ul><li>Click the Chrome menu at the top right-hand corner of your browser</li>.\n<li>Select the Settings option.\nClick on the Privacy and Security tab from the left sidebar.\nClick Show advanced settings at the end of the page.\nNext, click on the Site Settings tab.\nNow, scroll to the bottom of the page, and find the content section. Click on the JavaScript tab in the content section.\nHere, you can select a radio button to turn JavaScript on or off.\nAlso, you can add the URLS of the custom website to block and unblock JavaScript on particular websites."
+                   },
+                   {
+                       "title": "JavaScript in Microsoft Edge",
+                       "notes": "Here are simple steps to turn on or turn off JavaScript in your Microsoft Edge −\n\nClick Edge menu (three dots) at top right-hand corner of the edge browser.\nFollow More Tools → Internet Options from the menu.\nSelect Security tab from the dialog box.\nClick the Custom Level button.\nScroll down till you find Scripting option.\nSelect Enable radio button under Active scripting.\nFinally click OK and come out.\nTo disable JavaScript support in your Microsoft Edge, you need to select Disable radio button under Active scripting."
+                   },
+                   {
+                       "title": "JavaScript in Firefox",
+                       "notes": "Here are the steps to turn on or turn off JavaScript in Firefox −\n\nOpen a new tab → type about: config in the address bar.\nThen you will find the warning dialog. Select I’ll be careful, I promise!\nThen you will find the list of configure options in the browser.\nIn the search bar, type javascript.enabled.\nThere you will find the option to enable or disable javascript by right-clicking on the value of that option → select toggle.\nIf javascript.enabled is true, it converts to false upon clicking toggle. If javascript is disabled, it gets enabled upon clicking toggle."
+                   },
+                   {
+                       "title": "JavaScript in Safari",
+                       "notes": "When you install the Safari web browser, JavaScript comes installed by default. If you have disabled it and want to enable it, follow the steps below.\n\nClick on the safari menu from the top-left corner.\nSelect the preferences in the dropdown menu. It will open a new window.\nOpen the security tab.\nCheck the Enable JavaScript checkbox in the ‘web content’ section to enable the javascript. You can disable the JavaScript by unchecking the checkbox.\nNow, close the preference window and reload the web page."
+                   },
+                   {
+                       "title": "JavaScript in Opera",
+                       "notes": "Here are the steps to turn on or turn off JavaScript in Opera −\n\nFollow Tools → Preferences from the menu.\nSelect the Advanced option from the dialog box.\nSelect Content from the listed items.\nSelect Enable JavaScript checkbox.\nFinally, click OK and come out.\nTo disable JavaScript support in your Opera, you should not select the enable JavaScript checkbox."
+                   },
+                   {
+                       "title": "Warning for Non-JavaScript Browsers",
+                       "notes": "If you have to do something important using JavaScript, then you can display a warning message to the user using <noscript> tags.\n\nYou can add a noscript block immediately after the script block as follows \n\n<html>\n<head>\n<script>\ndocument.write(\"Hello World!\")\n</script>\n\n<noscript>\nSorry...JavaScript is needed to go ahead.\n</noscript>\n</head>\n<body>\n</body>\n</html>\nNow, if the user's browser does not support JavaScript or JavaScript is not enabled, then the message from </noscript> will be displayed on the screen.",
+                       "code":" \n\n<html>\n<head>\n<script>\ndocument.write(\"Hello World!\")\n</script>\n\n<noscript>\nSorry...JavaScript is needed to go ahead.\n</noscript>\n</head>\n<body>\n</body>\n</html>\nNow, if the user's browser does not support JavaScript or JavaScript is not enabled, then the message from </noscript> will be displayed on the screen."
+                   }
+               ]
+           }
+       }
+   }
+]
+
+ 
+

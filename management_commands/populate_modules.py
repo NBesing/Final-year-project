@@ -17,21 +17,21 @@ modules_data = [
         "id": 1,
         "title": "JavaScript Basics",
         "description": "This module looks into the overview of JS and some of its basic concepts",
-        "num_lessons": 15,
+        "num_lessons": 13,
         "level_id": level.id
     },
     {
         "id": 2,
         "title": "JavaScript Operators",
         "description": "This module looks into the different operators that are used in Javascript",
-        "num_lessons": 16,
+        "num_lessons": 15,
         "level_id": level.id
     },
     {
         "id": 3,
         "title": "JavaScript Control flows",
         "description": "This module looks into the different loops in JS",
-        "num_lessons": 9,
+        "num_lessons": 10,
         "level_id": level.id
     },
     {

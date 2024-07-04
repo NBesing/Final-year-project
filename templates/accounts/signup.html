@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class="col-md-7 d-flex my-auto justify-content-center align-items-center">
-                <form class="form mt-3 mb-3" id="signup-form" action="{% url 'level_selection' %}" method="get"">
+                <form class="form mt-3 mb-3" id="signup-form" action="{% url 'lessons:level_selection' %}" method="get"">
                     {% csrf_token %}
                     <h2 class="text-center mb-5 signup">Sign Up</h2>
                     <div class="form-row">
