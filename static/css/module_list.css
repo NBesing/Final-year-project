@@ -13,9 +13,9 @@ body {
 /* .navbar{
     background-color: #427CD4;
 } */
-/* .logo-row{
-    position: fixed;
-} */
+.course-title{
+   
+}
 .header{
     background-color: #365B9A!important;
 }
@@ -54,6 +54,9 @@ body {
    
 }
 
+.module_list{
+    position: fixed;
+}
 .sidebar h2 {
     text-align: center;
 }
@@ -92,7 +95,8 @@ body {
 }
 
 .topnav{
-    border-bottom: 1px solid #D7D7D7;
+    /* border-bottom: 1px solid #D7D7D7; */
+    color: #1c1c1c!important;
 }
 .content h2 {
     margin-top: 0;

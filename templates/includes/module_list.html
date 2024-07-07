@@ -1,8 +1,13 @@
-<!-- {% load static %} -->
+
+{% load static %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
 {% endblock %}
 
+{% block title %}Course Modules{% endblock %}
+
+{% block content %}
 <div class="row course-title d-flex justify-content-center pt-2 pb-2">
     <h3>Course Modules</h3>
 </div>
@@ -35,3 +40,4 @@
     {% endfor %}
 
 </div>
+{% endblock %}

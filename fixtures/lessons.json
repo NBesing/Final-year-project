@@ -1,4 +1,5 @@
-[
+
+  [
    {
       "model": "lessons.lesson",
       "pk": 1,
@@ -47,47 +48,920 @@
               ]
           }
       }
-  },
-
+   },
    {
-       "model": "lessons.lesson",
-       "pk": 2,
-       "fields": {
-           "module_id": 1,
-           "title": "JS Enabling",
-           "description": "All modern browsers come with built-in support for JavaScript, and it has enabled JavaScript by default. Frequently, you may need to enable or disable this support manually. This chapter explains how to turn JavaScript support on and off in your browsers: Chrome, Microsoft Edge, Firefox, Safari, and Opera.",
-           "content": {
-               "subtopics": [
-                   {
-                       "title": "JavaScript in Chrome",
-                       "notes": "\n\nHere are the steps to turn on or turn off JavaScript in Chrome −\n\n<ul><li>Click the Chrome menu at the top right-hand corner of your browser</li>.\n<li>Select the Settings option.\nClick on the Privacy and Security tab from the left sidebar.\nClick Show advanced settings at the end of the page.\nNext, click on the Site Settings tab.\nNow, scroll to the bottom of the page, and find the content section. Click on the JavaScript tab in the content section.\nHere, you can select a radio button to turn JavaScript on or off.\nAlso, you can add the URLS of the custom website to block and unblock JavaScript on particular websites."
-                   },
-                   {
-                       "title": "JavaScript in Microsoft Edge",
-                       "notes": "Here are simple steps to turn on or turn off JavaScript in your Microsoft Edge −\n\nClick Edge menu (three dots) at top right-hand corner of the edge browser.\nFollow More Tools → Internet Options from the menu.\nSelect Security tab from the dialog box.\nClick the Custom Level button.\nScroll down till you find Scripting option.\nSelect Enable radio button under Active scripting.\nFinally click OK and come out.\nTo disable JavaScript support in your Microsoft Edge, you need to select Disable radio button under Active scripting."
-                   },
-                   {
-                       "title": "JavaScript in Firefox",
-                       "notes": "Here are the steps to turn on or turn off JavaScript in Firefox −\n\nOpen a new tab → type about: config in the address bar.\nThen you will find the warning dialog. Select I’ll be careful, I promise!\nThen you will find the list of configure options in the browser.\nIn the search bar, type javascript.enabled.\nThere you will find the option to enable or disable javascript by right-clicking on the value of that option → select toggle.\nIf javascript.enabled is true, it converts to false upon clicking toggle. If javascript is disabled, it gets enabled upon clicking toggle."
-                   },
-                   {
-                       "title": "JavaScript in Safari",
-                       "notes": "When you install the Safari web browser, JavaScript comes installed by default. If you have disabled it and want to enable it, follow the steps below.\n\nClick on the safari menu from the top-left corner.\nSelect the preferences in the dropdown menu. It will open a new window.\nOpen the security tab.\nCheck the Enable JavaScript checkbox in the ‘web content’ section to enable the javascript. You can disable the JavaScript by unchecking the checkbox.\nNow, close the preference window and reload the web page."
-                   },
-                   {
-                       "title": "JavaScript in Opera",
-                       "notes": "Here are the steps to turn on or turn off JavaScript in Opera −\n\nFollow Tools → Preferences from the menu.\nSelect the Advanced option from the dialog box.\nSelect Content from the listed items.\nSelect Enable JavaScript checkbox.\nFinally, click OK and come out.\nTo disable JavaScript support in your Opera, you should not select the enable JavaScript checkbox."
-                   },
-                   {
-                       "title": "Warning for Non-JavaScript Browsers",
-                       "notes": "If you have to do something important using JavaScript, then you can display a warning message to the user using <noscript> tags.\n\nYou can add a noscript block immediately after the script block as follows \n\n<html>\n<head>\n<script>\ndocument.write(\"Hello World!\")\n</script>\n\n<noscript>\nSorry...JavaScript is needed to go ahead.\n</noscript>\n</head>\n<body>\n</body>\n</html>\nNow, if the user's browser does not support JavaScript or JavaScript is not enabled, then the message from </noscript> will be displayed on the screen.",
-                       "code":" \n\n<html>\n<head>\n<script>\ndocument.write(\"Hello World!\")\n</script>\n\n<noscript>\nSorry...JavaScript is needed to go ahead.\n</noscript>\n</head>\n<body>\n</body>\n</html>\nNow, if the user's browser does not support JavaScript or JavaScript is not enabled, then the message from </noscript> will be displayed on the screen."
-                   }
-               ]
-           }
+      "model": "lessons.lesson",
+      "pk": 2,
+      "fields": {
+          "module_id": 1,
+          "title": "JS Enabling",
+          "description": "All modern browsers come with built-in support for JavaScript, and it has enabled JavaScript by default. Frequently, you may need to enable or disable this support manually. This chapter explains how to turn JavaScript support on and off in your browsers: Chrome, Microsoft Edge, Firefox, Safari, and Opera.",
+          "content": {
+              "subtopics": [
+                  {
+                      "title": "JavaScript in Chrome",
+                      "notes": "\n\nHere are the steps to turn on or turn off JavaScript in Chrome −\n\n<ul><li>Click the Chrome menu at the top right-hand corner of your browser</li>.\n<li>Select the Settings option.\nClick on the Privacy and Security tab from the left sidebar.\nClick Show advanced settings at the end of the page.\nNext, click on the Site Settings tab.\nNow, scroll to the bottom of the page, and find the content section. Click on the JavaScript tab in the content section.\nHere, you can select a radio button to turn JavaScript on or off.\nAlso, you can add the URLS of the custom website to block and unblock JavaScript on particular websites."
+                  },
+                  {
+                      "title": "JavaScript in Microsoft Edge",
+                      "notes": "Here are simple steps to turn on or turn off JavaScript in your Microsoft Edge −\n\nClick Edge menu (three dots) at top right-hand corner of the edge browser.\nFollow More Tools → Internet Options from the menu.\nSelect Security tab from the dialog box.\nClick the Custom Level button.\nScroll down till you find Scripting option.\nSelect Enable radio button under Active scripting.\nFinally click OK and come out.\nTo disable JavaScript support in your Microsoft Edge, you need to select Disable radio button under Active scripting."
+                  },
+                  {
+                      "title": "JavaScript in Firefox",
+                      "notes": "Here are the steps to turn on or turn off JavaScript in Firefox −\n\nOpen a new tab → type about: config in the address bar.\nThen you will find the warning dialog. Select I’ll be careful, I promise!\nThen you will find the list of configure options in the browser.\nIn the search bar, type javascript.enabled.\nThere you will find the option to enable or disable javascript by right-clicking on the value of that option → select toggle.\nIf javascript.enabled is true, it converts to false upon clicking toggle. If javascript is disabled, it gets enabled upon clicking toggle."
+                  },
+                  {
+                      "title": "JavaScript in Safari",
+                      "notes": "When you install the Safari web browser, JavaScript comes installed by default. If you have disabled it and want to enable it, follow the steps below.\n\nClick on the safari menu from the top-left corner.\nSelect the preferences in the dropdown menu. It will open a new window.\nOpen the security tab.\nCheck the Enable JavaScript checkbox in the ‘web content’ section to enable the javascript. You can disable the JavaScript by unchecking the checkbox.\nNow, close the preference window and reload the web page."
+                  },
+                  {
+                      "title": "JavaScript in Opera",
+                      "notes": "Here are the steps to turn on or turn off JavaScript in Opera −\n\nFollow Tools → Preferences from the menu.\nSelect the Advanced option from the dialog box.\nSelect Content from the listed items.\nSelect Enable JavaScript checkbox.\nFinally, click OK and come out.\nTo disable JavaScript support in your Opera, you should not select the enable JavaScript checkbox."
+                  },
+                  {
+                      "title": "Warning for Non-JavaScript Browsers",
+                      "notes": "If you have to do something important using JavaScript, then you can display a warning message to the user using <noscript> tags.\n\nYou can add a noscript block immediately after the script block as follows ",
+                      "code": "<html>\n<head>\n<script>\ndocument.write(\"Hello World!\");\n</script>\n\n<noscript>\nSorry...JavaScript is needed to go ahead.\n</noscript>\n</head>\n<body>\n</body>\n</html>"
+                  }
+              ]
+          }
+      }
+   },
+   {
+      "model": "lessons.lesson",
+      "pk": 3,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Placement",
+        "description": "We will be seeing how to ...",
+        "content": {
+          "subtopics": [
+            {
+              "title": "JavaScript Placement in HTML File",
+              "notes": "There is flexibility to place JavaScript code anywhere in an HTML document. However, the most preferred ways to include JavaScript in an HTML file are as follows −\n\nScript in <head>...</head> section.\n\nScript in <body>...</body> section.\n\nScript in <body>...</body> and <head>...</head> sections.\n\nScript in an external file and then include in <head>...</head> section.\nIn the following section, we will see how we can place JavaScript in an HTML file in different ways."
+            },
+            {
+              "title": "JavaScript in <head>...</head> section",
+              "notes": "If you want to have a script run on some event, such as when a user clicks somewhere, then you will place that script in the head as follows",
+              "code": "<html>\n<head>\n<script type = \"text/javascript\">\nfunction sayHello() {\nalert(\"Hello World\")\n}\n</script>\n</head>\n<body>\n<input type = \"button\" onclick = \"sayHello()\" value = \"Say Hello\" />\n</body>\n</html>"
+            },
+            {
+              "title": "JavaScript in <body>...</body> section",
+              "notes": "If you need a script to run as the page loads so that the script generates content in the page, then the script goes in the <body> portion of the document. In this case, you would not have any function defined using JavaScript. Take a look at the following code.",
+              "code": "<html>\n<head>\n</head>\n<body>\n<script type = \"text/javascript\">\ndocument.write(\"Hello World\")\n</script>\n<p>This is web page body </p>\n</body>\n</html>"
+            },
+            {
+              "title": "JavaScript in <body> and <head> Sections",
+              "notes": "You can put your JavaScript code in <head> and <body> sections altogether as follows",
+              "code": "<html>\n<head>\n<script type = \"text/javascript\">\nfunction sayHello() {\nalert(\"Hello World\")\n}\n</script>\n</head>\n<body>\n<script type = \"text/javascript\">\ndocument.write(\"Hello World\")\n</script>\n<input type = \"button\" onclick = \"sayHello()\" value = \"Say Hello\" />\n</body>\n</html>"
+            },
+            {
+              "title": "JavaScript in External File",
+              "notes": "As you begin to work more extensively with JavaScript, you will likely find cases where you are reusing identical JavaScript code on multiple pages of a site.\n\nYou are not restricted to be maintaining identical code in multiple HTML files. The script tag provides a mechanism to allow you to store JavaScript in an external file and then include it in your HTML files.\n\nTo use JavaScript from an external file source, you need to write all your JavaScript source code in a simple text file with the extension \".js\" and then include that file as shown below.\n\nFor example, you can keep the following content in the filename.js file, and then you can use the sayHello function in your HTML file after including the filename.js file.\n\nfilename.js\nfunction sayHello() {\nalert(\"Hello World\")\n}\nHere is an example to show how you can include an external JavaScript file in your HTML code using the script tag and its src attribute.\n\nYou may include the external script reference within the <head> or <body> tag.",
+              "code": "<html>\n<head>\n<script type = \"text/javascript\" src = \"filename.js\"></script>\n</head>\n<body>...\n</body>\n</html>"
+            },
+            {
+              "title": "External References",
+              "notes": "You can add an external JavaScript file in the HTML using the below 3 ways.",
+              "code": ""
+            },
+            {
+              "title": "1. Using the full file path",
+              "notes": "When you need to add any hosted JavaScript file or a file that doesn’t exist in the same project into the HTML, you should use the full file path.\n\nFor example,",
+              "code": "<head>\n<script src = \"C://javascript/filename.js\"></script>\n</head>"
+            },
+            {
+              "title": "2. Using the relative file path",
+              "notes": "For example,\n<head>\n<script src = \"javascript\\filename.js\"></script>\n</head>",
+              "code": ""
+            },
+            {
+              "title": "3. Using the filename only",
+              "notes": "If HTML and JavaScript both files are in the same folder, you can use the file name.",
+              "code": "<head>\n<script src = \"filename.js\"></script>\n</head>"
+            },
+            {
+              "title": "Advantages of using the <script> tag",
+              "notes": "Here are the advantages of using the <script> tag to add JavaScript in the HTML.\n\nEase of Integration\nThe <script> tag allows developers to integrate JavaScript into the HTML file easily. Adding JavaScript to the HTML file allows you to add behavior and interactivity to the web page.\n\nImmediate Execution\nWhenever the browser finds a <script> tag on the web page, it immediately executes the JavaScript code defined inside that. It enables website visitors to interact with the web pages and get real-time updates immediately.\n\nInline and External scripts\nYou can use the <script> tag to add the inline or external script into the HTML file. If you want to load JavaScript before the HTML of a web page, you can add the <script> tag in the <head> tag. Otherwise, you can add the <script> tag in the <body> tag.\n\nExternal Libraries and Frameworks integration\nThe <script> tag enables you to add external libraries and frameworks to the HTML web page.\n\nFor example, in the below code, we have added JQuery to the web page using its CDN.",
+              "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js\"></script>"
+            },
+            {
+              "title": "Global Scope Access",
+              "notes": "Whatever code you define in the script tag has access to the global scope of the web page. You can access the global variables, functions, etc., anywhere in the code.",
+              "code": ""
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 4,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Syntax",
+        "description": "JavaScript syntax comprises a set of rules that define how to construct a JavaScript code. JavaScript can be implemented using JavaScript statements that are placed within the <script>...</script> HTML tags in a web page.\n\nYou can place the <script> tags, containing your JavaScript, anywhere within your web page, but it is normally recommended that you should keep it within the <head> tags.\n\nThe <script> tag alerts the browser program to start interpreting all the text between these tags as a script. The script tag takes two important attributes −\nLanguage − This attribute specifies what scripting language you are using. Typically, its value will be javascript. Although recent versions of HTML (and XHTML, its successor) have phased out the use of this attribute.\n\nType − This attribute is what is now recommended to indicate the scripting language in use and its value should be set to \"text/javascript\". JavaScript has become the default language in HTML5 and modern browsers, so now adding type is not required.",
+        "content": {
+          "subtopics": [
+            {
+              "title": "Your First JavaScript Code",
+              "notes": "Let us take a sample example to print out \"Hello World\". We call the document.write method which writes a string into our HTML document. This method can be used to write text, HTML, or both. Take a look at the following code",
+              "code": "<html>\n<head>\n<title> Your first JavaScript program </title>\n</head>\n<body>\n<script language=\"javascript\" type=\"text/javascript\">\ndocument.write(\"Hello World!\")\n</script>\n</body>\n</html>\nThis code will produce the following result −\n\nHello World!"
+            },
+            {
+              "title": "JavaScript Values",
+              "notes": "In JavaScript, you can have two types of values.\n\nFixed values (Literals)\n\nVariables (Dynamic values)",
+              "code": ""
+            },
+            {
+              "title": "JavaScript Literals",
+              "notes": "In the below code, 10 is a Number literal and ‘Hello’ is a string literal.",
+              "code": "<html>\n<body>\n<script>\ndocument.write(10); // Number Literal\ndocument.write(\"<br />\"); // To add line-break\ndocument.write(\"Hello\"); // String Literal\n</script>\n</body>\n</html>\nThis code will produce the following result −\n\n10\nHello"
+            },
+            {
+              "title": "JavaScript Variables",
+              "notes": "In JavaScript, variables are used to store the dynamic data.\n\nYou can use the below keyword to define variables in JavaScript.\n\nvar\nlet\nconst\nYou can use the assignment operator (equal sign) to assign values to the variable.\n\nIn the below code, variable a contains the numeric value, and variable b contains the text (string).",
+              "code": "<html>\n<body>\n<script>\nlet a = 5; // Variable Declaration\ndocument.write(a); // Using variable\ndocument.write(\"<br>\");\nlet b = \"One\";\ndocument.write(b);\n</script>\n</body>\n</html>\nThis code will produce the following result −\n\n5\nOne"
+            },
+            {
+              "title": "Whitespace and Line Breaks",
+              "notes": "JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use spaces, tabs, and newlines freely in your program and you are free to format and indent your programs in a neat and consistent way that makes the code easy to read and understand.",
+              "code": ""
+            },
+            {
+              "title": "Semicolons are Optional",
+              "notes": "Simple statements in JavaScript are generally followed by a semicolon character, just as they are in C, C++, and Java. JavaScript, however, allows you to omit this semicolon if each of your statements are placed on a separate line. For example, the following code could be written without semicolons.",
+              "code": "<script>\nvar1 = 10\nvar2 = 20\n</script>\nBut when formatted in a single line as follows, you must use semicolons −\n\n<script>\nvar1 = 10; var2 = 20;\n</script>"
+            },
+            {
+              "title": "Case Sensitivity",
+              "notes": "JavaScript is a case-sensitive language. This means that the language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.\n\nSo the identifiers Time and TIME will convey different meanings in JavaScript.\n\nIn the code below, we compare the ‘time’ and ‘Time’ strings, which returns false.",
+              "code": "<html>\n<body>\n<script>\nlet a = \"time\";\nlet b = \"Time\";\ndocument.write(\"a == b? \" + (a == b));\n</script>\n</body>\n</html>\nThis code will produce the following result −\n\na == b? false"
+            },
+            {
+              "title": "JavaScript and Camel Case",
+              "notes": "Pascal Case − We can create variables like SmartWatch, MobileDevice, WebDrive, etc. It represents the upper camel case string.\n\nLower Camel Case − JavaScript allows developers to use variable names and expression names like smartwatch, mobileDevice, webDriver, etc. Here the first character is in lowercase.\n\nUnderscore − We can use underscore while declaring variables like smart_watch, mobile_device, web_driver, etc.",
+              "code": "let sum = x + y;"
+            },
+            {
+              "title": "JavaScript Keywords",
+              "notes": "JavaScript contains multiple keywords which we can use for a particular task. For example, the function keyword can be used to define the function. The let, var, and const keywords can be used to define variables.\n\nLet’s understand the use of the keyword via the example below.",
+              "code": ""
+            },
+            {
+              "title": "Example",
+              "notes": "In this example, we used the function keyword to define the function. We used the var keyword inside the function to define the sum variable.\n\nAlso, we used the let and const keywords outside the function to define two variables and initialize them with values. After that, we called the function using the function name and passed variables as an argument.",
+              "code": "<html>\n<body>\n<script>\nfunction getSum(first, second) {\nvar sum = first * second;\ndocument.write(\"The sum of \" + first + \" and \" + second + \" is \" + sum);\n}\nlet first = 3;\nconst second = 4;\ngetSum(first, second);\n</script>\n</body>\n</html>"
+            }
+          ]
+        }
+      }
+    },
+    
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 5,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Hello World",
+        "description": "Learn how to write a basic 'Hello World' program in JavaScript.",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "Write 'Hello World' Program in JavaScript",
+              "notes": "'Hello, World!' is often the first program programmers write when learning a new programming language. JavaScript 'Hello World' is a simple program generally used to demonstrate the basic syntax of the language. This program will make use of different JavaScript methods to print 'Hello World'.",
+              "code": ""
+            },
+            {
+              "topic": "Writing Hello World in JavaScript",
+              "notes": "'Hello, World!' is often the first program programmers write when learning a new programming language. JavaScript 'Hello World' is a simple program generally used to demonstrate the basic syntax of the language. This program will make use of different JavaScript methods to print 'Hello World'.",
+              "code": "console.log('Hello, World!');"
+            },
+            {
+              "topic": "Using document.write()",
+              "notes": "In JavaScript, the simplest way to print 'Hello World' is to use the document.write() method. The document.write() method writes the content (a string of text) directly to the HTML document or web page. Let’s look at the following",
+              "code": "<script>\ndocument.write('Hello World')\n</script>"
+            },
+            {
+              "topic": "Example",
+              "notes": "Let's try to write a JavaScript program that prints 'Hello World!' to the document or web page. In the below program, we placed the JavaScript code within the <head> section. You can try to put the JavaScript part inside the <body> section and execute the program.",
+              "code": "<html>\n<head>\n<script>\ndocument.write('Hello World');\n</script>\n</head>\n<body>\n</body>\n</html>"
+            },
+            {
+              "topic": "Using console.log()",
+              "notes": "The console.log() is a very convenient method to print the message to the web Console. It is very useful to debug JavaScript codes in the browsers. Let's look at the simple application of the console.log() to print 'Hello World' to the web console.",
+              "code": "<script>\nconsole.log('Hello World')\n</script>"
+            },
+            {
+              "topic": "Example",
+              "notes": "Let's try to write a complete JavaScript program with HTML.",
+              "code": "<html>\n<head>\n<script>\nconsole.log('Hello World');\n</script>\n</head>\n<body>\n<p> Please open the console before clicking 'Edit & Run' button </p>\n</body>\n</html>\nIt will produce the following message in the web console −\n\nHello World"
+            },
+            {
+              "topic": "Using innerHTML",
+              "notes": "The innerHTML property of an HTML element defines the HTML content of the element. We can use this property to display the Hello World message. By changing the innerHTML property of the element, we can display the message in the HTML document or webpage.\n\nTo use the innerHTML property of an element, we need to access that element first. We can use the document.getElementById() method to access the element. Let's look at a complete example.",
+              "code": "let message = 'Hello, World!';\nconsole.log(message);"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we define a div element with the id 'output'. We access this element using document.getElementById('output'). Then we change the innerHTML property and display our message 'Hello World'.",
+              "code": "<html>\n<head>\n<title>Using innerHTML property</title>\n</head>\n<body>\n<div id='output'></div>\n<script>\ndocument.getElementById('output').innerHTML = 'Hello World';\n</script>\n</body>\n</html>"
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 6,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Console.log()",
+        "description": "",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "JavaScript console.log() method",
+              "notes": "The console.log() is one of the most important methods in JavaScript. It is used to print the message in the web console.\n\nWe can use the console.log() method to debug the code by printing the output in the console. For example, if the developer requests an API and wants to check the data received as a response, they might use the console.log() method. Also, there are other use cases of the console.log() method.",
+              "code": ""
+            },
+            {
+              "topic": "Syntax",
+              "notes": "You can follow the syntax below to use the console.log() method −",
+              "code": "console.log(msg1, msg2, …, msgN);"
+            },
+            {
+              "topic": "Console.log() with client-sided JavaScript",
+              "notes": "Whenever we use the console.log() method in the frontend code, it prints the output in the browser's console.\n\nHere is a shortcut to open the console in Chrome browser −\n\nPress Ctrl + Shift + J together on Windows/Linux and Cmd + Option + J on Mac.\nMost browsers have the same shortcut key to open the console. However, if you can’t open the console in any browser, you may search on Google.\n\nAlternatively, to open the Console, right-click the mouse and follow Inspect -> Console options.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have printed the 'Hello World!' message using the console.log() method.\n\nAlso, we defined two integer variables and used another console.log() method to print the sum of num1 and num2. Here, developers can observe how we have printed variables in the console. The example also demonstrates that we can perform addition, multiplication, etc. operations in the console.log() method parameter.",
+              "code": "<html>\n<head>\n<title> Console.log() method with HTML </title>\n</head>\n<body>\n<h3> Message is printed in the console </h3>\n<p> Please open the console before clicking 'Edit & Run' button </p>\n<script>\nconsole.log('Hello World!');\nvar num1 = 30;\nvar num2 = 20;\nconsole.log('The sum of ', num1, ' and ', num2, ' is: ', num1 + num2);\n</script>\n</body>\n</html>\nIt will produce the following result in the Console −\n\nHello World!\nThe sum of  30  and  20  is:  50"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have created a JavaScript object containing the name, domain, and description properties. We have printed the object in the web console using the console.log() method.\n\nIn the console, we can see that it prints the object, and we can expand the object by clicking the arrow given at the start of the object to see the detailed information.",
+              "code": "<html>\n<head>\n<title> Console.log() method with HTML </title>\n</head>\n<body>\n<h3> Message is printed in the console </h3>\n<p> Please open the console before clicking 'Edit & Run' button </p>\n<script>\n// Defining the object\nvar obj = {\nwebsite: 'Tutorialspoint',\nDomain: 'www.tutorialspoint.com',\ndescription: 'This site is for learning.'\n};\nconsole.log(obj);\n</script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Console.log() with server-side JavaScript",
+              "notes": "The console.log() method with the backend code prints the output in the terminal where the backend server is running.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "We have written the below code printing the ‘Hello World!’ message into the app.js file and used the ‘node app.js’ command in the terminal to run the server. It prints the message in the terminal that we can observe.",
+              "code": "let message = 'Hello world!';\nconsole.log(message);\n\nThis will produce the following result −\n\nHello world!\n\nYou can use the console.log() method with frontend and backend code to debug the code by printing output in the console."
+            }
+          ]
+        }
+      }
+    },
+    
+
+    {
+      "model": "lessons.lesson",
+      "pk": 7,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Comments",
+        "description": "JavaScript comments are used to explain the purpose of the code. The comments are not executed as a part of the program and are solely meant for human developers to understand the code better.\n\nYou can use comments for various purposes, such as:\n\n- Explaining the purpose of a particular piece of code.\n- Adding documentation to your code for yourself and others who may read it.\n- Temporarily disabling or 'commenting out' a block of code for testing or debugging without deleting it.\n\nA good developer always writes comments to explain the code.\n\nThere are two common ways to write comments in JavaScript:\n\n- Single-line comments\n- Multi-line comments",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "Single-line comments in JavaScript",
+              "notes": "We can start a single-line comment with the double forward slash (//). We can write comments between // and the end of the line.\n\nSyntax\nThe syntax for single-line comments is given below",
+              "code": "<script>\n// single-line comment message\n</script>"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have explained each step of the JavaScript code using single-line comments. In the output, the code prints the concatenated string.",
+              "code": "<html>\n<head>\n<title> Single line comments </title>\n</head>\n<body>\n<script>\n// Defining the string1\nvar string1 = 'JavaScript';\n// Defining the string2\nvar string2 = 'TypeScript';\n// Printing the strings\ndocument.write(string1, ' ', string2);\n</script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have commented the 'bool1 = false;' line to avoid the execution of that code. In the output, we can see that the value of the bool1 variable is true, as we commented out the code that updates the bool1 variable’s value.\n\nAlso, we can add single-line comments after writing the code, as we added after the document.write() method.",
+              "code": "<html>\n<head>\n<title> Single line comments </title>\n</head>\n<body>\n<script>\nvar bool1 = true;\n// bool1 = false;\ndocument.write('The value of the bool1 is: ', bool1); // print variable value\n</script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Multi-line comments in JavaScript",
+              "notes": "The multi-line comment is useful when we need to comment on multiple lines of code or explain larger codes. We can write multi-line comments between /* and */.\n\nSyntax\nThe syntax for multi-line comments is given below",
+              "code": "<script>\n/* First line of comment message\nThe second line of the comment message */\n</script>"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have defined 'a' and 'b' variables. After that, we have written the code to swap the values of 'a' and 'b' in 3 lines and commented it out using multi-line comments.\n\nThe output prints the actual values of 'a' and 'b' as the browser ignores the commented code.",
+              "code": "<html>\n<head>\n<title> Multi line comments </title>\n</head>\n<body>\n<script>\nvar a = 100;\nvar b = 200;\n\n/* a = a + b;\nb = a - b;\na = a - b; */\n\ndocument.write('a = ' + a + '<br>' + 'b = ' + b);\n</script>\n</body>\n</html>"
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 8,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Variables",
+        "description": "JavaScript variables are used to store data that can be changed later on. These variables can be thought of as named containers. You can place data into these containers and then refer to the data simply by naming the container.\n\nBefore you use a variable in a JavaScript program, you must declare it. In JavaScript, you can declare the variables in 4 ways −\n\n- Without using any keywords.\n\n- Using the 'var' keyword.\n\n- Using the 'let' keyword.\n\n- Using the 'const' keyword.\n\nThe let and const keywords were introduced to JavaScript in 2015 (ES6). Prior to ES6, only var keyword was used to declare the variable in JavaScript. In this section, we will discuss 'var' keyword. We will cover the 'let' and 'const' keywords in subsequent chapters.",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "Variable Declaration in JavaScript",
+              "notes": "You can follow the syntax below to declare the variables without using any keywords.",
+              "code": "<script>\nMoney = 10;\nName = \"tutorialspoint\";\n</script>"
+            },
+            {
+              "topic": "",
+              "notes": "Furthermore, you can use the var keyword to declare the variables as shown below.",
+              "code": "<script>\nvar money;\nvar name;\n</script>"
+            },
+            {
+              "topic": "",
+              "notes": "You can also declare multiple variables with the same var keyword as follows",
+              "code": "<script>\nvar money, name;\n</script>"
+            },
+            {
+              "topic": "Variable Initialization using the Assignment Operator",
+              "notes": "Storing a value in a variable is called variable initialization. You can do variable initialization at the time of variable creation or at a later point in time when you need that variable.\n\nFor instance, you might create a variable named money and assign the value 2000.50 to it later. For another variable, you can assign a value at the time of initialization as follows.",
+              "code": "<script>\nvar name = \"Ali\";\nvar money;\nmoney = 2000.50;\n</script>"
+            },
+            {
+              "topic": "",
+              "notes": "Note − Use the var keyword only for declaration or initialization, once for the life of any variable name in a document. You should not re-declare the same variable twice.\n\nJavaScript is an untyped language. This means that a JavaScript variable can hold a value of any data type. Unlike many other languages, you don't have to tell JavaScript during variable declaration what type of value the variable will hold. The value type of a variable can change during the execution of a program and JavaScript takes care of it automatically.",
+              "code": ""
+            },
+            {
+              "topic": "JavaScript Data Types",
+              "notes": "In JavaScript, the variable can hold the value of the dynamic data type. For example, you can store the value of number, string, boolean, object, etc. data type values in JavaScript variables.",
+              "code": "<script>\nvar num = 765; // Number\nvar str = \"Welcome\"; // String\nvar bool = false; // Boolean\n</script>"
+            },
+            {
+              "topic": "JavaScript Variable Names (Identifiers)",
+              "notes": "In JavaScript, a unique character sequence is used to name the variables called identifiers.\n\nHere are some rules for the naming of the identifiers in JavaScript −\n\nValid characters − In JavaScript, a variable name can contain digits, alphabetical characters, and special characters like underscore (_) and dollar sign ($). JavaScript variable names should not start with a numeral (0-9). They must begin with a letter or an underscore character. For example, 123test is an invalid variable name but _123test is a valid one.\n\nCase sensitivity − Variable names are case sensitive. It means Name and name are different identifiers.\n\nUnicode support − The identifiers can also contain the Unicode. So, developers may define variables in any language.\n\nReserved keywords − You should not use any of the JavaScript reserved keywords as a variable name. For example, break or boolean variable names are not valid. Here, we have given a full list of the JavaScript reserved keywords.",
+              "code": "let name = 'John'; \nlet age = 30; \nlet person = { name: 'John', age: 30 };"
+            },
+            {
+              "topic": "JavaScript Dollar Sign ($) and Under Score (_)",
+              "notes": "You can use the $ and _ to define the variables in JavaScript, as the JavaScript engine considers it a valid character.\n\nExample (Demonstrating the identifiers)\nIn this example, we have defined the variables using the var keyword. The first variable name starts with the underscore, and the second variable name starts with the dollar sign. Programmers can uncomment the third variable declaration to check the error generated by JavaScript when we start any identifier with the digit.",
+              "code": "<html>\n<head>\n<title> Variables in JavaScript </title>\n</head>\n<body>\n<script>\nvar _abc = \"Hi!\";\nvar $abc = \"Hello!\";\n// var 9abc = \"Bye!\";  // This is invalid\ndocument.write(\"_abc \" + _abc + \"<br>\");\ndocument.write(\"$abc = \" + $abc + \"<br>\");\n</script>\n</body>\n</html>\nIt produces the following result −\n\n_abc Hi!\n$abc = Hello!"
+            },
+            {
+              "topic": "Undefined Variable Value in JavaScript",
+              "notes": "When you don't initialize the variable after declaring, it contains the undefined value. However, you can also assign the undefined value to the variable.\n\nLet's look at the example below.\n\nExample",
+              "code": "<html>\n<body>\n<script>\nvar num;\ndocument.write(\"The value of num is: \" + num + \"<br/>\");\n</script>\n</body>\n</html>\nThis produces the following result −\n\nThe value of num is: undefined"
+            },
+            {
+              "topic": "JavaScript Variable Scope",
+              "notes": "The scope of a variable is the region of your program in which it is defined. JavaScript variables have only two scopes.\n\nGlobal Variables − A global variable has global scope which means it can be defined anywhere in your JavaScript code.\n\nLocal Variables − A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.\n\nWithin the body of a function, a local variable takes precedence over a global variable with the same name. If you declare a local variable or function parameter with the same name as a global variable, you effectively hide the global variable. Take a look into the following example.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have defined the variable named myVar outside the function and initialized it with the 'global' value. Also, we have defined the variable with the same identifier inside the checkscope() function and initialized it with the 'local' value.\n\nWe print the myVar variable's value inside the function. So, the local variable takes preference over the global variable and prints the 'local' in the output.",
+              "code": "<html>\n<head>\n<title> JavaScript Variable Scope Example</title>\n</head>\n<body onload = \"checkscope();\">\n<script>\nvar myVar = \"global\"; // Declare a global variable\nfunction checkscope() {\nvar myVar = \"local\"; // Declare a local variable\ndocument.write(myVar);\n}\n</script>\n</body>\n</html>\nThis produces the following result −\n\nlocal"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have defined the variables without using the var keyword. The name variable contains the value of the string type, and the number variable contains the value of the float data type.\n\nWhen we define the variables without using any keyword, JavaScript considers them global variables and can use them anywhere inside the code.",
+              "code": "<html>\n<head>\n<title> Variables without var keyword </title>\n</head>\n<body>\n<script>\nname = \"tutorialspoint\"; // String type variable\nnumber = 10.25; // Number type variable\ndocument.write(\"name = \" + name + \", number = \" + number + \"<br>\");\n</script>\n</body>\n</html>"
+            },
+            {
+              "topic": "",
+              "notes": "This produces the following result −\n\nname = tutorialspoint, number = 10.25\nAlso, the identifier doesn't lose the previous value if we declare the variable using the var keyword with the value and re-declare the same identifier without initialization. Let’s understand it via the example below.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have declared the age variable and initialized it with 10. Again, we have declared the age variable but haven’t initialized it. Still, it prints 10 in the output because it doesn’t lose the previous initialization’s value. However, if we update the value of the age variable, it successfully updates it.",
+              "code": "<html>\n<head>\n<title> Variables with var keyword </title>\n</head>\n<body>\n<script>\nvar age = 10;\nvar age;\ndocument.write(\"age = \" + age + \"<br>\");\n</script>\n</body>\n</html>\nThis produces the following result −\n\nage = 10"
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 9,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Let Statement",
+        "description": "Learn about the let statement in JavaScript.",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "What is JavaScript let statement?",
+              "notes": "The JavaScript let statement is used to declare a variable. With the let statement, we can declare a variable that is block-scoped. This means a variable declared with let is only accessible within the block of code in which it is defined.\n\nThe let keyword was introduced in the ES6 (2015) version of JavaScript. It is an alternative to the var keyword.\n\nThe main reason behind introducing the let keyword is to improve the scoping behaviors of variables and the safety of the code.\n\nVariable Declaration with let statement\nFollowing is the syntax to declare a variable with let statement.\nLet's have a look at some examples for variable declaration with let.",
+              "code": "let name = 'John';\nlet age = 35;\nlet x = true;"
+            },
+            {
+              "topic": "JavaScript Block Scope vs. Function Scope",
+              "notes": "The scope of the variable declared with the let keyword is block-scoped. It means if you define the variable with the let keyword in a specific block, you can access the variable inside that particular block only, and if you try to access the variable outside the block, it raises an error like 'variable is not defined'.",
+              "code": "{\n  let x = 'John';\n}\n// here x can't be accessed"
+            },
+            {
+              "topic": "",
+              "notes": "The var keyword has a function scope, meaning if you define the variable using the var keyword in any function block, you can access it throughout the function.",
+              "code": "function foo() {\n  if (true) {\n    let x = 5;\n    var y = 10;\n  }\n  // here x can't be accessed while y is accessible\n}"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we have defined the variable x using the let keyword and variable y using the var keyword. Also, we have assigned 10 and 20 values to both variables, respectively.\n\nWe defined the test() function, redeclared the x and y variables inside it, and initialized them with 50 and 100 values, respectively. We print variable values inside the function, and it prints the 50 and 100 as it gives first preference to the local variables over global variables.",
+              "code": "<html>\n<head>\n  <title> Variable declaration with let keyword </title>\n</head>\n<body>\n  <script>\n    let x = 10;\n    var y = 20;\n    function test() {\n      let x = 50;\n      var y = 100;\n      document.write('x = ' + x + ', y = ' + y + '<br/>');\n    }\n    test();\n  </script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, we initialized the bool variable with a 'true' value. After that, we declared the variables x and y using the let and var keywords in the 'if' block.\n\nWe print the value of the x and y variable inside the 'if' block. We can't access the 'x' variable outside the 'if' block as it has block scope, but we can access variable y outside the 'if' block and inside the function block as it has function scope.",
+              "code": "<html>\n<head>\n  <title> Variable declaration with let keyword </title>\n</head>\n<body>\n  <script>\n    function test() {\n      let bool = true;\n      if (bool) {\n        let x = 30;\n        var y = 40;\n        document.write('x = ' + x + ', y = ' + y + '<br/>');\n      }\n      // x can't be accessible here\n      document.write('y = ' + y + '<br/>');\n    }\n    test();\n  </script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Redeclaring Variables in JavaScript",
+              "notes": "You can't redeclare the variables declared with the let keyword in the same block. However, you can declare the variables with the same name in different blocks within the same function.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, you can observe that variables declared with the let keyword can’t be redeclared in the same block, but variables declared with the var keyword can be redeclared in the same block.\n\nThe code prints the value of the newly declared variable in the output.",
+              "code": "<html>\n<head>\n  <title> Variable redeclaring </title>\n</head>\n<body>\n  <script>\n    function test() {\n      if (1) {\n        let m = 70;\n        // let m = 80; // redeclaration with let keyword is not possible\n        var n = 80;\n        var n = 90; // redeclaration with var keyword is possible\n        document.write('m = ' + m + ', n = ' + n);\n      }\n    }\n    test();\n  </script>\n</body>\n</html>"
+            },
+            {
+              "topic": "Variable Hoisting",
+              "notes": "The hoisting behavior of JavaScript moves the declaration of the variables to the top of the code. The let keyword doesn't support hoisting, but the var keyword does.",
+              "code": ""
+            },
+            {
+              "topic": "Example",
+              "notes": "In the example below, you can see that we can initialize and print the value of the variable n before its declaration as it is declared using the var keyword.",
+              "code": "<html>\n<head>\n  <title> Variable hoisting </title>\n</head>\n<body>\n  <script>\n    function test() {\n      // Hoisting is not supported by let keyword\n      // m = 100;\n      // document.write('m = ' + m + '<br/>');\n      // let m;\n      n = 50;\n      document.write('n = ' + n + '<br/>');\n      var n;\n    }\n    test();\n  </script>\n</body>\n</html>"
+            }
+          ]
+        }
+      }
+    },
+    
+
+    {
+      "model": "lessons.lesson",
+      "pk": 10,
+      "fields": {
+        "module_id": 1,
+        "title": "JS Constants",
+        "description": "JavaScript constants are the variables whose values remain unchanged throughout the execution of the program. You can declare constants using the const keyword.\n\nThe const keyword is introduced in the ES6 version of JavaScript with the let keyword. The const keyword is used to define variables having constant references. A variable defined with const can't be redeclared or reassigned. The const declaration has block as well as function scope.",
+        "content": {
+          "subtopics": [
+            {
+              "topic": "Declaring JavaScript Constants",
+              "notes": "You always need to assign a value at the time of declaration if the variable is declared using the const keyword.",
+              "code": "const x = 10;"
+            },
+            {
+              "topic": "",
+              "notes": "In any case, you can't declare variables with the const keyword without initialization.",
+              "code": "const y; // Incorrect way\ny = 20;"
+            },
+            {
+              "topic": "Can't be Reassigned",
+              "notes": "You can't update the value of variables declared with the const keyword.",
+              "code": "const y = 20;\ny = 40; // This is not possible"
+            },
+            {
+              "topic": "Block Scope",
+              "notes": "A JavaScript variable declared with the const keyword has block-scope. This means the same variable is treated as different outside the block.\n\nIn the example below, the x declared within the block is different from the x declared outside the block. So we can redeclare the same variable outside the block.",
+              "code": "{\n  const x = \"john\";\n}\nconst x = \"Doe\";"
+            },
+            {
+              "topic": "",
+              "notes": "But we can't redeclare the const variable within the same block.",
+              "code": "{\n  const x = \"john\";\n  const x = \"Doe\"; // incorrect\n}"
+            },
+            {
+              "topic": "Constant Arrays and Objects in JavaScript",
+              "notes": "We can declare arrays and objects using the const keyword, but there is a little twist in array and object declaration.\n\nThe variable with the const keyword keeps a constant reference but not a constant value. So, you can update the same array or object declared with the const keyword, but you can't reassign the reference of the new array or object to the constant variable.",
+              "code": ""
+            },
+            {
+              "topic": "Example (Constant Arrays)",
+              "notes": "In the example below, we have defined the array named 'arr' using the const keyword. After that, we update the array element at the 0th index and insert the 'fence' string at the end of the array.\n\nIn the output, you can observe that it prints the updated array.",
+              "code": "<html>\n<head>\n  <title> Constant Arrays </title>\n</head>\n<body>\n  <script>\n    // Defining the constant array\n    const arr = [\"door\", \"window\", \"roof\", \"wall\"];\n    // Updating arr[0]\n    arr[0] = \"gate\";\n    // Inserting an element to the array\n    arr.push(\"fence\");\n    // arr = [\"table\", \"chair\"] // reassigning array will cause an error.\n    // Printing the array\n    document.write(arr);\n  </script>\n</body>\n</html>\nWhen you execute the above code, it will produce the following result −\ngate,window,roof,wall,fence"
+            },
+            {
+              "topic": "Example (Constant Objects)",
+              "notes": "In the below example, we created the 'obj' object with the const keyword. Next, we update the 'animal' property of the object and insert the 'legs' property in the object. In the output, the code prints the updated object.",
+              "code": "<html>\n<head>\n  <title> Constant Objects </title>\n</head>\n<body>\n  <script>\n    // Defining the constant object\n    const obj = {\n      animal: \"Lion\",\n      color: \"Yellow\"\n    };\n    // Changing animal name\n    obj.animal = \"Tiger\";\n    // Inserting legs property\n    obj.legs = 4;\n    // Printing the object\n    document.write(JSON.stringify(obj));\n    // obj = { name: \"cow\" } // This is not possible\n  </script>\n</body>\n</html>\nIt will produce the following result −\n{\"animal\":\"Tiger\",\"color\":\"Yellow\",\"legs\":4}"
+            },
+            {
+              "topic": "No Const Hoisting",
+              "notes": "Variables defined with the const keyword are not hoisted at the top of the code.\n\nIn the example below, the const variable x is accessed before it is defined. It will cause an error. We can catch the error using try-catch statement.",
+              "code": "<html>\n<body>\n  <script>\n    try {\n      document.write(x);\n    } catch (e) {\n      document.write(e.message);\n    }\n    const x = 10;\n  </script>\n</body>\n</html>"
+            },
+            {
+              "topic": "",
+              "notes": "Here are some other properties of the variables declared with the const keyword:\n\n- Block scope.\n- It can't be redeclared in the same scope.\n- Variables declared with the const keyword can't be hoisted at the top of the code.\n- Constant variables value is a primitive value.",
+              "code": ""
+            },
+            {
+              "topic": "Which should you use among var, let, and const?",
+              "notes": "For block scope, you should use the let keyword.\nIf you need to assign a constant reference to any value, use the const keyword.\nWhen you require to define the variable inside any particular block, like a loop, 'if statement', etc. and need to access it outside the block but inside the function, you may use the var keyword.\nHowever, you can use any keyword to define global variables.\nRedeclaring variables is not a good practice. So, you should avoid it, but if necessary, you may use the var keyword.",
+              "code": ""
+            }
+          ]
+        }
+      }
+    },
+    
+    {
+      "model": "lessons.lesson",
+      "pk": 11,
+      "fields": {
+          "module_id": 1,
+          "title": "JS Data Types",
+          "description": "Data types in JavaScript refer to the types of the values that we are storing or working with. One of the most fundamental characteristics of a programming language is the set of data types it supports. These are the types of values that can be represented and manipulated in a programming language.\n\nJavaScript data types can be categorized as primitive and non-primitive (object). JavaScript (ES6 and higher) allows you to work with seven primitive data types −\n\n- Strings of text, e.g., \"This text string\"\n- Numbers, e.g., 123, 120.50\n- Boolean, e.g., true or false\n- null\n- undefined\n- BigInt\n- Symbol\n\nBigInt and Symbol are introduced in ES6. In ES5, there were only five primitive data types.\n\nIn addition to these primitive data types, JavaScript supports a composite data type known as an object. We will cover objects in detail in a separate chapter.\n\nThe Object data type contains the following sub-data types −\n\n- Object\n- Array\n- Date",
+          "content": {
+              "subtopics": [
+                  {
+                      "topic": "Why are data types important?",
+                      "notes": "In any programming language, data types are important for operation manipulation.\n\nFor example, the below code generates the “1010” output.\n\n```javascript\nlet sum = \"10\" + 10;\n```\nHere, the JavaScript engine converts the second operand to a string and combines it using the '+' operator rather than adding them.\n\nSo, you need to ensure that the type of operands is correct.\n\nNow, let's learn about each data type with examples."
+                  },
+                  {
+                      "topic": "JavaScript String",
+                      "notes": "In JavaScript, a string is a sequence of characters and can be created using 3 different ways given below −\n\n- Using single quotes\n- Using double quotes\n- Using backticks"
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we have created strings using single quotes, double quotes, and backticks. In the output, it prints the same result for all 3 strings.",
+                      "code": "<html>\n<head>\n<title>JavaScript String</title>\n</head>\n<body>\n<script>\nlet str1 = \"Hello World!\"; // Using double quotes\nlet str2 = 'Hello World!'; // Using single quotes\nlet str3 = `Hello World!`; // Using backticks\ndocument.write(str1 + \"<br>\");\ndocument.write(str2 + \"<br>\");\ndocument.write(str3 + \"<br>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Number",
+                      "notes": "A JavaScript number is always stored as a floating-point value (decimal number).\n\nJavaScript does not make a distinction between integer values and floating-point values.\n\nJavaScript represents numbers using the 64-bit floating-point format defined by the IEEE 754 standard."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we demonstrate JavaScript numbers with and without decimal points.",
+                      "code": "<html>\n<head>\n<title>JavaScript Number</title>\n</head>\n<body>\n<script>\nlet num1 = 10; // Integer\nlet num2 = 10.22; // Floating point number\ndocument.write(\"The value of num1 is \" + num1 + \"<br/>\");\ndocument.write(\"The value of num2 is \" + num2);\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "Example (Exponential notation of numbers)",
+                      "notes": "JavaScript also supports exponential notation of numbers. We have explained this in the below example code.",
+                      "code": "<html>\n<head>\n<title>JavaScript Number Exponential Notation</title>\n</head>\n<body>\n<script>\nlet num1 = 98e4; // 980000\nlet num2 = 98e-4; // 0.0098\ndocument.write(\"The value of num1 is: \" + num1 + \"<br/>\");\ndocument.write(\"The value of num2 is: \" + num2);\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Boolean",
+                      "notes": "Boolean represents one of two values: true or false.",
+                      "code": "<html>\n<head>\n<title>JavaScript Boolean</title>\n</head>\n<body>\n<script>\nlet bool1 = true;\nlet bool2 = false;\ndocument.write(\"The value of bool1 is \" + bool1 + \"<br/>\");\ndocument.write(\"The value of bool2 is \" + bool2 + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Undefined",
+                      "notes": "When you declare a variable but don't initialize it, it contains an undefined value. However, you can manually assign an undefined value to the variable also.",
+                      "code": "<html>\n<head>\n<title>JavaScript Undefined</title>\n</head>\n<body>\n<script>\nlet houseNo; // Contains undefined value\nlet apartment = \"Ajay\";\napartment = undefined; // Assigning the undefined value\ndocument.write(\"The value of house No is: \" + houseNo + \"<br/>\");\ndocument.write(\"The value of apartment is: \" + apartment + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Null",
+                      "notes": "When any variable's value is unknown, you can use null. It is good practice to use null for the empty or unknown value rather than undefined.",
+                      "code": "<html>\n<head>\n<title>JavaScript Null</title>\n</head>\n<body>\n<script>\nlet houseNo = null; // Unknown house number\nlet apartment = \"B-2\";\napartment = null; // Updating the value to null\ndocument.write(\"The value of houseNo is: \" + houseNo + \"<br/>\");\ndocument.write(\"The value of apartment is: \" + apartment + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript BigInt",
+                      "notes": "JavaScript stores only 64-bit long floating point numbers. If you want to store a very large number, you should use BigInt. You can create BigInt by appending 'n' to the end of the number.",
+                      "code": "<html>\n<head>\n<title>JavaScript BigInt</title>\n</head>\n<body>\n<script>\nlet largeNum = 1245646564515635412348923448234842842343546576876789n;\ndocument.write(\"The value of largeNum is \" + largeNum + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Symbol",
+                      "notes": "The Symbol data type is introduced in the ES6 version of JavaScript. It is used to create unique primitive and immutable values.\n\nThe Symbol() constructor can be used to create a unique symbol, and you may pass a string as a parameter of the Symbol() constructor."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we created the sym1 and sym2 symbols for the same string. After that, we compared the value of sym1 and sym2, and it gave a false output. It means both symbols are unique.",
+                      "code": "<html>\n<head>\n<title>JavaScript Symbol</title>\n</head>\n<body>\n<script>\nlet sym1 = Symbol(\"123\");\nlet sym2 = Symbol(\"123\");\nlet res = sym1 === sym2;\ndocument.write(\"Is sym1 and sym2 the same? \" + res + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Object",
+                      "notes": "In JavaScript, the object data type allows us to store a collection of data in key-value format. There are multiple ways to define an object, which we will see in the Objects chapter.\n\nHere, we will create an object using object literals."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we used '{}' (Object literals) to create an obj object. The object contains the 'animal' property with the string value, the 'legs' property with the number value, and the value of the 'color' variable is assigned to the 'horseColor' property.\n\nThe JSON.stringify() method converts the object to strings and shows it in the output.",
+                      "code": "<html>\n<head>\n<title>JavaScript Object</title>\n</head>\n<body>\n<script>\nlet color = \"Brown\";\nconst obj = {\n   animal: \"Horse\",\n   legs: 4,\n   horseColor: color\n}\ndocument.write(\"The given object is: \" + JSON.stringify(obj) + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Array",
+                      "notes": "In JavaScript, an array is a list of elements of different data types. You can create an array using two square brackets '[]' and insert multiple comma-separated values inside the array.",
+                      "code": "<html>\n<head>\n<title>JavaScript Array</title>\n</head>\n<body>\n<script>\nconst colors = [\"Brown\", \"Red\", \"Pink\", \"Yellow\", \"Blue\"];\ndocument.write(\"The given array is: \" + colors + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "JavaScript Date",
+                      "notes": "You can use the JavaScript Date object to manipulate the date."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we used the Date() constructor to create a date. In the output, you can see the current date and time according to your time zone.",
+                      "code": "<html>\n<head>\n<title>JavaScript Date</title>\n</head>\n<body>\n<script>\nlet date = new Date();\ndocument.write(\"The today's date and time is: \" + date + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "Dynamic Types",
+                      "notes": "JavaScript is a dynamically typed language like Python and Ruby. So, it decides the variable's data type at runtime but not at compile time. We can initialize or reassign the value of any data type to the JavaScript variables."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we initialized the first variable with the string value. After that, we updated its values to the number and boolean value.",
+                      "code": "<html>\n<head>\n<title>JavaScript Dynamic Data Type</title>\n</head>\n<body>\n<script>\nlet first = \"One\"; // it is string\nfirst = 1; // now it's Number\ndocument.write(\"The value of the first variable is \" + first + \"<br/>\");\nfirst = true; // now it's Boolean\ndocument.write(\"The value of the first variable is \" + first + \"<br/>\");\n</script>\n</body>\n</html>"
+                  },
+                  {
+                      "topic": "Checking Data Types Using the typeof Operator",
+                      "notes": "The typeof operator allows you to check the type of the variable."
+                  },
+                  {
+                      "topic": "Example",
+                      "notes": "In the example below, we used the typeof operator to check the data type of various variables.",
+                      "code": "<html>\n<head>\n<title>typeof Operator</title>\n</head>\n<body>\n<script>\nlet num = 30;\nlet str = \"Hello\";\nlet bool = true;\ndocument.write(\"The data type of num is: \" + typeof num + \"<br/>\");\ndocument.write(\"The data type of str is: \" + typeof str + \"<br/>\");\ndocument.write(\"The data type of bool is: \" + typeof bool + \"<br/>\");\n</script>\n</body>\n</html>"
+                  }
+              ]
+          }
+      }
+  },
+  
+  {
+   "model": "lessons.lesson",
+   "pk": 12,
+   "fields": {
+       "module_id": 1,
+       "title": "JS Type Conversion",
+       "description": "Type Conversions in JavaScript refer to the automatic or explicit process of converting data from one data type to another in JavaScript. These conversions are essential for JavaScript to perform operations and comparisons effectively. JavaScript variables can contain the values of any data type as it is a weakly typed language.\n\nThere are two types of type conversion in JavaScript −\n\nImplicit type conversion\nExplicit type conversion\n\nThe implicit type conversion is also known as coercion.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Implicit Type Conversion",
+                   "notes": "When type conversion is done by JavaScript automatically, it is called implicit type conversion. For example, when we use the '+' operator with the string and number operands, JavaScript converts the number to a string and concatenates it with the string.\n\nHere are some examples of the implicit type conversion.",
+                   "code": ""
+               },
+               {
+                   "topic": "Converting to String (Implicit conversion)",
+                   "notes": "In this example, we used the '+' operator to implicitly convert different values to the string data type.",
+                   "code": "\"100\" + 24; // Converts 24 to string\n'100' + false; // Converts false boolean value to string\n\"100\" + null; // Converts null keyword to string"
+               },
+               {
+                   "topic": "",
+                   "notes": "Please note that to convert a value to string using '+' operator, one operand should be string.\n\nLet's try the example below, and check the output ",
+                   "code": "<html>\n<head>\n<title>Implicit conversion to string</title>\n</head>\n<body>\n<script>\ndocument.write(\"100\" + 24 + \"<br/>\");\ndocument.write('100' + false + \"<br/>\");\ndocument.write(\"100\" + null+ \"<br/>\");\ndocument.write(\"100\" + undefined+ \"<br/>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Converting to Number (Implicit conversion)",
+                   "notes": "When you use the string values containing the digits with the arithmetic operators except for the '+' operator, it converts operands to numbers automatically and performs the arithmetic operation, which you can see in the example below.\n\nBoolean values also get converted to a number.",
+                   "code": "'100' / 50; // Converts '100' to 100\n'100' - '50'; // Converts '100' and '50' to 100 and 50\n'100' * true; // Converts true to 1\n'100' - false; // Converts false to 0\n'tp' / 50 // Converts 'tp' to NaN"
+               },
+               {
+                   "topic": "",
+                   "notes": "Try the example below and check the output",
+                   "code": "<html>\n<head>\n<title>Implicit conversion to Number</title>\n</head>\n<body>\n<script>\ndocument.write(('100' / 50) + \"<br>\");\ndocument.write(('100' - '50') + \"<br>\");\ndocument.write(('100' * true) + \"<br>\");\ndocument.write(('100' - false) + \"<br>\");\ndocument.write(('tp' / 50) + \"<br>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Converting to Boolean (Implicit conversion)",
+                   "notes": "When you use the Nullish (!!) operator with any variable, it implicitly converts its value to the boolean value.",
+                   "code": "num = !!0; // !0 = true, !!0 = false\nnum = !!1; // !1 = false, !!1 = true\nstr = !!\"\"; // !\"\" = true, !!\"\" = false\nstr = !!\"Hello\"; // !\"Hello\" = false, !!\"Hello\" = true"
+               },
+               {
+                   "topic": "Null to Number (Implicit conversion)",
+                   "notes": "In JavaScript, the null represents the empty. So, null automatically gets converted to 0 when we use it as an operand of the arithmetic operator.",
+                   "code": "let num = 100 + null; // Converts null to 0\nnum = 100 * null; // Converts null to 0"
+               },
+               {
+                   "topic": "Undefined with Number and Boolean (Implicit conversion)",
+                   "notes": "Using the undefined with the 'number' or 'boolean' value always gives the NaN in the output. Here, NaN means not a number.",
+                   "code": "<html>\n<head>\n<title>Using undefined with a number and boolean value</title>\n</head>\n<body>\n<script>\nlet num = 100 + undefined; // Prints NaN\ndocument.write(\"The value of the num is: \" + num + \"<br>\");\nnum = false * undefined; // Prints NaN\ndocument.write(\"The value of the num is: \" + num + \"<br>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Explicit Type Conversion",
+                   "notes": "In many cases, programmers are required to convert the data type of the variable manually. It is called the explicit type conversion.\n\nIn JavaScript, you can use the constructor functions or built-in functions to convert the type of the variable.",
+                   "code": ""
+               },
+               {
+                   "topic": "Converting to String (Explicit conversion)",
+                   "notes": "You can use the String() constructor to convert the numbers, boolean, or other data types into the string.",
+                   "code": "String(100); // number to string\nString(null); // null to string\nString(true); // boolean to string"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "You can use the String() constructor function to convert a value to the string. You can also use typeof operator to check the type of the resultant value.",
+                   "code": "<html>\n<head>\n<title>Converting to string explicitly</title>\n</head>\n<body>\n<script>\ndocument.write(typeof String(100) + \"<br/>\");\ndocument.write(typeof String(null)+ \"<br/>\");\ndocument.write(typeof String(true) + \"<br/>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "",
+                   "notes": "We can also use the toString() method of Number object to convert number to string.",
+                   "code": "const num = 100;\nnum.toString() // Converts 100 to '100'"
+               },
+               {
+                   "topic": "Converting to Number (Explicit conversion)",
+                   "notes": "You can use the Number() constructor to convert a string into a number. We can also use unary plus (+) operator to convert a string to number.",
+                   "code": "Number('100'); // Converts '100' to 100\nNumber(false); // Converts false to 0\nNumber(null); // Converts null to 0\nnum = +\"200\"; // Using the unary operator"
+               },
+               {
+                   "topic": "",
+                   "notes": "Convert a string to a float using the parseFloat() function.",
+                   "code": "However, you can also use the below methods and variables to convert the string into numbers.\nparseFloat() - To extract the floating point number from the string.\nparseInt() - To extract the integer from the string.\n+ - It is an unary operator."
+               },
+               {
+                   "topic": "Example",
+                   "notes": "You can use the Number() constructor function or unary (+) operator to convert a string, boolean, or any other value to a number.\n\nThe Number() function also converts the exponential notation of a number to a decimal number.",
+                   "code": "<html>\n<head>\n<title>Converting to number explicitly</title>\n</head>\n<body>\n<script>\ndocument.write(Number(\"200\") + \"<br/>\");\ndocument.write(Number(\"1000e-2\") + \"<br/>\");\ndocument.write(Number(false) + \"<br/>\");\ndocument.write(Number(null) + \"<br/>\");\ndocument.write(Number(undefined) + \"<br/>\");\ndocument.write(+\"200\" + \"<br/>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Converting to Boolean (Explicit conversion)",
+                   "notes": "You can use the Boolean() constructor to convert the other data types into Boolean.",
+                   "code": "Boolean(100); // Converts number to boolean (true)\nBoolean(0); // 0 is falsy value (false)\nBoolean(\"\"); // Empty string is falsy value (false)\nBoolean(\"Hi\"); // Converts string to boolean (true)\nBoolean(null); // null is falsy value (false)"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "You can use the Boolean() constructor to convert values to the Boolean. All false values like 0, empty string, null, undefined, etc., get converted to false and other values are converted to true.",
+                   "code": "<html>\n<head>\n<title>Converting to boolean explicitly</title>\n</head>\n<body>\n<script>\ndocument.write(Boolean(100) + \"<br/>\");\ndocument.write(Boolean(0) + \"<br/>\");\ndocument.write(Boolean(\"\") + \"<br/>\");\ndocument.write(Boolean(\"Hi\") + \"<br/>\");\ndocument.write(Boolean(null) + \"<br/>\");\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Converting Date to String/Number",
+                   "notes": "You can use the Date object's Number() constructor or getTime() method to convert the date string into the number. The numeric date represents the total number of milliseconds since 1st January 1970.\n\nFollow the syntax below to convert the date into a number.",
+                   "code": "Number(date);\nOR\ndate.getTime();"
+               },
+               {
+                   "topic": "",
+                   "notes": "You can use the String() constructor or the toString() method to convert the date into a string.\n\nFollow the syntax below to convert the date into the string.",
+                   "code": "String(date);\nOR\ndate.toString();"
+               },
+               {
+                   "topic": "",
+                   "notes": "Let's try to demonstrate this with the help of a program.",
+                   "code": "<html>\n<head>\n<title>Converting date to string / number</title>\n</head>\n<body>\n<script>\nlet date = new Date();\nlet numberDate = date.getTime();\ndocument.write(\"The Numeric date is: \" + numberDate + \"<br/>\");\nlet dateString = date.toString();\ndocument.write(\"The string date is: \" + dateString + \"<br/>\");\n</script>\n</body>\n</html>"
+               }
+           ]
        }
    }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 13,
+   "fields": {
+       "module_id": 1,
+       "title": "JS Strict Mode",
+       "description": "In JavaScript, the strict mode is introduced in the ES5 (ECMAScript 2009). The purpose behind introducing the \"strict mode\" is to make the JavaScript code more secure.\n\nThe 'use strict' literal expression is used to add the strict mode in the JavaScript code. It removes the silent errors from the code, such as you can't use the variable without declaration, you can't modify the readable property of the object, etc.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Enabling Strict Mode",
+                   "notes": "To enable strict mode, you should write the following literal expression to the top of your code",
+                   "code": "'use strict';\nThe 'use strict' directive is used enable JavaScript's strict mode."
+               },
+               {
+                   "topic": "Why Use the Strict Mode?",
+                   "notes": "Here, we have listed some reasons for using the strict JavaScript mode −\n\nError Prevention − The strict mode prevents the common errors which developers make while writing the JavaScript code, such as initializing the variable without declaration or using the reserved keywords as an identifier.\nSafer Code − The strict mode prevents the creation of global variables accidentally. Also, it doesn't allow to use of statements like 'with', which can lead to vulnerability in the code.\nFuture Compatibility − You can align your code with the future versions of JavaScript by using the script mode. For example, the current version of JavaScript doesn't contain keywords like 'public' but is reserved for future versions. So, the strict mode won't allow you to use it as an identifier from now.",
+                   "code": ""
+               },
+               {
+                   "topic": "Strict Mode in the Global Scope",
+                   "notes": "When you add the 'use strict' at the top of the JavaScript code; it uses the strict mode for the whole code.",
+                   "code": ""
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we have defined the 'y' variable and initialized it with the 50. The code prints the value of 'y' in the output.\n\nAlso, we initialized the variable 'x' without declaring it. So, it gives the error in the console and doesn't print the output.\n\nIn short, the strict mode doesn't allow you to use the variable without its declaration.",
+                   "code": "<html>\n<head>\n<title> Using the strict mode globally </title>\n</head>\n<body>\n<script>\n\"use strict\";\nlet y = 50; // This is valid\ndocument.write(\"The value of the X is: \" + y);\nx = 100; // This is not valid\ndocument.write(\"The value of the X is: \" + x);\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Strict Mode in the Local Scope",
+                   "notes": "You can also use the \"strict mode\" inside the particular function. So, it will be applied only in the function scope. Let's understand it with the help of an example.",
+                   "code": ""
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we used the 'use strict' literal only inside the test() function. So, it removes the unusual errors from the function only.\n\nThe code below allows you to initialize the variable without declaring it outside the function but not inside it.",
+                   "code": "<html>\n<head>\n<title> Using the strict mode globally </title>\n</head>\n<body>\n<script>\nx = 100; // This is valid\ndocument.write(\"The value of the X is - \" + x);\nfunction test() {\n\"use strict\";\ny = 50; // This is not valid\ndocument.write(\"The value of the y is: \" + x);\n}\ntest();\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "",
+                   "notes": "1. You can't initialize the variable with a value without declaring it.",
+                   "code": "<script>\n'use strict';\nnum = 70.90; // This is invalid\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "2. Similarly, you can't use the object without declaring it.",
+                   "code": "<script>\n'use strict';\nnumObj = {a: 89, b: 10.23}; // This is invalid\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "3. You can't delete objects using the delete keyword.",
+                   "code": "<script>\n'use strict';\nlet women = { name: \"Aasha\", age: 29 };\ndelete women; // This is invalid\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "4. You can't delete the object prototype in the strict mode.",
+                   "code": "<script>\n'use strict';\nlet women = { name: \"Aasha\", age: 29 };\ndelete women.prototype; // This is invalid\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "5. Deleting the function using the delete operator is not allowed.",
+                   "code": "<script>\n'use strict';\nfunction func() { }\ndelete func; // This is invalid\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "6. You can't have a function with duplicate parameter values.",
+                   "code": "<script>\n'use strict';\nfunction func(param1, param1, param2) {\n// Function with 2 param1 is not allowed!\n}\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "7. You can't assign octal numbers to variables.",
+                   "code": "<script>\n'use strict';\nlet octal = 010; // Throws an error\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "8. You can't use escape characters.",
+                   "code": "<script>\n'use strict';\nlet octal = \\010; // Throws an error\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "9. You can't use reserved keywords like eval, arguments, public, etc., as an identifier",
+                   "code": "<script>\n'use strict';\nlet public = 100; // Throws an error\n</script>"
+               },
+               {
+                   "topic": "",
+                   "notes": "10. In the strict mode, when you use the 'this' keyword inside the function, it refers to the reference object through which the function is invoked. If the reference object is not specified, it refers to the undefined value.",
+                   "code": "<script>\n'use strict';\nfunction test() {\nconsole.log(this); // Undefined\n}\ntest();\n</script>"
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 14,
+   "fields": {
+       "module_id": 1,
+       "title": "JS Reserved Keywords",
+       "description": "The reserved keywords in JavaScript are predefined keywords used to serve the built-in functionality of the programming language. For example, the var and let keywords are used to define variables, the function keyword is used to define the functions, etc. JavaScript contains more than fifty reserved keywords.\n\nIn simple terms, you can't use the reserved keywords as an identifier. If you do, you will get the conflicts, and the code will generate the wrong output or throw an error.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Introduction to Reserved Keywords",
+                   "notes": "Reserved keywords are words that cannot be used as identifiers (e.g., variables, functions, or labels).",
+                   "code": ""
+               },
+               {
+                   "topic": "List of Reserved Keywords",
+                   "notes": "A list of reserved keywords in JavaScript.",
+                   "code": "abstract, arguments, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, eval, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in, instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, volatile, while, with, yield"
+               },
+               {
+                   "topic": "Using Keywords as Identifiers",
+                   "notes": "Keywords cannot be used as identifiers in JavaScript.",
+                   "code": "let for = 5; // This will cause an error"
+               },
+               {
+                   "topic": "Future Reserved Keywords",
+                   "notes": "Some keywords are reserved for future use.",
+                   "code": ""
+               },
+               {
+                   "topic": "Strict Mode and Reserved Keywords",
+                   "notes": "In strict mode, using certain keywords will cause an error.",
+                   "code": ""
+               },
+               {
+                   "topic": "Best Practices for Reserved Keywords",
+                   "notes": "Best practices for avoiding reserved keywords.",
+                   "code": ""
+               },
+               {
+                   "topic": "Common Mistakes with Keywords",
+                   "notes": "Common mistakes made when using keywords.",
+                   "code": ""
+               },
+               {
+                   "topic": "Reserved Keywords in Other Languages",
+                   "notes": "Comparison of reserved keywords in JavaScript and other programming languages.",
+                   "code": ""
+               },
+               {
+                   "topic": "Examples of Reserved Keywords",
+                   "notes": "Examples of using reserved keywords in JavaScript.",
+                   "code": "let newVariable = 10; // new is a reserved keyword, so we use newVariable"
+               },
+               {
+                   "topic": "Avoiding Reserved Keywords",
+                   "notes": "How to avoid using reserved keywords in your code.",
+                   "code": ""
+               }
+           ]
+       }
+   }
+}
+
 ]
+
+
 
  
 

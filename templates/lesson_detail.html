@@ -1,39 +1,25 @@
-
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
 {% endblock %}
-{% block title %}{{ lesson.title }} - Lesson Detailt{% endblock %}
+
+{% block title %}{{ lesson.title }} - Lesson Detail{% endblock %}
 
 {% block content %}
-<style>
-        .exercise-list-button{
-        background-color: #427CD4;
-        border-radius: 10px;
-        padding-left: 10px!important;
-        color: white;
-        }
-
-
-        .exercise-list-button:hover{
-            background-color: #365B9A;
-            border-radius: 10px;
-            color: white;
-        }
-</style>
 <div class="row m-5">
     <h1>{{ lesson.title }}</h1>
     <p>{{ lesson.description }}</p>
 
     {% for subtopic in subtopics %}
-            <h3>{{ subtopic.title }}</h3>
-            <p>{{ subtopic.notes|linebreaks}}</p> <!-- Converts line breaks to <br> tags -->
-            {% if subtopic.code %}
-            <pre><code>{{ subtopic.code|safe }}</code></pre>
-            {% endif %}
+    <h3>{{ subtopic.title }}</h3>
+    <p>{{ subtopic.notes|linebreaks }}</p> <!-- Converts line breaks to <br> tags -->
+    
+    {% if subtopic.code %}
+    <pre class="language-markup"><code>{{ subtopic.code|safe }}</code></pre>
+    {% endif %}
+    
     {% endfor %}
 </div>
 {% endblock %}

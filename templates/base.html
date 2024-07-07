@@ -7,6 +7,9 @@
     <title>{% block title %}My Website{% endblock %}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+
+
     <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
 </head>
 <body>
@@ -16,7 +19,7 @@
                 {% include 'includes/header.html' %}
             </div>
            
-            <div class="col-md-3 bg-light">
+            <div class="col-md-3 bg-light module_list">
                
                 {% include 'includes/module_list.html' %}
               
@@ -35,5 +38,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+        // Initialize Prism for syntax highlighting
+        Prism.highlightAll();
+    </script>
 </body>
 </html>
