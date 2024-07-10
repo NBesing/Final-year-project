@@ -9,6 +9,20 @@ class Lesson(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_previous_lesson_id(self):
+        # Implement logic to get ID of previous lesson
+        previous_lesson = Lesson.objects.filter(id__lt=self.id).order_by('-id').first()
+        if previous_lesson:
+            return previous_lesson.id
+        return None
+
+    def get_next_lesson_id(self):
+        # Implement logic to get ID of next lesson
+        next_lesson = Lesson.objects.filter(id__gt=self.id).order_by('id').first()
+        if next_lesson:
+            return next_lesson.id
+        return None
 
 class Example(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)

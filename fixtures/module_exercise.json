@@ -1,0 +1,303 @@
+[
+    {
+      "model": "modules.module_exercise",
+      "pk": 1,
+      "fields": {
+        "module_id": 1,
+        "title": "Sum of Two Numbers",
+        "content": "Implement a JavaScript function that takes two numbers as arguments and returns their sum. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts two parameters.",
+          "Hint 2: Use the return statement to return the sum of the two parameters."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 2,
+      "fields": {
+        "module_id": 1,
+        "title": "Even or Odd Number",
+        "content": "Create a JavaScript program that prompts the user to enter a number, and then displays a message indicating whether the number is even or odd.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Use the prompt function to get the user input.",
+          "Hint 2: Use the modulo operator (%) to check if the number is even or odd."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 3,
+      "fields": {
+        "module_id": 1,
+        "title": "String Length",
+        "content": "Develop a JavaScript function that takes a string as an argument and returns the length of the string. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts a string parameter.",
+          "Hint 2: Use the length property of the string to get its length."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 4,
+      "fields": {
+        "module_id": 1,
+        "title": "Sum of Array Elements",
+        "content": "Construct a JavaScript program that declares an array of numbers, and then uses a loop to calculate the sum of all the elements in the array.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Declare an array of numbers.",
+          "Hint 2: Use a loop to iterate through the array and accumulate the sum."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 5,
+      "fields": {
+        "module_id": 1,
+        "title": "Largest Number in Array",
+        "content": "Implement a JavaScript function that takes an array of numbers as an argument and returns the largest number in the array. Test the function with different input arrays.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts an array parameter.",
+          "Hint 2: Use a loop or array method to find and return the largest number."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 6,
+      "fields": {
+        "module_id": 1,
+        "title": "Greeting Message",
+        "content": "Design a JavaScript program that prompts the user to enter their name, and then displays a greeting message that includes the user's name.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Use the prompt function to get user input.",
+          "Hint 2: Display a greeting message that includes the user's name."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 7,
+      "fields": {
+        "module_id": 1,
+        "title": "Remove Vowels from String",
+        "content": "Develop a JavaScript function that takes a string as an argument and returns a new string with all the vowels removed. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts a string parameter.",
+          "Hint 2: Use a loop or array method to remove the vowels from the string."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 8,
+      "fields": {
+        "module_id": 1,
+        "title": "Person Object",
+        "content": "Construct a JavaScript program that declares an object representing a person's information (name, age, and email), and then displays the values of the object's properties in the console.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Declare an object with properties for name, age, and email.",
+          "Hint 2: Use console.log to display the values of the object's properties."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 9,
+      "fields": {
+        "module_id": 1,
+        "title": "Divide Two Numbers",
+        "content": "Implement a JavaScript function that takes two numbers as arguments and returns the result of dividing the first number by the second number. Test the function with different input values, including cases where the second number is 0.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts two parameters.",
+          "Hint 2: Use an if statement to check if the second number is 0 and handle accordingly."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 10,
+      "fields": {
+        "module_id": 1,
+        "title": "Number Sign",
+        "content": "Create a JavaScript program that prompts the user to enter a number, and then displays a message that indicates whether the number is positive, negative, or zero.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Use the prompt function to get the user input.",
+          "Hint 2: Use if-else statements to check the sign of the number and display the appropriate message."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 11,
+      "fields": {
+        "module_id": 1,
+        "title": "Even Numbers in Array",
+        "content": "Develop a JavaScript function that takes an array of numbers as an argument and returns a new array that contains only the even numbers from the original array. Test the function with different input arrays.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts an array parameter.",
+          "Hint 2: Use a loop or array method to filter out the even numbers."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 12,
+      "fields": {
+        "module_id": 1,
+        "title": "Update Student Attendance",
+        "content": "Construct a JavaScript program that declares an object representing a student's information (name, grade, and attendance), and then updates the attendance property based on user input.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Declare an object with properties for name, grade, and attendance.",
+          "Hint 2: Use the prompt function to get user input and update the attendance property."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 13,
+      "fields": {
+        "module_id": 1,
+        "title": "Capitalize Words",
+        "content": "Implement a JavaScript function that takes a string as an argument and returns a new string with the first letter of each word capitalized. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts a string parameter.",
+          "Hint 2: Use string methods to split the string into words, capitalize each word, and join them back together."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 14,
+      "fields": {
+        "module_id": 1,
+        "title": "Display Array Strings",
+        "content": "Design a JavaScript program that declares an array of strings, and then uses a loop to display each string in the console.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Declare an array of strings.",
+          "Hint 2: Use a loop to iterate through the array and display each string using console.log."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 15,
+      "fields": {
+        "module_id": 1,
+        "title": "Prime Number Check",
+        "content": "Develop a JavaScript function that takes a number as an argument and returns a boolean value indicating whether the number is a prime number. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts a number parameter.",
+          "Hint 2: Use a loop to check if the number has any divisors other than 1 and itself."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 16,
+      "fields": {
+        "module_id": 1,
+        "title": "Celsius to Fahrenheit",
+        "content": "Construct a JavaScript program that prompts the user to enter a temperature value in Celsius, and then displays the equivalent temperature in Fahrenheit.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Use the prompt function to get the user input in Celsius.",
+          "Hint 2: Use the formula F = C * 9/5 + 32 to convert Celsius to Fahrenheit."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 17,
+      "fields": {
+        "module_id": 1,
+        "title": "Average of Array Elements",
+        "content": "Implement a JavaScript function that takes an array of numbers as an argument and returns the average of all the numbers in the array. Test the function with different input arrays.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts an array parameter.",
+          "Hint 2: Use a loop to calculate the sum of the array elements and then divide by the number of elements to get the average."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 18,
+      "fields": {
+        "module_id": 1,
+        "title": "Product Total Cost",
+        "content": "Create a JavaScript program that declares an object representing a product's information (name, price, and quantity), and then calculates the total cost of the product based on the price and quantity.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Declare an object with properties for name, price, and quantity.",
+          "Hint 2: Calculate the total cost by multiplying the price by the quantity."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 19,
+      "fields": {
+        "module_id": 1,
+        "title": "Reverse String",
+        "content": "Develop a JavaScript function that takes a string as an argument and returns a new string with all the characters in reverse order. Test the function with different input values.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Define a function that accepts a string parameter.",
+          "Hint 2: Use string methods to split the string into characters, reverse them, and join them back together."
+        ]
+      }
+    },
+    {
+      "model": "modules.module_exercise",
+      "pk": 20,
+      "fields": {
+        "module_id": 1,
+        "title": "Multiplication Table",
+        "content": "Design a JavaScript program that prompts the user to enter a number, and then displays a multiplication table for that number up to 10.",
+        "number_of_attempts": 2,
+        "number_of_hints": 2,
+        "hints": [
+          "Hint 1: Use the prompt function to get the user input.",
+          "Hint 2: Use a loop to generate and display the multiplication table up to 10."
+        ]
+      }
+    }
+  ]
+  

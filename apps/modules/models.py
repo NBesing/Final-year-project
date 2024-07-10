@@ -10,16 +10,13 @@ class Module(models.Model):
     def __str__(self):
         return self.title
 
-    def module_list(request):
-        modules = Module.objects.prefetch_related('lessons').all()  # Prefetch related lessons
-        return render(request, 'module_list.html', {'modules': modules})
-
 class ModuleExercise(models.Model):
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
-    description = models.TextField()
-    exercises_content = models.TextField()
-    num_attempts = models.IntegerField()
-    num_questions = models.IntegerField()
-    hints = models.TextField()
+    title = models.TextField()
+    content = models.TextField()
+    number_of_attempts = models.IntegerField()
+    number_of_hints = models.IntegerField()
+    hints = models.JSONField(default=list) # Use JSONField for MySQL
+
     def __str__(self):
-        return self.description
+        return self.title

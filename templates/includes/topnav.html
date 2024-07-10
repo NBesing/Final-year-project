@@ -1,22 +1,32 @@
 
-
-<div class="row topnav pt-2 pb-2">
-    <div
-      class="col-md-8 btn-group"
-      role="group"
-      aria-label="Button group with three buttons"
-    >
-      <button type="button" class="btn  active ">
-        Lectures
-      </button>
-      <button type="button" class="btn ">Exercises</button>
-      <button type="button" class="btn ">Talk to your tutor</button>
+<style>
+  .topnav{
+    /* border-bottom: 1px solid #D7D7D7; */
+  }
+  .topnav .btn {
+    color: #1c1c1c; /* Default button color */
+    
+  }
+  .topnav .btn.active {
+    color: white; /* Active button text color */
+   
+    
+  }
+  .topnav .editor-button{
+    color: white;
+  }
+</style>
+  <div class="row topnav pt-2 pb-2">
+    <div class="col-md-8 btn-group" role="group" aria-label="Button group with three buttons">
+        <a href="{% url 'lessons:lesson_detail' 1 %}" class="btn {% if request.path == '/lessons/lessons/1/' %}active{% endif %}">Lectures</a>
+        <a href="{% url 'modules:exercise_list' %}" class="btn {% if request.path == '/modules/exercise_list/' %}active{% endif %}">Exercises</a>
+        <a href="" class="btn {% if request.path == '/tutor/' %}active{% endif %}">Talk to your tutor</a>
     </div>
-
     <div class="col-md-4 d-flex justify-content-end">
-      <button class="btn editor-button"> Try the editor</button>
+        <a href="" class="btn editor-button">Try the editor</a>
     </div>
-  </div>
+</div>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script>

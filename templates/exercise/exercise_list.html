@@ -22,12 +22,12 @@
             color: white;
         }
 </style>
-<div class="row pt-5 exercise-list mr-5 ">
+<div class="row pt-5 exercise-list ">
     <div class="col-md-6">
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Module 1: JavaScript Basics</h5>
-                <a href="{% url 'module_exercise' %}"  class="btn exercise-list-button  ps-3 pe-3 ">Start Exercise</a>
+                <a href="{% url 'modules:module_exercise' module_id=module.pk %}""  class="btn exercise-list-button  ps-3 pe-3 ">Start Exercise</a>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Module 2: JavaScript Operators</h5>
-                <a href="{% url 'module_exercise' %}"  class="btn exercise-list-button">Start Exercise</a>
+                <a href="{% url 'module_exercise' module_id=module.pk %}"  class="btn exercise-list-button">Start Exercise</a>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">Module 4: JavaScript Control Flows</h5>
-                <a href="{% url 'module_exercise' %}"  class="btn exercise-list-button">Start Exercise</a>
+                <a href="{% url 'module_exercise' module_id=module.pk %}"  class="btn exercise-list-button">Start Exercise</a>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <h5 class="card-title">JavaScript Functions</h5>
-                <a href="{% url 'module_exercise' %}"  class="btn exercise-list-button">Start Exercise</a>
+                <a href="{% url 'module_exercise' module_id=module.pk %}"  class="btn exercise-list-button">Start Exercise</a>
             </div>
         </div>
     </div>

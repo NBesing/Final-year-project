@@ -8,7 +8,29 @@
 {% block title %}{{ lesson.title }} - Lesson Detail{% endblock %}
 
 {% block content %}
-<div class="row m-5">
+<style>
+    .bottom-buttom-row{
+        border-top: 1px solid #D7D7D7;
+    }
+</style>
+
+<div class="row d-flex justify-content-end">
+    {% if previous_lesson_id %}
+        <a href="{% url 'lessons:lesson_detail' previous_lesson_id %}" class="btn ">
+            <i class="fas fa-angle-left"></i> Previous 
+        </a>
+    {% endif %}
+    
+    {% if next_lesson_id %}
+        <a href="{% url 'lessons:lesson_detail' next_lesson_id %}" class="btn ">
+            Next <i class="fas fa-angle-right"></i>
+        </a>
+    {% endif %}          
+       
+</div>
+
+
+<div class="row ">
     <h1>{{ lesson.title }}</h1>
     <p>{{ lesson.description }}</p>
 
@@ -21,5 +43,32 @@
     {% endif %}
     
     {% endfor %}
+</div>
+   
+
+<div class="col-12 d-flex justify-content-between bottom-button-row mt-5 mb-5 pt-3" >
+    <div class="row">
+        <button type="button" class="btn btn-outline-primary btn-mark-read">
+            Mark as Read<i class="fas fa-check"></i><i class="fas fa-check"></i> 
+        </button>
+    </div>
+    
+    <div class="row d-flex justify-content-end">
+        {% if previous_lesson_id %}
+            <a href="{% url 'lessons:lesson_detail' previous_lesson_id %}" class="btn ">
+                <i class="fas fa-angle-left"></i> Previous 
+            </a>
+        {% endif %}
+        
+        {% if next_lesson_id %}
+            <a href="{% url 'lessons:lesson_detail' next_lesson_id %}" class="btn ">
+                Next <i class="fas fa-angle-right"></i>
+            </a>
+        {% endif %}
+                
+            
+    </div>
+</div>
+   
 </div>
 {% endblock %}

@@ -895,64 +895,674 @@
    }
 },
 
+ {
+    "model": "lessons.lesson",
+    "pk": 14,
+    "fields": {
+        "module_id": 1,
+        "title": "JS Reserved Keywords",
+        "description": "The reserved keywords in JavaScript are predefined keywords used to serve the built-in functionality of the programming language. For example, the var and let keywords are used to define variables, the function keyword is used to define the functions, etc. JavaScript contains more than fifty reserved keywords.\n\nIn simple terms, you can't use the reserved keywords as an identifier. If you do, you will get the conflicts, and the code will generate the wrong output or throw an error.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Introduction to Reserved Keywords",
+                    "notes": "Reserved keywords are words that cannot be used as identifiers (e.g., variables, functions, or labels).",
+                    "code": ""
+                },
+                {
+                    "topic": "List of Reserved Keywords",
+                    "notes": "A list of reserved keywords in JavaScript.",
+                    "code": "abstract, arguments, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, eval, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in, instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, volatile, while, with, yield"
+                },
+                {
+                    "topic": "Using Keywords as Identifiers",
+                    "notes": "Keywords cannot be used as identifiers in JavaScript.",
+                    "code": "let for = 5; // This will cause an error"
+                },
+                {
+                    "topic": "Future Reserved Keywords",
+                    "notes": "Some keywords are reserved for future use.",
+                    "code": ""
+                },
+                {
+                    "topic": "Strict Mode and Reserved Keywords",
+                    "notes": "In strict mode, using certain keywords will cause an error.",
+                    "code": ""
+                },
+                {
+                    "topic": "Best Practices for Reserved Keywords",
+                    "notes": "Best practices for avoiding reserved keywords.",
+                    "code": ""
+                },
+                {
+                    "topic": "Common Mistakes with Keywords",
+                    "notes": "Common mistakes made when using keywords.",
+                    "code": ""
+                },
+                {
+                    "topic": "Reserved Keywords in Other Languages",
+                    "notes": "Comparison of reserved keywords in JavaScript and other programming languages.",
+                    "code": ""
+                },
+                {
+                    "topic": "Examples of Reserved Keywords",
+                    "notes": "Examples of using reserved keywords in JavaScript.",
+                    "code": "let newVariable = 10; // new is a reserved keyword, so we use newVariable"
+                },
+                {
+                    "topic": "Avoiding Reserved Keywords",
+                    "notes": "How to avoid using reserved keywords in your code.",
+                    "code": ""
+                }
+            ]
+        }
+    }
+},
 {
    "model": "lessons.lesson",
-   "pk": 14,
+   "pk": 15,
    "fields": {
-       "module_id": 1,
-       "title": "JS Reserved Keywords",
-       "description": "The reserved keywords in JavaScript are predefined keywords used to serve the built-in functionality of the programming language. For example, the var and let keywords are used to define variables, the function keyword is used to define the functions, etc. JavaScript contains more than fifty reserved keywords.\n\nIn simple terms, you can't use the reserved keywords as an identifier. If you do, you will get the conflicts, and the code will generate the wrong output or throw an error.",
+       "module_id": 2,
+       "title": "JS Operators",
+       "description": "Learn about the different operators in JavaScript.",
        "content": {
            "subtopics": [
                {
-                   "topic": "Introduction to Reserved Keywords",
-                   "notes": "Reserved keywords are words that cannot be used as identifiers (e.g., variables, functions, or labels).",
+                   "topic": "Introduction to Arithmetic Operators",
+                   "notes": "Arithmetic operators are used to perform mathematical operations.",
                    "code": ""
                },
                {
-                   "topic": "List of Reserved Keywords",
-                   "notes": "A list of reserved keywords in JavaScript.",
-                   "code": "abstract, arguments, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, eval, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in, instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, void, volatile, while, with, yield"
+                   "topic": "Addition Operator",
+                   "notes": "The addition operator (+) adds numbers.",
+                   "code": "let sum = 5 + 10;"
                },
                {
-                   "topic": "Using Keywords as Identifiers",
-                   "notes": "Keywords cannot be used as identifiers in JavaScript.",
-                   "code": "let for = 5; // This will cause an error"
+                   "topic": "Subtraction Operator",
+                   "notes": "The subtraction operator (-) subtracts numbers.",
+                   "code": "let difference = 10 - 5;"
                },
                {
-                   "topic": "Future Reserved Keywords",
-                   "notes": "Some keywords are reserved for future use.",
+                   "topic": "Multiplication Operator",
+                   "notes": "The multiplication operator (*) multiplies numbers.",
+                   "code": "let product = 5 * 10;"
+               },
+               {
+                   "topic": "Division Operator",
+                   "notes": "The division operator (/) divides numbers.",
+                   "code": "let quotient = 10 / 5;"
+               },
+               {
+                   "topic": "Modulus Operator",
+                   "notes": "The modulus operator (%) returns the division remainder.",
+                   "code": "let remainder = 10 % 3;"
+               },
+               {
+                   "topic": "Increment Operator",
+                   "notes": "The increment operator (++) increases a number by one.",
+                   "code": "let x = 5; x++;"
+               },
+               {
+                   "topic": "Decrement Operator",
+                   "notes": "The decrement operator (--) decreases a number by one.",
+                   "code": "let x = 5; x--;"
+               },
+               {
+                   "topic": "Unary Negation Operator",
+                   "notes": "The unary negation operator (-) negates a number.",
+                   "code": "let x = -5;"
+               },
+               {
+                   "topic": "Unary Plus Operator",
+                   "notes": "The unary plus operator (+) attempts to convert the operand to a number.",
+                   "code": "let x = +'5';"
+               }
+           ]
+       }
+   }
+},
+{
+   "model": "lessons.lesson",
+   "pk": 16,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Arithmetic Operators",
+       "description": "Learn about the different arithmetic operators in JavaScript.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Introduction to Operators",
+                   "notes": "In JavaScript, an operator is a symbol that performs an operation on one or more operands, such as variables or values, and returns a result. Let us take a simple expression 4 + 5 is equal to 9. Here 4 and 5 are called operands, and ‘+’ is called the operator.\n\nJavaScript supports the following types of operators.\n\n- Arithmetic Operators\n- Comparison Operators\n- Logical (or Relational) Operators\n- Bitwise Operators\n- Assignment Operators\n- Miscellaneous Operators\n\nLets have a look on all operators one by one.",
                    "code": ""
                },
                {
-                   "topic": "Strict Mode and Reserved Keywords",
-                   "notes": "In strict mode, using certain keywords will cause an error.",
+                   "topic": "JavaScript Arithmetic Operators",
+                   "notes": "The JavaScript arithmetic operators are used to perform mathematical calculations such as addition, multiplication, subtraction, division, etc. on numbers. JavaScript supports the following arithmetic operators −\n\nAssume variable x holds 10 and variable y holds 20, then −\n\n| Operator  | Description                              | Example       |\n| --------- | ---------------------------------------- | ------------- |\n| + (Addition) | Adds two operands.                      | x + y will give 30. |\n| - (Subtraction) | Subtracts the second operand from the first. | x - y will give -10. |\n| * (Multiplication) | Multiplies both operands.                 | x * y will give 200. |\n| / (Division) | Divides the numerator by the denominator. | y / x will give 2. |\n| % (Modulus) | Outputs the remainder of an integer division. | y % x will give 0 |\n| ++ (Increment) | Increases an integer value by one.        | x++ will give 11. |\n| -- (Decrement) | Decreases an integer value by one.        | x-- will give 9. |",
                    "code": ""
                },
                {
-                   "topic": "Best Practices for Reserved Keywords",
-                   "notes": "Best practices for avoiding reserved keywords.",
+                   "topic": "JavaScript Comparison Operators",
+                   "notes": "The JavaScript comparison operators compare two values and returns a boolean result (true or false). JavaScript supports the following comparison operators −\n\nAssume variable x holds 10 and variable y holds 20, then −\n\n| Operator  | Description                                            | Example        |\n| --------- | ------------------------------------------------------ | -------------- |\n| == (Equal) | Checks if the value of two operands is equal or not. If yes, then the condition becomes true. | (x == y) is not true. |\n| != (Not Equal) | Checks if the value of two operands is equal or not. If the values are not equal, then the condition becomes true. | (x != y) is true. |\n| === (Strict equality) | It checks whether the value and data type of the variable is equal or not. If yes, then the condition becomes true. | (x === y) is not true. |\n| !== (Strict inequality) | It checks whether the value and data type of the variable is equal or not. If the values are not equal, then the condition becomes true. | (x !== y) is true. |\n| > (Greater than) | Checks if the value of the left operand is greater than the value of the right operand. If yes, then the condition becomes true. | (x > y) is not true. |\n| < (Less than) | Checks if the value of the left operand is less than the value of the right operand. If yes, then the condition becomes true. | (x < y) is true. |\n| >= (Greater than or Equal to) | Checks if the value of the left operand is greater than or equal to the value of the right operand. If yes, then the condition becomes true. | (x >= y) is not true. |\n| <= (Less than or Equal to) | Checks if the value of the left operand is less than or equal to the value of the right operand. If yes, then the condition becomes true. | (x <= y) is true. |",
+                   "code": "let x = 3 + 5 * 2; // 13, not 16"
+               },
+               {
+                   "topic": "JavaScript Arithmetic Operators",
+                   "notes": "Arithmetic operators in JavaScript perform mathematical calculations on numeric values (operands). Most of the arithmetic operators are binary operators as they perform calculations on two operands. Some arithmetic operators are unary operators. The unary operators perform computation on a single operand.\n\nJavaScript supports many arithmetic operators such as addition, subtraction, multiplication, division operators, etc. It uses the common symbols for arithmetic operators such as \"+\" for addition, \"-\" for subtraction, \"*\" for multiplication, \"/ \" for division etc.\n\nThe operands can be literals, variables or the expression.",
+                   "code": "var z = 3 + 5;  // 3 and 5 are literal values.\nconst x = 3; y = 5;\nvar z = x + y ; // x and y are variables.\nvar z = 3 + 2*x  // expression"
+               },
+               {
+                   "topic": "",
+                   "notes": "In general, arithmetic operators are used to perform mathematical operations but they can be used for other operations as well. For example, the addition operator (+) can be used for string concatenation.\n\nHere, we have given a table containing the mathematical operators and explaining the functionality of each operator.\n\n| Operator  | Name        | Description                           |\n| --------- | ----------- | ------------------------------------- |\n| +         | Addition    | Adds two operands                     |\n| -         | Subtraction | Subtracts the second operand from the first |\n| *         | Multiplication | Multiply both operands                   |\n| /         | Division    | Divide the numerator by the denominator |\n| %         | Modulus     | Outputs the remainder of an integer division |\n| ++        | Increment   | Increases an integer value by one     |\n| --        | Decrement   | Decreases an integer value by one     |",
                    "code": ""
                },
                {
-                   "topic": "Common Mistakes with Keywords",
-                   "notes": "Common mistakes made when using keywords.",
+                   "topic": "JavaScript Addition (+) Operator",
+                   "notes": "The JavaScript addition (+) operator adds two numeric operands. It is denoted by the plus (+) symbol.",
+                   "code": "var x = 5, y = 10;\nvar sum = x + y;"
+               },
+               {
+                   "topic": "",
+                   "notes": "This operator can also be used to concatenate strings and/or numbers.",
+                   "code": "var z = '10' + 3  // returns 103\nvar z = '10' + '3'  // returns 103\n\n- If one operand is string, the addition operator converts the other operand to string and concatenate it with first operand.\n- If both the operands are string, it just concatenates the second operand to the first operand.\n- If both operands are numeric values, it will return the numeric value."
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the below example, we demonstrate adding two decimal numbers and concatenating the strings and numbers.",
+                   "code": "<html>\n<body>\n   <script>\n      const x = 3; y = 5;\n      var z = x + y ;\n      document.write(z +\"</br>\");\n      var z = '10' + 3 \n      document.write(z +\"</br>\");\n      var z = '10' + '3';\n      document.write(z +\"</br>\");\n   </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Subtraction (-) Operator",
+                   "notes": "JavaScript subtraction (-) operator subtracts the right operand from the left operand and produces their difference. It is denoted by the minus (-) symbol.\n\n| Example     | Result      |\n| ----------- | ----------- |\n| 20 - 10     | returns 10  |\n| '20' - 10   | returns 10  |\n| '20' - '10' | returns 10  |\n| '20ee' - 10 | returns NaN |\n| NaN - 10    | returns NaN |\n| Infinity - 10 | returns infinity |\n\n- The subtraction operator uses numeric operands but can also be used for non-numeric operands such as strings.\n- If both operands are numbers, then resultant is number.\n- If any or both operands are strings (containing only numbers), it first converts the strings to number and then performs subtraction operations.\n- If string contains non numeric value, it will return NaN.\n- If any operand is NaN or Infinity, the result will be NaN or Infinity respectively.",
                    "code": ""
                },
                {
-                   "topic": "Reserved Keywords in Other Languages",
-                   "notes": "Comparison of reserved keywords in JavaScript and other programming languages.",
+                   "topic": "Example",
+                   "notes": "In the below example, we demonstrate the subtraction two decimal numbers and of other datatypes.",
+                   "code": "<html>\n<body>\n   <script>\n      var x = 20, y = 10;\n      var z = x - y ;\n      document.write(z +\"</br>\");\n      var z = '20' - 10;\n      document.write(z +\"</br>\");\n      var z = '20' - '10';\n      document.write(z +\"</br>\");\n      var z = '20ee' - 10;\n      document.write(z +\"</br>\");\n      var z = NaN - 10;\n      document.write(z +\"</br>\");\n      var z = Infinity - 10;\n      document.write(z +\"</br>\");\n   </script>\n</body>\n</html>"
+               }
+           ]
+       }
+   }
+},
+
+
+{
+   "model": "lessons.lesson",
+   "pk": 17,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Comparison Operators",
+       "description": "The comparison operators in JavaScript compare two variables or values and return a boolean value, either true or false based on comparison result. For example, we can use the comparison operators to check whether two operands are equal or not.\n\nThe comparison operators are used in logical expressions. A logical expression is evaluated to either true or false.\n\nThe comparison operators are binary operators as they perform operations on two operands. The operands can be numerical, string, logical, or object values.\n\nThere are eight comparison operators in JavaScript to perform different types of comparison. Here, we have given a table explaining each comparison operator with the example.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "How comparison is done?",
+                   "notes": "If both operands are of same type, the comparison operators compare the values. However, if the operands are of different types, JavaScript performs appropriate type conversion for the comparison. This is known as type coercion.\n\nThe comparison is done by checking the numerical values of the operands if both the operands are numbers. The strings are compared based on lexicographical ordering, using Unicode values. The following type coercion is done when a string is compared with a number.\n\n- If the string contains only numeric value, it is converted to number type.\n\n- If the string contains non-numeric values as well, it will be converted to NaN.\n\n- If the string is empty, it is converted to zero.\n\nThe strict equality (===) and strict inequality (!==) operators perform strict comparison. These operators don't perform type conversion before performing the comparison operation.",
                    "code": ""
                },
                {
-                   "topic": "Examples of Reserved Keywords",
-                   "notes": "Examples of using reserved keywords in JavaScript.",
-                   "code": "let newVariable = 10; // new is a reserved keyword, so we use newVariable"
+                   "topic": "Dealing with falsy values",
+                   "notes": "There are some falsy values in JavaScript. JavaScript deals with these falsy values differently while performing the comparison. Followings are the falsy values −\n-  0 (zero)\n- false\n- '' or \"\" (Empty String)\n- null\n- undefined\n- NaN\n\nAll comparison operators (except === and !==) convert false and empty string to zero before performing the comparison.\n\nIn addition to the above, the less and greater than operators (<, <=, >, >=) convert null to zero and undefined to NaN.",
+                   "code": ""
                },
                {
-                   "topic": "Avoiding Reserved Keywords",
-                   "notes": "How to avoid using reserved keywords in your code.",
+                   "topic": "JavaScript Equality (==) Operator",
+                   "notes": "The 'equality' operator checks if the value of two operands is equal or not. It returns true if the operands are equal, otherwise it returns false. If the operands are of different types, it performs type conversion and then compares the operands.\n\nLet’s look at some examples of comparison with no type conversion. The both operands are of the same type.",
+                   "code": "const a = 10;\nconst b = 20;\na == 10; // true\na == b; // false\n\"Hello\" == \"Hello\"; // true"
+               },
+               {
+                   "topic": "",
+                   "notes": "Now let’s check some examples of comparison with type conversion. Here the operands are of different types.",
+                   "code": "5 == '5'; // true\n0 == false; // true\n0 == ''; // true\n\nIn the first example above, '5' is converted to 5 (string to number conversion). The false and empty string (' '), are converted to zero (0) before comparison."
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the equality operator in JavaScript −",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a == b);\n  document.getElementById(\"output\").innerHTML = \"(a == b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Inequality (!=) Operator",
+                   "notes": "The 'inequality' operator checks if the values of two operands are not equal. It returns true if the operands are not equal, otherwise it returns false. Same as the equality operator, type conversion is performed if the operands are not of the same type.\n\nIn the example below, two values of the same type are compared for inequality check. If the values are not equal, the inequality operator will return true.\n\n10 != 10; // false\n10 != 20; // true\n\"Hello\" != \"Hello\"; // false\n\nLet’s check for inequality when the operands are of different types\n\n10 != '10'; // false\n0 != false; // false\n\nHere in the first example, '10' is typecasted to 10. Here string is converted to number type. In the second example, false (Boolean value) is converted to zero (number).",
                    "code": ""
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the inequality operator in JavaScript.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a != b);\n  document.getElementById(\"output\").innerHTML = \"(a != b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Strict Equality (===) Operator",
+                   "notes": "The 'strict equality' operator checks whether the values and data types of the two operands are equal or not. It returns true if both operands are equal and of the same type.\n\nIn other words, it checks the equality of the operands without the type conversion. If the operands are of different types, it returns false without further checking the value.",
+                   "code": "10 === 10; // true\n10 === 20; // false\n\"Hello\" === \"Hello\"; // true\n10 === '10'; // false\n0 === false; // false"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the strict equality operator in JavaScript.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a === b);\n  document.getElementById(\"output\").innerHTML = \"(a === b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Strict Inequality (!==) Operator",
+                   "notes": "The 'strict inequality' operator checks whether the two operands are not equal in value or type. It returns true if the operands are of the same type but not equal or are of different types.\n\nSame as the strict equality operator, it also first checks the inequality of operands without type conversion. If the operands are of different types, it will return true without further checking the value.",
+                   "code": "10 !== 10; // returns false\n10 !== 20; // returns true\n\"Hello\" !== \"Hello\"; // returns false\n10 !== '10'; // returns true\n0 !== false; // returns true"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the strict inequality operator in JavaScript.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a !== b);\n  document.getElementById(\"output\").innerHTML = \"(a !== b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Greater Than (>) Operator",
+                   "notes": "The 'greater than' operator checks if the value of the left operand is greater than the value of the right operand. If yes, it returns true; otherwise, it returns false.",
+                   "code": "20 > 10; // true\n10 > 10; // false\n\"ab\" > \"aa\"; // true\n10 > '5'; // true"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the greater than operator in JavaScript −",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a > b);\n  document.getElementById(\"output\").innerHTML = \"(a > b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Greater Than or Equal (>=) Operator",
+                   "notes": "The 'greater than or equal' operator checks if the value of the left operand is greater than or equal to the value of the right operand. If yes, it returns true; otherwise, it returns false.",
+                   "code": "10 >= 5; // true\n5 >= 5; // true\n\"ab\" >= \"aa\"; // true\n10 >= '5'; // true"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "The following code shows how to use the greater than or equal to operator in JavaScript.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const a = 10;\n  const b = 20;\n  let result = (a >= b);\n  document.getElementById(\"output\").innerHTML = \"(a >= b) => \" + result;\n</script>\n<p> Set the variables to different values and then try...</p>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Less Than (<) Operator",
+                   "notes": "The 'less than' operator returns true if the value of the left operand is less than the value of the right operand; otherwise, it returns false.",
+                   "code": "10 < 20; // true\n5 < 5; // false\n\"ab\" < \"aa\"; // true\n10 < '5'; // false"
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 18,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Logical Operators",
+       "description": "The logical operators in JavaScript are generally used with Boolean operands and return a boolean value. There are mainly three types on logical operators in JavaScript - && (AND), || (OR), and ! (NOT). These operators are used to control the flow the program.\n\nAlthough the logical operators are typically used with Boolean values, they can be used with any type. For each non-boolean value, the operator converts to a boolean. The falsy values are converted to false and truthy values to true.\n\nThere are six falsy values in JavaScript: false, null, undefined, 0 (zero), '' (empty string), NaN. The value other than falsy values are treated as truthy values. So non zero numbers, non-empty strings, etc., are truthy values.\n\nThe && and || operators return the value of one of the operands based on condition. So if the operands are non-boolean, they return a non-boolean value. The ! operator always returns a Boolean value.\n\nThe operands may be literals, variables or expressions. These are first evaluated to boolean equivalent before performing the logical operation.\n\nIn the below table, we have given the logical operators with its description and example. Let’s assume: x = true, y = false.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "JavaScript Logical AND (&&) Operator",
+                   "notes": "The logical AND (&&) operator evaluates the operands from left to right. If the first operand can be converted to false, it will return the value of the first operand, otherwise it will return the value of the second operand.\n\nx && y\nIn the above expression if x is a falsy value then it will return the value of x otherwise it will return the value of y.\n\nThe above rule is followed for all types of operands, whether they are Boolean values, numbers or strings, etc.\n\nLet's first discuss with Boolean operands. In general, for a set of Boolean operands, it will return true if both operands are true else it returns false.\n\n- true && true; // returns true\n- true && false; // returns false\n- false && true; // returns false\n- false && false; // returns false\n\nFor number operands, the && operator will return the first operand if it is falsy values (0, -0, and 0n), otherwise second operand.\n\n- 0 && 10; // returns 0\n- 10 && 20; // returns 20 \n- 20 && 0; // returns 0\n\nFor string values, empty string is converted to false and non-empty string to true. Look at the below example.",
+                   "code": "let str1 = '';\nlet str2 = 'Hello';\nlet str3 = 'World';\nconsole.log(str1 && str2); // returns '' empty string\nconsole.log(str2 && str3); // returns World"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "Now let's look at an example of a logical expression.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const x = 3;\n  const y = -2;\n  document.getElementById(\"output\").innerHTML = x > 0 && y > 2;\n</script>\n</body>\n</html>\nHere x > 0 is evaluated to true and y > 2 is evaluated to false. And the final expression becomes true && false which is evaluated as false."
+               },
+               {
+                   "topic": "Logical OR Operator",
+                   "notes": "The logical OR operator (||) returns true if at least one operand is true.",
+                   "code": "let result = true || false; // true"
+               },
+               {
+                   "topic": "Multiple && Operators",
+                   "notes": "If we have multiple && operators in an expression, the && operator evaluates the expression from left to right and it converts each operand to a boolean value. If the result is false, then it returns the value of that operand and terminates the execution. If all the operands are truthy then it returns the value of the last operand.",
+                   "code": "10 && null && false; // returns null\ntrue && 10 && 20; // returns 20"
+               },
+               {
+                   "topic": "JavaScript Logical OR (||) Operator",
+                   "notes": "The logical OR (||) operator also evaluates the operands from left to right. If the first operand can be converted to true, it will return the value of the first operand, otherwise it will return the value of the second operand.\n\nx || y\nIn the above expression if x is a truthy value then it will return the value of x otherwise it will return the value of y.\n\nAs || is a logical operator but it can be applied to any type of operand not only boolean.\n\nLet's first discuss with Boolean operands. In general, for a set of Boolean operands, it will return false if both operands are false else it returns true.\n\n- true || true; // returns true\n- true || false; // returns true\n- false || true; // returns true\n- false || false; // returns false\n\nFor number operands, the || operator will return the first operand if it is truthy values (other than 0, -0, and 0n), otherwise second operand.\n\n- 0 || 10; // returns 10\n- 10 || 20; // returns 10\n- 20 || 0; // returns 20\n\nFor string values, empty string is converted to false and non-empty string to true. Look at the below example.",
+                   "code": "let result = (true && false) || true; // true"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  let str1 = '';\n  let str2 = 'Hello';\n  let str3 = 'World';\n  document.getElementById(\"output\").innerHTML = str1 || str2 + '<br>' + str2 || str3;\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "Now let's look at an example with expression −",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  const x = 3;\n  const y = -2;\n  document.getElementById(\"output\").innerHTML = x > 0 || y > 2;\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Multiple || Operators",
+                   "notes": "We may have multiple || operators in an expression. The || operator evaluates the expression from left to right and it converts each operand to a boolean value. If the result is true, then it returns the value of that operand and terminates the execution. If all the operands are falsy then it returns the value of the last operand.",
+                   "code": "null || 10 || false // returns 10\nfalse || null || undefined // returns undefined"
+               },
+               {
+                   "topic": "JavaScript Logical NOT (!) Operator",
+                   "notes": "",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  document.getElementById(\"output\").innerHTML = !true + '<br>' + !false + '<br>' + !0 + '<br>' + !20 + '<br>' + !('Hello World');\n</script>\n</body>\n</html>\n\nlet x = false; x ||= true; // x is true"
+               },
+               {
+                   "topic": "Logical Operators Precedence",
+                   "notes": "An expression may have more than one logical operator in JavaScript. In such situations, the operators are evaluated on the basis of their precedence. The NOT (!) operator has the highest precedence. Then AND (&&) operator has the higher precedence than OR (||) operator.\n\n- Logical NOT (!)\n- Logical AND (&&)\n- Logical OR (||)",
+                   "code": ""
+               },
+               {
+                   "topic": "Example",
+                   "notes": "",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n  document.getElementById(\"output\").innerHTML = (false || true && !false); // returns true\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Short Circuit Evaluation",
+                   "notes": "Logical expressions are evaluated from left to right. These are tested for short-circuit evaluation. Following is the rule of short circuit evaluation −\n\n- false && any_value returns false\n- true || any_value returns true\n\nThe any_value part is not evaluated so it doesn't have any effect on final result.",
+                   "code": ""
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 19,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Bitwise Operators",
+       "description": "The bitwise operators in JavaScript perform operations on the integer values at the binary level. They are used to manipulate each bit of the integer values. Bitwise operators are similar to logical operators but they work on individual bits.\n\nJavaScript bitwise operators works on 32-bits operands. In JavaScript, numbers are stored as 64-bit floating point number. JavaScript converts the numbers to 32-bit signed integer before performing the operation. After bitwise operation, it converts the result to 64-bits number.\n\nThere are seven bitwise operators in JavaScript. Following is the list of bitwise operators with description.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Introduction to Bitwise Operators",
+                   "notes": "Bitwise operators perform operations on binary representations of numbers.",
+                   "code": ""
+               },
+               {
+                   "topic": "Bitwise AND Operator",
+                   "notes": "The bitwise AND operator (&) returns a 1 in each bit position for which the corresponding bits of both operands are 1.",
+                   "code": "let result = 5 & 1; // 1"
+               },
+               {
+                   "topic": "Bitwise OR Operator",
+                   "notes": "The bitwise OR operator (|) returns a 1 in each bit position for which the corresponding bits of either or both operands are 1.",
+                   "code": "let result = 5 | 1; // 5"
+               },
+               {
+                   "topic": "Bitwise XOR Operator",
+                   "notes": "The bitwise XOR operator (^) returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1.",
+                   "code": "let result = 5 ^ 1; // 4"
+               },
+               {
+                   "topic": "Bitwise NOT Operator",
+                   "notes": "The bitwise NOT operator (~) inverts the bits of its operand.",
+                   "code": "let result = ~5; // -6"
+               },
+               {
+                   "topic": "Bitwise Left Shift Operator",
+                   "notes": "The bitwise left shift operator (<<) shifts the bits of its first operand to the left by the number of positions specified by the second operand.",
+                   "code": "let result = 5 << 1; // 10"
+               },
+               {
+                   "topic": "Bitwise Right Shift Operator",
+                   "notes": "The bitwise right shift operator (>>) shifts the bits of its first operand to the right by the number of positions specified by the second operand.",
+                   "code": "let result = 5 >> 1; // 2"
+               },
+               {
+                   "topic": "Bitwise Zero-Fill Right Shift Operator",
+                   "notes": "The bitwise zero-fill right shift operator (>>>) shifts the bits of its first operand to the right by the number of positions specified by the second operand, filling in zeros from the left.",
+                   "code": "let result = 5 >>> 1; // 2"
+               },
+               {
+                   "topic": "Using Bitwise Operators",
+                   "notes": "How to use bitwise operators in JavaScript.",
+                   "code": "let x = 5; let y = 1; let result = x & y;"
+               },
+               {
+                   "topic": "Bitwise Operator Applications",
+                   "notes": "Common applications of bitwise operators.",
+                   "code": ""
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 20,
+   "fields": {
+       "module_id": 2,
+       "title": "Assignment Operators in JavaScript",
+       "description": "Learn about assignment operators in JavaScript.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Arithmetic Assignment Operators",
+                   "notes": "In this section, we will cover simple assignment and arithmetic assignment operators. An arithmetic assignment operator performs arithmetic operation and assigns the result to a variable. Following is the list of operators with example −",
+                   "code": ""
+               },
+               {
+                   "topic": "Simple Assignment (=) Operator",
+                   "notes": "A simple assignment (=) operator assigns a value to a variable. We can assign a single value to multiple variables. This is known as assignment chaining.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 5;\n    let y = x + 10; \n    document.getElementById(\"output\").innerHTML = \n    \"Value of x : \" + x + \"<br>\" +\n    \"Value of y : \" + y;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Addition Assignment (+=) Operator",
+                   "notes": "The JavaScript addition assignment operator performs addition on the two operands and assigns the result to the left operand. Here addition may be numeric addition or string concatenation.\n\nx += b;\nIn the above statement, it adds values of b and x and assigns the result to x.",
+                   "code": ""
+               },
+               {
+                   "topic": "Example: Numeric Addition Assignment",
+                   "notes": "",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 5;\n    x += 7;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Example: String Concatenation Assignment",
+                   "notes": "",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x =\"Hello\";\n    x += \" World\";\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Multiplication Assignment (*=) Operator",
+                   "notes": "The multiplication assignment operator in JavaScript multiplies both operands and assigns the result to the left operand.\n\nlet x *= b;\nIn the above statement, it multiplies x and b and assigns the result to x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 10;\n    x *= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Division Assignment (/=) Operator",
+                   "notes": "This operator divides left operand by the right operand and assigns the result to left operand.\n\nlet x /= b;\nIn the above statement, it divides x by b and assigns the result (quotient) to x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 10;\n    x /= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Remainder Assignment (%=) Operator",
+                   "notes": "The JavaScript remainder assignment operator performs the remainder operation on the operands and assigns the result to left operand.\n\nlet x %= b;\nIn the above statement, it divides x by b and assigns the result (remainder) to x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 12;\n    x %= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Exponentiation Assignment (**=) Operator",
+                   "notes": "This operator performs exponentiation operation on the operands and assigns the result to left operand.\n\nlet x **= b;\nIn the above statement, it computes x**b and assigns the result to x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 5;\n    x **= 3;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Bitwise Assignment Operators",
+                   "notes": "A bitwise assignment operator performs bitwise operation on the operands and assigns the result to a variable. These operations perform two operations, first a bitwise operation and second the simple assignment operation. Bitwise operation is done on bit-level. A bitwise operator treats both operands as 32-bit signed integers and performs the operation on corresponding bits of the operands. The simple assignment operator assigns the result to the variable (left operand).\n\nFollowing is the list of operators with example",
+                   "code": ""
+               },
+               {
+                   "topic": "Bitwise AND Assignment Operator",
+                   "notes": "The JavaScript bitwise AND assignment (&=) operator performs bitwise AND operation on the operands and assigns the result to the left operand (variable).\n\nlet x &= b;\nIn the above statement, it performs bitwise AND on x and b and assigns the result to the variable x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 7;\n    x &= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Bitwise OR Assignment Operator",
+                   "notes": "The JavaScript bitwise OR assignment (|=) operator performs bitwise OR operation on the operands and assigns the result to the left operand (variable).\n\nlet x |= b;\nIn the above statement, it performs bitwise OR on x and b and assigns the result to the variable x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 7;\n    x |= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Bitwise XOR Assignment Operator",
+                   "notes": "The JavaScript bitwise XOR assignment (^=) operator performs bitwise XOR operation on the operands and assigns the result to the left operand (variable).\n\nlet x ^= b;\nIn the above statement, it performs bitwise XOR on x and b and assigns the result to the variable x.",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    let x = 7;\n    x ^= 5;\n    document.getElementById(\"output\").innerHTML = \"Value of x : \" + x;\n  </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "JavaScript Logical Assignment Operators",
+                   "notes": "In JavaScript, a logical assignment operator performs a logical operation on the operands and assigns the result to a variable (left operand). Each logical assignment operator is a combination of two operators: the first is a logical operator and the second is a simple assignment operator.\n\nFollowing is the list of the logical assignment operators with example",
+                   "code": "<html>\n<body>\n  <div id=\"output\"></div>\n  <script>\n    var a = 5;\n    var b = 10;\n    var result = (a &&= b);\n    document.getElementById(\"output\").innerHTML = \n    \"Value of (a &&= b) => \" + result + \"<br/>\";\n    result = (a ||= b);\n    document.getElementById(\"output\").innerHTML +=\n    \"Value of (a ||= b) => \" + result;\n  </script>\n</body>\n</html>"
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 21,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Conditional Operators",
+       "description": "The conditional operator in JavaScript first evaluates an expression for a true or false value and then executes one of the two given statements depending upon the result of the evaluation. The conditional operator is also known as the ternary operator.\n\nThe JavaScript conditional (ternary) operator is the only operator that takes three operands – a condition followed by a question mark (?), then the first expression to be executed if the condition is truthy followed by a colon (:), and finally the second expression to be executed if the condition is falsy.\n\nThere are six falsy values in JavaScript. These are − 0 (zero), false, empty string ('' or \"\"), null, undefined, and NaN. All other values are treated as truthy in JavaScript.\n\nSyntax\n\nFollowing is the syntax of conditional (ternary) operator in JavaScript −\n\nvar variable = condition ? exp1 : exp2;\n\nParameters\n\nHere, we have explained the parameters in the above statement.\n\n- condition − It is a conditional statement.\n- exp1 − If the conditional statement evaluates truthy, control flow executes the exp1 expression.\n- exp2 − If the conditional statement evaluates falsy, control flow executes the exp2 expression.\n\nIf the value of the condition is any falsy value, the result of the expression will be the value of exp2; otherwise, it will be the value of exp1.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we compare the value of the num1 and num2 variables in the conditional statement. Here, the conditional statement evaluates true, so the result variable contains the value of the first expression.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n   var num1 = 90;\n   var num2 = 67;\n   var res = num1 > num2 ? \"num1 is greater than num2\" : \"num2 is greater than num1\";\n   document.getElementById(\"output\").innerHTML = res;\n</script>\n</body>\n</html>\n\nIt will produce the following result −\n\nnum1 is greater than num2"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we assign the value to the object property according to the conditional statement’s result.\n\nNow, imagine what if you need to write the if-else statement to assign value to each property conditionally. The code will become complex, but with the ternary operator, you can easily do it with a single line of code.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n   const year = 2004;\n   const obj = {\n      name: \"John\",\n      age: year < 2005 ? \"adult\" : \"minor\",\n      city: \"New York\"\n   };\n\n   document.getElementById(\"output\").innerHTML = obj.name + \" is \" + obj.age + \" and lives in \" + obj.city;\n</script>\n</body>\n</html>\n\nIt will produce the following result −\n\nJohn is adult and lives in New York"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "This example demonstrates that you can also use the expression instead of values. According to the conditional statement, control flow evaluates the first or second expression and assigns the resultant value to the 'result' variable.",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n   let operator = '-';\n   let res = operator == '+' ? 10 + 20 : 10 - 20;\n   document.getElementById(\"output\").innerHTML = \"The result is: \" + res;\n</script>\n</body>\n</html>\n\nIt will produce the following result −\n\nThe result is: -10"
+               },
+               {
+                   "topic": "Handling null values",
+                   "notes": "We can use the JavaScript conational operator to handle null value to set a default value if the user passes a null value.",
+                   "code": ""
+               },
+               {
+                   "topic": "Example",
+                   "notes": "",
+                   "code": "<html>\n<body>\n<div id=\"output\"></div>\n<script>\n   const greet = (user) => {\n      const name = user ? user.name : \"stranger\";\n      return `Hello, ${name}`;\n   };\n   document.getElementById(\"output\").innerHTML = greet({ name: \"John\" }) + \"<br>\" + greet(null);\n</script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "",
+                   "notes": "It will produce the following result −\n\nHello, John\nHello, stranger",
+                   "code": ""
+               }
+           ]
+       }
+   }
+},
+
+{
+   "model": "lessons.lesson",
+   "pk": 22,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Typeof Operator",
+       "description": "The typeof operator in JavaScript is a unary operator used to get the data type of a particular variable. It is placed before its single operand, which can be of any type. It returns a string value indicating the data type of its operand. JavaScript contains primitive and non-primitive data types.\n\nThere are seven primitive or basic data types in JavaScript – number, string, boolean, undefined, null, symbol, and bigint. There is also a composite data type called object. The object data type contains three sub data types – Object, Array, and Date.\n\nSyntax\nFollowing is the syntax of the typeof operator −\n\ntypeof (operand);\n\nWe can write the operand without parentheses as follows −\n\ntypeof operand;\n\nParameter\noperand − It can be a value, variable, or expression representing the object or primitive. In JavaScript, primitives are data that are not objects and have no methods or properties.\n\nReturn Value\nIt returns the string value representing the data type of the operand.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Datatypes Returned by typeof Operator",
+                   "notes": "There are seven primitive data types in JavaScript – number, string, boolean, bigint, undefined, null, and symbol. The typeof operator is useful to identify these primitive or basic data types.\n\nThe typeof operator returns the same data type for all primitive values except null. It returns 'object' for null values.\n\nFor objects, dates, and arrays, it returns 'object' as the data type.\n\nFor functions and classes, it returns 'function' as the data type.\n\nLet's use the typeof operator to identify these data types one by one.",
+                   "code": "typeof 10; // returns 'number'\ntypeof 'Hello World'; // returns 'string'\ntypeof true; // returns 'boolean'\ntypeof {name: 'Tutorialspoint'}; // returns 'object'\ntypeof function foo(){}; // returns 'function'\ntypeof undefined; // returns 'undefined'\ntypeof null; // returns 'object'\ntypeof Symbol(); // returns 'symbol'\ntypeof 10n; // returns 'bigint'"
+               },
+               {
+                   "topic": "JavaScript typeof Operator to Check Number Type",
+                   "notes": "In JavaScript, the number type represents numeric values. JavaScript uses a floating-point representation for all numbers. The JavaScript typeof operator returns 'number' for all types of numbers such as integers, floating points, zero, Infinity, NaN, etc.",
+                   "code": "typeof 10; // returns 'number'\ntypeof -10; // returns 'number'\ntypeof 0; // returns 'number'\ntypeof 10.20; // returns 'number'\ntypeof Math.LN10; // returns 'number'\ntypeof Infinity; // returns 'number'\ntypeof NaN; // returns 'number'\ntypeof Number('1'); // returns 'number'\ntypeof Number('hello'); // returns 'number'"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "",
+                   "code": "<html>\n<body>\n   <p>Using typeof operator to check number data type</p>\n   <div id=\"output\"></div>\n   <script>\n      let num = 42;\n      document.getElementById(\"output\").innerHTML = typeof num;\n   </script>\n   <p>Set the variable to a different value and then try...</p>\n</body>\n</html>\nOutput\nUsing typeof operator to check number data type\nnumber\nSet the variable to a different value and then try..."
+               },
+               {
+                   "topic": "JavaScript typeof Operator to Check String Type",
+                   "notes": "Strings represent sequences of characters. The typeof operator helps identify string variables. The JavaScript typeof operator returns 'string' for all types of strings, such as empty string, string of characters, string words, multiline string, etc.",
+                   "code": "typeof '10'; // returns 'string'\ntypeof ''; // returns 'string'\ntypeof 'Hello World'; // returns 'string'\ntypeof String(10); // returns 'string'\ntypeof typeof 2; // returns 'string'"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we use the typeof operator to check the string data type.",
+                   "code": "<html>\n<body>\n   <div id=\"output\"></div>\n   <script>\n      let str = 'Hello World';\n      document.getElementById(\"output\").innerHTML = typeof str;\n   </script>\n   <p>Set the variable</p>\n"
+
+               },
+               {
+                   "topic": "JavaScript typeof Operator to Check Function Type",
+                   "notes": "Functions are first-class citizens in JavaScript. The JavaScript typeof operator returns 'function' for all types of functions. Interestingly, it returns 'function' for classes also.",
+                   "code": "const myFunc = function() { return 'Hello world'; };\ntypeof myFunc; // returns 'function'\nconst func = new Function();\ntypeof func; // returns 'function'\nclass myClass { constructor() { } }\ntypeof myClass; // returns 'function'"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "In the example below, we use the typeof operator to check the function data type.",
+                   "code": "<html>\n<body>\n   <div id=\"output\"></div>\n   <script>\n      const myFunc = function() { return 'Hello world'; };\n      document.getElementById(\"output\").innerHTML = typeof myFunc;\n   </script>\n   <p>Set the variable to a different value and then try...</p>\n</body>\n</html>\nOutput\nfunction\nSet the variable to a different value and then try..."
+               },
+               {
+                   "topic": "JavaScript typeof Operator to Check BigInt Type",
+                   "notes": "The typeof operator returns 'bigint' for BigInt numbers. BigInt values are numeric values that are too big to be represented by the number primitive.\n\ntypeof 100n; // returns 'bigint'",
+                   "code": ""
+               },
+               {
+                   "topic": "JavaScript typeof Operator in Real-Time Development",
+                   "notes": "For example, the developer gets the data from an API. If there is only a single string, the API returns the string response, and for multiple strings, the API returns an array of strings. In this scenario, developers need to check whether the type of the response is a string or an array, and if it is an array, they need to traverse each string of the array.",
+                   "code": "let type = typeof 42; // returns 'number'"
+               }
+           ]
+       }
+   }
+},
+{
+   "model": "lessons.lesson",
+   "pk": 23,
+   "fields": {
+       "module_id": 2,
+       "title": "JS Operator Precedence",
+       "description": "In JavaScript, operator precedence ensures the priority of the operators to be executed when a single expression contains multiple operators. So, whatever expressions have higher priority, the compiler executes it first over other operators and then executes the operators with the lower precedence.\n\nWhenever you write any JavaScript expression with only 1 or 2 operators, you can easily understand the output of the expression. But when the expression contains multiple operators, you should know the concept of operator precedence to evaluate the expression correctly.\n\nThe best example of operator precedence is that in traditional mathematics, the multiplication operator has higher precedence over the addition or subtraction operator. So, if any mathematical expression contains the multiplication and addition of both operators, you need to perform the multiplication first.",
+       "content": {
+           "subtopics": [
+               {
+                   "topic": "Associativity",
+                   "notes": "The term associativity refers to the direction compiler should follow while evaluating the expression. In many situations, operators have the same precedence. In such cases, ambiguity occurs that which operation the compiler should perform first. So, the compiler takes the help of associativity. It can be from left to right or right to left.\n\nFor example, we need to execute the below expression.\n\nlet res = 50/5*2;\nConsidering the above expression as (50/5) * 2 gives 20 as an output.\n\nEvaluating the expression like 50/ (5*2) gives the 5 as a resultant value.\n\nTo resolve the above ambiguity, the compiler uses the associativity rule. The associativity for the division and multiplication operator is from left to right. So, it evaluates the expression as (50 / 5) * 2.\n\nThe assignment operator has right-to-left associativity. Consider the below assignment expression.\n\nP = q = 90;\nIn the above expression, 90 is assigned to the q, and the value of the q variable is assigned to the p.\n\nIn short, the JavaScript compiler evaluates the expression based on the operator precedence, and when multiple operators have the same precedence, it uses the associativity rule.",
+                   "code": ""
+               },
+               {
+                   "topic": "Examples",
+                   "notes": "In the example below, the first expression contains the division, modulo, and multiplication operators with the same precedence. So, the compiler will use the associativity rule, which is left to right for multiplication, division, and modulo operator.\n\nSo, it divides the 30 by 15, takes modulo of (30/15) with 3, and multiples the ((30/15)%3) with 2.\n\nIn the second expression, the exponentiation operator has right-to-left associativity. So, it evaluates the expression same as (2 *8 (3 ** 2)).",
+                   "code": "<html>\n<body>\n   <div id=\"output\"></div>\n   <script>\n      const first = 30 / 15 % 3 * 2;\n      const second = 2 ** 3 ** 2;\n      document.getElementById(\"output\").innerHTML =\n         \"The value of first expression is : \" + first + \"<br>\" + \n         \"The value of second expression is : \" + second;\n   </script>\n</body>\n</html>\nOutput\nIt will produce the following result −\n\nThe value of first expression is : 4\nThe value of second expression is : 512"
+               },
+               {
+                   "topic": "Example",
+                   "notes": "This code demonstrates that you can use the grouping operator () to change the operator precedence. In the below code, we have taken the same expressions which we have taken in the above code, but we change the operator precedence.\n\nIn the first expression, first, we take modulo and multiply the resultant value with 2. So, we get 0 and divide 30 by 0, returning infinity.\n\nIn the second expression, the first expression evaluates the (2 ** 3) and (8 ** 2), which is equal to 64.",
+                   "code": "<html>\n<body>\n   <div id=\"output\"></div>\n   <script>\n      const first = 30 / ((15 % 3) * 2);\n      const second = (2 ** 3) ** 2;\n      document.getElementById(\"output\").innerHTML =\n         \"The value of first expression is : \" + first + \"<br>\" + \n         \"The value of second expression is : \" + second;\n   </script>\n</body>\n</html>"
+               },
+               {
+                   "topic": "Parentheses and Precedence",
+                   "notes": "Parentheses can be used to change the order of evaluation.",
+                   "code": "let result = (3 + 5) * 2; // 16"
+               },
+               {
+                   "topic": "Using Operator Precedence",
+                   "notes": "How to use operator precedence in JavaScript.",
+                   "code": "let result = 10 - 2 / 2; // 9"
+               },
+               {
+                   "topic": "Examples of Operator Precedence",
+                   "notes": "Examples of using operator precedence in JavaScript.",
+                   "code": "let result = 3 + 4 * 2 / (1 - 5); // 1"
+               },
+               {
+                   "topic": "Common Mistakes with Operator Precedence",
+                   "notes": "Common mistakes made when using operator precedence.",
+                   "code": "let result = 10 - 2 * 2; // 6, not 16"
+               },
+               {
+                   "topic": "Operator Precedence Table",
+                   "notes": "A table of JavaScript operators with their precedence levels.",
+                   "code": ""
+               },
+               {
+                   "topic": "Precedence and Associativity in Detail",
+                   "notes": "Detailed explanation of operator precedence and associativity.",
+                   "code": ""
+               },
+               {
+                   "topic": "Operator Precedence in Practice",
+                   "notes": "How operator precedence is used in real-world JavaScript code.",
+                   "code": "let result = (a + b) * (c - d);"
                }
            ]
        }
