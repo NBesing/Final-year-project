@@ -1,39 +1,83 @@
-
 {% load static %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
 {% endblock %}
 
-{% block title %}Course Modules{% endblock %}
+
 
 {% block content %}
+
+<style>
+    .accordion.sidebar {
+        max-height: 500px; /* Adjust the max height as per your design */
+        overflow-y: auto; /* Enable vertical scroll */
+    }
+    .sidebar ul li a:hover,
+    .sidebar ul li a:focus {
+        color: #FFBB00;
+        border-left: 4px solid #FFBB00;
+        background-color: #fff1c9!important;
+    }
+    /* .sidebar ul li a:focus {
+        color: #FFBB00;
+        border-left: 4px solid #FFBB00;
+    } */
+    .course-title{
+        background-color: #0e4291;
+        color:white;
+    }
+    .accordion.sidebar .btn-link {
+        color: black; /* Set text color to black */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .accordion.sidebar .btn-link:hover,
+    .accordion.sidebar .btn-link:focus {
+        color: #FFBB00; /* Change text color on hover/focus */
+        text-decoration: none; /* Remove underline */
+        position: relative; /* Ensure position for icon */
+        padding-right: 1.5rem; /* Adjust padding for icon space */
+        display: block; /* Make button a block element */
+        width: 100%; /* Occupy full width of parent */
+        text-align: left; /* Align text to the left *
+        
+    }
+
+    .accordion.sidebar .btn-link:focus {
+        box-shadow: none; /* Remove focus outline */
+    }
+</style>
+
 <div class="row course-title d-flex justify-content-center pt-2 pb-2">
-    <h3>Course Modules</h3>
+    <h4>JavaScript Modules</h4>
 </div>
-<div class="accordion sidebar p-4 " id="chaptersAccordion">
+<div class="accordion sidebar " id="chaptersAccordion">
 
     <!-- Loop through modules -->
     {% for module in modules %}
     <div class="card">
-        <div class="card-header">
+        <div class="card-header ">
             <h5 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button"
+                <button class="btn btn-link   text-left" type="button"
                         data-toggle="collapse" data-target="#chapter{{ module.id }}Collapse"
                         aria-expanded="false" aria-controls="chapter{{ module.id }}Collapse">
                     {{ module.title }}
+                    <i class="fas fa-chevron-down"></i>
                 </button>
             </h5>
         </div>
         <div id="chapter{{ module.id }}Collapse" class="collapse"
             aria-labelledby="chapter{{ module.id }}Heading" data-parent="#chaptersAccordion">
             <div class="card-body">
+             <h6> 
                 <ul class="list-unstyled">
                     <!-- Loop through lessons of the current module -->
-                    {% for lesson in module.lessons.all %}
-                    <li><a href="#">{{ lesson.title }}</a></li>
+                    {% for lesson in module.lesson_set.all %}
+                    <li><a href="">{{ lesson.title }}</a></li>
                     {% endfor %}
                 </ul>
+             </h6>
             </div>
         </div>
     </div>

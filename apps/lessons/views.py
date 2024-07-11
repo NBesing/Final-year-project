@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Lesson
+from .models import Lesson,Module
 
 def lesson_list(request):
     lessons = Lesson.objects.all()
     return render(request, 'lessons/lesson_list.html', {'lessons': lessons})
 
-def lesson_detail(request, pk):
-    lesson = get_object_or_404(Lesson, pk=pk)
+def lesson_detail(request, module_id, lesson_id):
+    lesson = get_object_or_404(Lesson, module_id=module_id, id=lesson_id)
     subtopics = lesson.content.get('subtopics', []) 
     
     # Get IDs of previous and next lessons
@@ -26,4 +26,10 @@ def lesson_detail(request, pk):
     })
 
 def level_selection(request):
-    return render(request, 'level_selection.html')
+    selected_module = Module.objects.first()  # Replace with your logic
+    selected_lesson = Lesson.objects.filter(module=selected_module).first() if selected_module else None
+
+    return render(request, 'level_selection.html', {
+        'selected_module': selected_module,
+        'selected_lesson': selected_lesson
+    })

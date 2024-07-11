@@ -8,25 +8,26 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
-
-
     <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
+    <style>
+        .module_list {
+            max-height: 1500px; 
+            overflow-y: auto;
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12  header">
+            <div class="col-md-12 header pt-2 pb-2">
                 {% include 'includes/header.html' %}
             </div>
-           
-            <div class="col-md-3 bg-light module_list">
-               
+            <div class="col-md-3 module_list">
                 {% include 'includes/module_list.html' %}
-              
             </div>
-            <div class="col-md-9 content-section pl-5 pr-5" >
+            <div class="col-md-9">
                 {% include 'includes/topnav.html' %}
-                
                 <div class="content">
                     {% block content %}
                     {% endblock %}

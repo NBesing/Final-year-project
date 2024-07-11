@@ -56,8 +56,11 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
-                        <a  href="{% url 'lessons:lesson_detail' pk=1 %}" class="btn w-50">Enroll</a>
-                        
+                        {% if selected_module and selected_lesson %}
+                        <a href="{% url 'lessons:lesson_detail' module_id=selected_module.id lesson_id=selected_lesson.id %}" class="btn w-50">Enroll</a>
+                        {% else %}
+                        <p>No lessons available to enroll.</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -85,4 +88,3 @@
     </script>
 </body>
 </html>
-

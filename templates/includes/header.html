@@ -4,6 +4,7 @@
     .navbar-brand {
         font-weight: bold;
         color: white;
+        background-color: white!important;
     }
     .form-inline .form-control {
         width: 440px;
@@ -15,12 +16,12 @@
     #levelDropdown{
         font-size: 20px;
         font-weight:700;
-        color:#1c1c1c;
+        color:white;
     }
     .dropdown-menu {
         right: 0;
         left: auto;
-        color: black !important;
+        color: white!important;
     }
     .search-btn {
         border: 1px solid #427CD4;
@@ -28,11 +29,20 @@
         background-color: white;
     }
     .fa {
-        color: #1c1c1c!important;
+        color: white!important;
+    }
+    .fa-search{
+        color: #427CD4!important;
+    }
+    .logout{
+        color:red;
+    }
+    .dropdown-menu{
+        color:white!important;
     }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg">
     <img src="{% static 'images/logo-transparent.svg' %}" alt="Illustration" class="logo mr-5">
     <div class="collapse navbar-collapse">
         <!-- Search Bar and Level Dropdown in the same flex container -->
@@ -83,7 +93,7 @@
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item logout" href="#">Logout</a>
                 </div>
             </li>
         </ul>

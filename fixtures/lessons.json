@@ -1567,7 +1567,727 @@
            ]
        }
    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 24,
+    "fields": {
+        "module_id": 3,
+        "title": "JS If…Else",
+        "description": "The JavaScript if...else statement executes a block of code when the specified condition is true. When the condition is false the else block will be executed. The if-else statements can be used to control the flow of execution of a program based on different conditions.\n\nWhile writing a program, there may be a situation when you need to adopt one out of a given set of paths. In such cases, you need to use conditional statements that allow your program to make correct decisions and perform the right actions.\n\nJavaScript supports conditional statements used to perform different actions based on different conditions. Here we will explain the if...else statement.\nJavaScript supports the following forms of if...else statement −\n\n- if statement\n\n- if...else statement\n\n- if...else if... statement.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "JavaScript if statement",
+                    "notes": "The if statement is the fundamental control statement that allows JavaScript to make decisions and execute statements conditionally.\nHere a JavaScript expression is evaluated. If the resulting value is true, the given statement(s) are executed. If the expression is false, then no statement would be not executed. Most of the times, you will use comparison operators while making decisions.\nSyntax",
+                    "code": "if (expression) {\n    Statement(s) to be executed if expression is true\n}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Try the following example to understand how the if statement works.",
+                    "code": "<html>\n<body>\n   <div id='output'></div>\n   <script type='text/javascript'>\n      let result;\n      let age = 20;\n      if (age > 18) {\n         result = 'Qualifies for driving';\n      }\n      document.getElementById('output').innerHTML = result;\n   </script>\n   <p> Set the variable to a different value and then try... </p>\n</body>\n</html>\nOutput\nQualifies for driving\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "JavaScript if...else statement",
+                    "notes": "The 'if...else' statement is the next form of control statement that allows JavaScript to execute statements in a more controlled way.\nHere JavaScript expression is evaluated. If the resulting value is true, the given statement(s) in the ‘if’ block, are executed. If the expression is false, then the given statement(s) in the else block are executed.\n\nSyntax",
+                    "code": "if (expression) {\n    Statement(s) to be executed if expression is true\n} else {\n    Statement(s) to be executed if expression is false\n}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Try the following code to learn how to implement an if-else statement in JavaScript.",
+                    "code": "<html>\n<body>\n   <div id='output'></div>\n   <script type='text/javascript'>\n      let result;\n      let age = 15;\n      if (age > 18) {\n         result = 'Qualifies for driving';\n      } else {\n         result = 'Does not qualify for driving';\n      }\n      document.getElementById('output').innerHTML = result;\n   </script>\n   <p> Set the variable to a different value and then try... </p>\n</body>\n</html>\nOutput\nDoes not qualify for driving\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Try the following code to learn how to implement an if-else-if statement in JavaScript.",
+                    "code": "<html>\n<body>\n   <div id='demo'></div>\n   <script type='text/javascript'>\n      const output = document.getElementById('demo');\n      let book = 'maths';\n      if (book == 'history') {\n         output.innerHTML = '<b>History Book</b>';\n      } else if (book == 'maths') {\n         output.innerHTML = '<b>Maths Book</b>';\n      } else if (book == 'economics') {\n         output.innerHTML = '<b>Economics Book</b>';\n      } else {\n         output.innerHTML = '<b>Unknown Book</b>';\n      }\n   </script>\n   <p> Set the variable to a different value and then try... </p>\n</body>\n</html>\nOutput\nMaths Book\nSet the variable to different value and then try..."
+                }
+            ]
+        }
+    }
+},
+
+
+
+{
+    "model": "lessons.lesson",
+    "pk": 25,
+    "fields": {
+        "module_id": 3,
+        "title": "JS While",
+        "description": "A while statement in JavaScript creates a loop that executes a block of code repeatedly, as long as the specified condition is true. The condition is evaluated before the execution of the block of code.\n\nWhile writing a program, you may encounter a situation where you need to perform an action over and over again. In such situations, you would need to write loop statements to reduce the number of lines.\n\nJavaScript supports all the necessary loops to ease the pressure of programming. In this chapter, we will discuss the while loop.\n\nThere are 2 kinds of while loops in JavaScript, as given below.\n\n- Entry-controlled loops − The loop checks whether the looping condition is valid first and enters into the body of the loop to execute the loop statements.\n\n- Exit-controlled loops − The loop enters into the body and executes the loop statements without checking the condition. After completing the iteration, it checks the condition.\n\nThe most basic loop in JavaScript is the while loop which would be discussed in this lesson. The while loop is an entry-controlled loop.\n\nThe purpose of a while loop is to execute a statement or code block repeatedly as long as an expression is true. Once the expression becomes false, the loop terminates.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of while loop in JavaScript is as follows",
+                    "code": "while (expression) {\n    Statement(s) to be executed if expression is true\n}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, we defined the 'count' variable and initialized it with 0. After that, we make iterations using the while loop until the value of the count is less than 10.",
+                    "code": "<html>\n<body>\n    <div id='output'></div>\n    <script type='text/javascript'>\n        let output = document.getElementById('output');\n        var count = 0;\n        output.innerHTML = 'Starting Loop <br>';\n        while (count < 10) {\n            output.innerHTML += 'Current Count : ' + count + '<br>';\n            count++;\n        }\n        output.innerHTML += 'Loop stopped!';\n    </script>\n    <p> Set the variable to a different value and then try... </p>\n</body>\n</html>\nOutput\nStarting Loop\nCurrent Count : 0\nCurrent Count : 1\nCurrent Count : 2\nCurrent Count : 3\nCurrent Count : 4\nCurrent Count : 5\nCurrent Count : 6\nCurrent Count : 7\nCurrent Count : 8\nCurrent Count : 9\nLoop stopped!\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "JavaScript do...while Loop",
+                    "notes": "The do...while loop is similar to the while loop except that the condition check happens at the end of the loop. This means that the loop will always be executed at least once, even if the condition is false.\nSyntax\nThe syntax for do-while loop in JavaScript is as follows",
+                    "code": "do {\n    Statement(s) to be executed;\n} while (expression);"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, we used the do...while loop and printed the results in the output until the value of the count variable is less than 5. In the output, we can observe that it always executes for once, even if the condition is false.",
+                    "code": "<html>\n<body>\n    <div id='output'></div>\n    <script type='text/javascript'>\n        let output = document.getElementById('output');\n        var count = 0;\n        output.innerHTML += 'Starting Loop' + '<br />';\n        do {\n            output.innerHTML += 'Current Count : ' + count + '<br />';\n            count++;\n        } while (count < 5);\n        output.innerHTML += 'Loop stopped!';\n    </script>\n    <p>Set the variable to a different value and then try...</p>\n</body>\n</html>\nOutput\nStarting Loop\nCurrent Count : 0\nCurrent Count : 1\nCurrent Count : 2\nCurrent Count : 3\nCurrent Count : 4\nLoop Stopped!\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "JavaScript while vs. for Loops",
+                    "notes": "The JavaScript while loop is similar to the for loop with the first and third expressions omitted. A for loop is generally used when the number of iteration is fixed and known but we use the while loop when the number of iterations is not known.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Let's take an example of printing the first five natural numbers using for loop −",
+                    "code": "<html>\n<body>\n  <p> First five natural numbers:</p>\n  <div id='demo'></div>\n  <script>\n    const output = document.getElementById('demo');\n    for(let i = 1; i <= 5; i++){\n      output.innerHTML += i + '<br>';\n    }\n  </script>\n</body>\n</html>\nIt will produce the following output −\n\nFirst five natural numbers:\n1\n2\n3\n4\n5"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "We can now modify the above for loop as follows −",
+                    "code": "<html>\n<body>\n  <p> First five natural numbers:</p>\n  <div id='demo'></div>\n  <script>\n    const output = document.getElementById('demo');\n    let i = 1;\n    for(; i <= 5; ){\n      output.innerHTML += i + '<br>';\n      i++;\n    }\n  </script>\n</body>\n</html>\nOutput\n\nFirst five natural numbers:\n1\n2\n3\n4\n5"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the above example, we have omitted first and third expression in for loop statement. This is similar to the while loop statement. Look at the below example −",
+                    "code": "<html>\n<body>\n  <p> First five natural numbers:</p>\n  <div id='demo'></div>\n  <script>\n    const output = document.getElementById('demo');\n    let i = 1;\n    while(i <= 5){\n      output.innerHTML += i + '<br>';\n      i++;\n    }\n  </script>\n</body>\n</html>\nOutput\n\nFirst five natural numbers:\n1\n2\n3\n4\n5"
+                },
+                {
+                    "topic": "",
+                    "notes": "You notice that the for loop without first expression (initialization) and third expression (iteration), is similar to the while loop.",
+                    "code": ""
+                }
+            ]
+        }
+    }
+},
+
+
+{
+    "model": "lessons.lesson",
+    "pk": 26,
+    "fields": {
+        "module_id": 3,
+        "title": "JS For",
+        "description": "The JavaScript for loop is used to execute a block of code repeatedly, until a specified condition evaluates to false. It can be used for iteration if the number of iterations is fixed and known.\n\nThe JavaScript loops are used to execute the particular block of code repeatedly. The 'for' loop is the most compact form of looping. It includes the following three important parts:\n\n- Initialization − The loop initialization expression is where we initialize our counter to a starting value. The initialization statement is executed before the loop begins.\n\n- Condition − The condition expression which will test if a given condition is true or not. If the condition is true, then the code given inside the loop will be executed. Otherwise, the control will come out of the loop.\n\n- Iteration − The iteration expression is where you can increase or decrease your counter.\n\nYou can put all the three parts in a single line separated by semicolons.\nSyntax\nfor (initialization; condition; iteration) {\n    Statement(s) to be executed if condition is true\n}",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "",
+                    "code": "for (initialization; condition; iteration) {\n    Statement(s) to be executed if condition is true\n}"
+                },
+                {
+                    "topic": "Example: Executing a code block repeatedly",
+                    "notes": "In the example below, we used the for loop to print the output's updated value of the 'count' variable. In each iteration of the loop, we increment the value of 'count' by 1 and print it in the output.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - for loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        const output = document.getElementById(\"output\");\n        output.innerHTML = \"Starting Loop <br>\";\n        let count;\n        for (let count = 0; count < 10; count++) {\n            output.innerHTML += \"Current Count : \" + count + \"<br/>\";\n        }\n        output.innerHTML += \"Loop stopped!\";\n    </script>\n</body>\n</html>\nOutput\nStarting Loop\nCurrent Count : 0\nCurrent Count : 1\nCurrent Count : 2\nCurrent Count : 3\nCurrent Count : 4\nCurrent Count : 5\nCurrent Count : 6\nCurrent Count : 7\nCurrent Count : 8\nCurrent Count : 9\nLoop stopped!"
+                },
+                {
+                    "topic": "Example: Initialization is optional",
+                    "notes": "The below code demonstrates that the first statement is optional in the for loop. You can also initialize the variable outside the loop and use it with the loop.\n\nWhenever you need to use the looping variable, even after the execution of the loop is completed, you can initialize a variable in the parent scope of the loop, as we have done in the below code. We also print the value of p outside the loop.",
+                    "code": "<html>\n<head>\n    <title> Initialization is optional in for loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        let output = document.getElementById(\"output\");\n        var p = 0;\n        for (; p < 5; p++) {\n            output.innerHTML += \"P -> \" + p + \"<br/>\";\n        }\n        output.innerHTML += \"Outside the loop! <br>\";\n        output.innerHTML += \"P -> \" + p + \"<br/>\";\n    </script>\n</body>\n</html>\nOutput\nP -> 0\nP -> 1\nP -> 2\nP -> 3\nP -> 4\nOutside the loop!\nP -> 5"
+                },
+                {
+                    "topic": "Example: Conditional statement is optional",
+                    "notes": "The below code demonstrates that the conditional statement in the for loop is optional. However, if you don't write any condition, it will make infinite iterations. So, you can use the 'break' keyword with the for loop to stop the execution of the loop, as we have done in the below code.",
+                    "code": "<html>\n<head>\n    <title> Conditional statement is optional in for loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        let output = document.getElementById(\"output\");\n        let arr = [10, 3, 76, 23, 890, 123, 54]\n        var p = 0;\n        for (; ; p++) {\n            if (p >= arr.length) {\n                break;\n            }\n            output.innerHTML += \"arr[\" + p + \"] -> \" + arr[p] + \"<br/>\";\n        }\n    </script>\n</body>\n</html>\nOutput\narr[0] -> 10\narr[1] -> 3\narr[2] -> 76\narr[3] -> 23\narr[4] -> 890\narr[5] -> 123\narr[6] -> 54"
+                },
+                {
+                    "topic": "Example: Iteration statement is optional",
+                    "notes": "In the for loop, the third statement is also optional and is used to increment the iterative variable. The alternative solution is that we can update the iterative variable inside the loop body.",
+                    "code": "<html>\n<head>\n    <title> Iteration statement is optional </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        let output = document.getElementById(\"output\");\n        let str = \"Tutorialspoint\";\n        var p = 0;\n        for (; ;) {\n            if (p >= str.length) {\n                break;\n            }\n            output.innerHTML += \"str[\" + p + \"] -> \" + str[p] + \"<br/>\";\n            p++;\n        }\n    </script>\n</body>\n</html>\nOutput\nstr[0] -> T\nstr[1] -> u\nstr[2] -> t\nstr[3] -> o\nstr[4] -> r\nstr[5] -> i\nstr[6] -> a\nstr[7] -> l\nstr[8] -> s\nstr[9] -> p\nstr[10] -> o\nstr[11] -> i\nstr[12] -> n\nstr[13] -> t"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 27,
+    "fields": {
+        "module_id": 3,
+        "title": "JS For…In",
+        "description": "The for...in loop in JavaScript is used to loop through an object's properties. The JavaScript for...in loop is a variant of the for loop. The for loop can't be used to traverse through the object properties. So, the for...in loop is introduced to traverse through all object properties.\n\nAs we have not discussed Objects yet, you may not feel comfortable with this loop. But once you understand how objects behave in JavaScript, you will find this loop very useful.\n\nThe for...in loop in JavaScript can also be used to iterate through the elements of an array. However, it is not recommended to do this as this is less efficient than using a for...of loop.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of for...in loop in JavaScript is as follows",
+                    "code": "for (variableName in object) {\n    statement or block to execute\n}"
+                },
+                {
+                    "topic": "Example: Iterate through object properties",
+                    "notes": "In the example below, the car object contains various properties. We used the for…in loop to traverse through each key of the object.\n\nIn the output, we can see that it prints the key and its value. We use the '[]' (member of) operator to access the value of the key from the object.",
+                    "code": "<html>\n<head>\n   <title> JavaScript - for...in loop </title>\n</head>\n<body>\n   <p id=\"output\"> </p>\n   <script>\n      let output = document.getElementById(\"output\");\n      let car = {\n         brand: \"OD\",\n         model: \"Q7\",\n         color: \"Black\",\n      }\n      for (key in car) {\n         output.innerHTML += key + \" -> \" + car[key] + \"<br>\";\n      }\n    </script>\n</body>\n</html>\nOutput\nbrand -> OD\nmodel -> Q7\ncolor -> Black"
+                },
+                {
+                    "topic": "Example: Iterating over a string",
+                    "notes": "In JavaScript, the string is an object. So, we can use the for…in loop to traverse through each character of the string. The index of the character is the key, and the character is a value.\n\nThe code prints the index and character in the output.",
+                    "code": "<html>\n<head>\n   <title> JavaScript - for...in loop </title>\n</head>\n<body>\n   <p id=\"output\"> </p>\n   <script>\n      let output = document.getElementById(\"output\");\n      let str = \"Hello\";\n      for (key in str) {\n         output.innerHTML += key + \" -> \" + str[key] + \"<br>\";\n      }\n   </script>\n</body>\n</html>\nOutput\n0 -> H\n1 -> e\n2 -> l\n3 -> l\n4 -> o"
+                },
+                {
+                    "topic": "Example: Iterating over an array",
+                    "notes": "In JavaScript, the array is also an object. So, the for…in loop can be used to traverse through array elements. Like a string, the index is a key, and the array element is a value for the key.\n\nThe below code prints the array index and its value in the output.",
+                    "code": "<html>\n<head>\n   <title> JavaScript - for...in loop </title>\n</head>\n<body>\n   <p id=\"output\"> </p>\n   <script>\n      let output = document.getElementById(\"output\");\n      let array = [\"Hi\", \"Hello\", 900, 23, true, \"JavaScript\"];\n      for (key in array) {\n         output.innerHTML += key + \" -> \" + array[key] + \"<br>\";\n      }\n   </script>\n</body>\n</html>\nOutput\n0 -> Hi\n1 -> Hello\n2 -> 900\n3 -> 23\n4 -> true\n5 -> JavaScript"
+                },
+                {
+                    "topic": "Example: Update value of each property of an object",
+                    "notes": "In the example below, we traverse each key of the object and update its value to null. In the output, the code prints the object keys with null values.\n\nSo, the for…in loop can also be used to update all or particular property values of the object.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - for...in loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        let output = document.getElementById(\"output\");\n        let car = {\n            brand: \"OD\",\n            model: \"Q7\",\n            color: \"Black\",\n        }\n        for (key in car) {\n            car[key] = null;\n        }\n        output.innerHTML += \"The updated object is - \" + JSON.stringify(car);\n    </script>\n</body>\n</html>\nOutput\nThe updated object is - {\"brand\":null,\"model\":null,\"color\":null}"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 28,
+    "fields": {
+        "module_id": 3,
+        "title": "JS For…Of",
+        "description": "The for...of loop in JavaScript is used to traverse elements of the iterable object. In each iteration, it gives an element of the iterable object. Iterable objects include arrays, strings, maps, sets, and generators.\n\nThe JavaScript for...of loop is a much more efficient way to iterate over iterables than using a for...in loop. The for...of loop iterates over the property value while the for...in loop is used to iterate through the keys (property name) of an object.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of 'for...of' loop in JavaScript is as follows:",
+                    "code": "for (ele of iterable) {\n    // loop body\n}"
+                },
+                {
+                    "topic": "Example: For...of Loop with Arrays",
+                    "notes": "In the example below, the array contains various strings. We use the for...of loop to traverse each array element. The output shows each element printed on a new line.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - for...of loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        const output = document.getElementById(\"output\");\n        const arr = [\"JavaScript\", \"Python\", \"C\", \"C++\", \"HTML\", \"CSS\"];\n        for (let ele of arr) {\n            output.innerHTML += ele + \"<br>\";\n        }\n    </script>\n</body>\n</html>\nOutput\nJavaScript\nPython\nC\nC++\nHTML\nCSS"
+                },
+                {
+                    "topic": "Example: For...of Loop with Strings",
+                    "notes": "In JavaScript, strings are iterable. The for...of loop is used here to iterate through each character of the string.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - for...of loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let str = \"JavaScript\";\n        for (let char of str) {\n            output.innerHTML += char + \", \";\n        }\n    </script>\n</body>\n</html>\nOutput\nJ, a, v, a, S, c, r, i, p, t,"
+                },
+                {
+                    "topic": "Example: For...of Loop with Set",
+                    "notes": "Sets in JavaScript are iterable objects. This example demonstrates using the for...of loop to iterate through a Set containing unique numbers.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - for...of loop </title>\n</head>\n<body>\n    <p id=\"output\"> </p>\n    <script>\n        const output = document.getElementById(\"output\");\n        const nums = new Set([10, 20, 30, 30, 30, 40, 50, 60]);\n        for (let num of nums) {\n            output.innerHTML += num + \", \";\n        }\n    </script>\n</body>\n</html>\nOutput\n10, 20, 30, 40, 50, 60,"
+                }
+            ]
+        }
+    }
+},
+
+
+{
+    "model": "lessons.lesson",
+    "pk": 29,
+    "fields": {
+        "module_id": 3,
+        "title": "JS Loop Control",
+        "description": "JavaScript provides full control to handle loops and switch statements. There may be a situation when you need to come out of a loop without reaching its bottom. There may also be a situation when you want to skip a part of your code block and start the next iteration of the loop.\n\nTo handle all such situations, JavaScript provides break and continue statements. These statements are used to immediately come out of any loop or to start the next iteration of any loop respectively. Also, JavaScript allows developers to use labels to name the loop.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Break Statement",
+                    "notes": "The JavaScript break statement, which was briefly introduced with the switch statement, is used to exit a loop early, breaking out of the enclosing curly braces.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "The following example illustrates the use of a break statement with a while loop. Notice how the loop breaks out early once x reaches 5 and then exits the loop.",
+                    "code": "<html>\n<body>\n    <div id=\"output\"></div>\n    <script>\n        const output = document.getElementById(\"output\");\n        let x = 1;\n        output.innerHTML = \"Entering the loop<br> \";\n        while (x < 20) {\n            if (x == 5) {\n                break;   // breaks out of loop completely\n            }\n            x = x + 1;\n            output.innerHTML += x + \"<br>\";\n        }\n        output.innerHTML += \"Exiting the loop!<br> \";\n    </script>\n    <p>Set the variable to different value and then try...</p>\n</body>\n</html>\nOutput\nEntering the loop\n2\n3\n4\n5\nExiting the loop!\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "The continue Statement",
+                    "notes": "The JavaScript continue statement tells the interpreter to immediately start the next iteration of the loop and skip the remaining code block. When a continue statement is encountered, the program flow moves to the loop check expression immediately. If the condition remains true, then it starts the next iteration; otherwise, the control comes out of the loop.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "This example illustrates the use of a continue statement with a while loop. Notice how the continue statement is used to skip printing when the index held in variable x reaches 5.",
+                    "code": "<html>\n<body>\n    <div id=\"output\"></div>\n    <script>\n        const output = document.getElementById(\"output\");\n        let x = 1;\n        output.innerHTML = \"Entering the loop<br> \";\n        while (x < 10) {\n            x = x + 1;\n            if (x == 5) {\n                continue; // skip rest of the loop body\n            }\n            output.innerHTML += x + \"<br>\";\n        }\n        output.innerHTML += \"Exiting the loop!<br> \";\n    </script>\n    <p>Set the variable to different value and then try...</p>\n</body>\n</html>\nOutput\nEntering the loop\n2\n3\n4\n6\n7\n8\n9\n10\nExiting the loop!\nSet the variable to different value and then try..."
+                },
+                {
+                    "topic": "Using Labels to Control the Flow",
+                    "notes": "Starting from JavaScript 1.2, a label can be used with break and continue to control the flow more precisely. A label is simply an identifier followed by a colon (:) that is applied to a statement or a block of code. We will see two different examples to understand how to use labels with break and continue.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example 1",
+                    "notes": "The following example shows how to implement a label with a break statement. In this example, 'outerloop' and 'innerloop' are labels used with the break statement.",
+                    "code": "<html>\n<body>\n    <div id=\"output\"></div>\n    <script>\n        const output = document.getElementById(\"output\");\n        output.innerHTML = \"Entering the loop!<br /> \";\n        outerloop:\n        for (let i = 0; i < 5; i++) {\n            output.innerHTML += \"Outerloop: \" + i + \"<br />\";\n            innerloop:\n            for (let j = 0; j < 5; j++) {\n                if (j > 3) break;           // Quit the innermost loop\n                if (i == 2) break innerloop;  // Do the same thing\n                if (i == 4) break outerloop;  // Quit the outer loop\n                output.innerHTML += \"Innerloop: \" + j + \"<br />\";\n            }\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop!\nOuterloop: 0\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nInnerloop: 3\nOuterloop: 1\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nInnerloop: 3\nOuterloop: 2\nOuterloop: 3\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nInnerloop: 3\nOuterloop: 4\nExiting the loop!"
+                },
+                {
+                    "topic": "Example 2",
+                    "notes": "This example demonstrates using the continue statement with a label inside a nested loop to skip the current iteration of the outer loop when q equals 3.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Label statement </title>\n</head>\n<body>\n    <div id=\"output\"></div>\n    <script>\n        const output = document.getElementById(\"output\");\n        output.innerHTML = \"Entering the loop!<br /> \";\n        outerloop:\n        for (let p = 0; p < 3; p++) {\n            output.innerHTML += \"Outerloop: \" + p + \"<br />\";\n            for (let q = 0; q < 5; q++) {\n                if (q == 3) {\n                    continue outerloop;\n                }\n                output.innerHTML += \"Innerloop: \" + q + \"<br />\";\n            }\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop!\nOuterloop: 0\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nOuterloop: 1\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nOuterloop: 2\nInnerloop: 0\nInnerloop: 1\nInnerloop: 2\nExiting the loop!"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 30,
+    "fields": {
+        "module_id": 3,
+        "title": "JS Break Statements",
+        "description": "The break statement in JavaScript terminates the loop or switch case statement. When you use the break statement with the loop, the control flow jumps out of the loop and continues to execute the other code.\n\nThe break statement can also be used to jump a labeled statement when used within that labeled statement. It is a useful tool for controlling the flow of execution in your JavaScript code.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of break statement in JavaScript is as follows:",
+                    "code": "break;\nOR\nbreak [label];"
+                },
+                {
+                    "topic": "Example (break statement with for loop)",
+                    "notes": "In the example below, we used the for loop to iterate. We added a conditional expression using the 'if' statement. When the value of 'x' is 5, it breaks the loop using the break statement.\n\nThis code prints values from 1 to 4 in the output.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Break statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        output.innerHTML += \"Entering the loop.<br /> \";\n        for (let x = 1; x < 10; x++) {\n            if (x == 5) {\n                break;   // breaks out of loop completely\n            }\n            output.innerHTML += x + \"<br />\";\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop.<br />\n1<br />\n2<br />\n3<br />\n4<br />\nExiting the loop!<br />"
+                },
+                {
+                    "topic": "Example (break statement with while loop)",
+                    "notes": "The code below demonstrates the while loop with the 'break' statement. In the while loop, when the value of x is either 3 or 7, it terminates the loop using the 'break' statement.\n\nIn this code, we update the value after checking the condition. It prints 1 to 3 in the output and then terminates the loop in the next iteration.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Break statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let x = 1;\n        output.innerHTML += \"Entering the loop.<br /> \";\n        while (x < 10) {\n            if (x == 3 || x == 7) {\n                break;   // breaks out of loop completely\n            }\n            x = x + 1;\n            output.innerHTML += x + \"<br />\";\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>"
+                },
+                {
+                    "topic": "Break statement with nested loops",
+                    "notes": "You can use the 'break' statement to exit any loop when dealing with nested loops. For example, if you use the 'break' statement with the outer loop, it terminates all iterations of both the outer and inner loops. If used with the inner loop, it only terminates the inner loop.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, 'x' is the looping variable for the outer loop, and 'y' is for the inner loop.\n\nIn the nested loop, when 'y' becomes 3, it breaks the inner loop. In the outer loop, when 'x' becomes 3, it breaks the outer loop. You won't see 'x > 3' or 'y > 2' in the output.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Break statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        output.innerHTML += \"Entering the loop.<br /> \";\n        for (let x = 1; x < 10; x++) {\n            for (let y = 1; y < 10; y++) {\n                if (y == 3) {\n                    break; // breaks inner loop\n                }\n                output.innerHTML += x + \" \" + y + \"<br />\";\n            }\n            if (x == 3) {\n                break; // breaks outer loop\n            }\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>"
+                },
+                {
+                    "topic": "Break statement with switch case statement",
+                    "notes": "The switch case statement executes one of the code blocks based on the conditional expression. The 'break' statement terminates the switch case statement after matching a case with the conditional expression's value.",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the code below, we use the 'break' statement with each case. Here, 'p' serves as the conditional expression for the switch case statement. It matches 'case 10'. Thus, the code executes that block and terminates the switch case statement using the 'break' statement.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Break statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let p = 10;\n        switch (p) {\n            case 10:\n                output.innerHTML = \"p is 10\";\n                break;\n            case 20:\n                output.innerHTML = \"p is 20\";\n                break;\n            case 30:\n                output.innerHTML = \"p is 30\";\n                break;\n            default:\n                output.innerHTML = \"p is not 10, 20, or 30\";\n        }\n    </script>\n</body>\n</html>"
+                }
+            ]
+        }
+    }
+},
+
+
+{
+    "model": "lessons.lesson",
+    "pk": 31,
+    "fields": {
+        "module_id": 3,
+        "title": "JS Continue Statements",
+        "description": "The continue statement in JavaScript is used to skip the current iteration of a loop and continue with the next iteration. It is often used in conjunction with an if statement to check for a condition and skip the iteration if the condition is met.\n\nThe JavaScript continue statement tells the interpreter to immediately start the next iteration of the loop and skip the remaining code block. When a continue statement is encountered, the program flow moves to the loop check expression immediately. If the condition remains true, then it starts the next iteration; otherwise, the control comes out of the loop. We can use the continue statement inside loops like for loop, while loop, do…while loop, etc.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of the continue statement in JavaScript is as follows:",
+                    "code": "continue;\nOR\ncontinue label;"
+                },
+                {
+                    "topic": "Continue statement with for loop",
+                    "notes": "The example below demonstrates the continue statement with a for loop. In this loop, when the value of x is 3, it executes the continue statement to skip the current iteration and move to the next iteration.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Continue statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        output.innerHTML += \"Entering the loop.<br /> \";\n        for (let x = 1; x < 5; x++) {\n            if (x == 3) {\n                continue;   // skip rest of the loop body\n            }\n            output.innerHTML += x + \"<br />\";\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop.<br />\n1<br />\n2<br />\n4<br />\nExiting the loop!<br />"
+                },
+                {
+                    "topic": "Continue statement with while loop",
+                    "notes": "In the following example, we use the while loop with the continue statement. Within each iteration of the while loop, we increment the value of x by 1. If x equals 2 or 3, it skips the current iteration and proceeds to the next one.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Continue statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        let x = 1;\n        output.innerHTML += \"Entering the loop.<br /> \";\n        while (x < 5) {\n            x = x + 1;\n            if (x == 2 || x == 3) {\n                continue;   // skip rest of the loop body\n            }\n            output.innerHTML += x + \"<br />\";\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop.<br />\n4<br />\n5<br />\nExiting the loop!<br />"
+                },
+                {
+                    "topic": "Continue statement with nested loop",
+                    "notes": "The continue statement can be used with nested loops to skip iterations of either the outer or inner loop.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Continue statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        output.innerHTML += \"Entering the loop.<br /> \";\n        for (let x = 1; x < 5; x++) {\n            if (x == 2 || x == 3) {\n                continue;   // skip rest of the loop body\n            }\n            for (let y = 1; y < 5; y++) {\n                if (y == 3) {\n                    continue;\n                }\n                output.innerHTML += x + \" - \" + y + \"<br />\";\n            }\n        }\n        output.innerHTML += \"Exiting the loop!<br /> \";\n    </script>\n</body>\n</html>\nOutput\nEntering the loop.<br />\n1 - 1<br />\n1 - 2<br />\n1 - 4<br />\n4 - 1<br />\n4 - 2<br />\n4 - 4<br />\nExiting the loop!<br />"
+                },
+                {
+                    "topic": "Skipping Iterations with While Loops",
+                    "notes": "While loops can also utilize continue statements to skip certain iterations.",
+                    "code": "let i = 0;\nwhile (i < 5) {\n    i++;\n    if (i === 3) {\n        continue;\n    }\n    console.log(i);\n}"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 32,
+    "fields": {
+        "module_id": 3,
+        "title": "JS Switch Case",
+        "description": "The JavaScript switch case is a conditional statement used to execute different blocks of code depending on the value of an expression. The expression is evaluated, and if it matches the value of one of the case labels, the code block associated with that case is executed. If none of the case labels match the value of the expression, the code block associated with the default label is executed.\n\nYou can use multiple if...else if statements, as in the previous chapter, to perform a multiway branch. However, this is not always the best solution, especially when all of the branches depend on the value of a single variable.\n\nStarting with JavaScript 1.2, you can use a switch statement which handles exactly this situation, and it does so more efficiently than repeated if...else if statements.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The objective of a switch statement is to give an expression to evaluate and several different statements to execute based on the value of the expression. The interpreter checks each case against the value of the expression until a match is found. If nothing matches, a default condition will be used.",
+                    "code": "switch (expression) {\n    case condition1:\n        statement(s);\n        break;\n    case condition2:\n        statement(s);\n        break;\n    ...\n    case conditionN:\n        statement(s);\n        break;\n    default:\n        statement(s);\n}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, we have a grade variable and use it as an expression in the switch case statement. The switch case statement executes different code blocks based on the value of the grade variable.\n\nFor the grade 'A', it prints 'Good job' in the output and terminates the switch case statement with the break statement.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Switch case statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let grade = 'A';\n        output.innerHTML += \"Entering switch block<br />\";\n        switch (grade) {\n            case 'A':\n                output.innerHTML += \"Good job<br />\";\n                break;\n            case 'B':\n                output.innerHTML += \"Passed<br />\";\n                break;\n            case 'C':\n                output.innerHTML += \"Failed<br />\";\n                break;\n            default:\n                output.innerHTML += \"Unknown grade<br />\";\n        }\n        output.innerHTML += \"Exiting switch block\";\n    </script>\n</body>\n</html>\nOutput\nEntering switch block<br />\nGood job<br />\nExiting switch block"
+                },
+                {
+                    "topic": "Example: Without break Statement",
+                    "notes": "When we don't use the 'break' statement with any case in the switch case statement, it continues executing the subsequent cases without terminating.\n\nIn the following code, we omitted the break statement for cases 'A' and 'B'. Therefore, for grade 'A', it executes the statements of cases 'A', 'B', and 'C', and then terminates the switch case statement.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Switch case statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let grade = 'A';\n        output.innerHTML += \"Entering switch block<br />\";\n        switch (grade) {\n            case 'A':\n                output.innerHTML += \"Good job<br />\";\n            case 'B':\n                output.innerHTML += \"Passed<br />\";\n            case 'C':\n                output.innerHTML += \"Failed<br />\";\n            default:\n                output.innerHTML += \"Unknown grade<br />\";\n        }\n        output.innerHTML += \"Exiting switch block\";\n    </script>\n</body>\n</html>\nOutput\nEntering switch block<br />\nGood job<br />\nPassed<br />\nFailed<br />\nUnknown grade<br />\nExiting switch block"
+                },
+                {
+                    "topic": "Example: Common Code Blocks",
+                    "notes": "Developers sometimes need to execute the same code block for multiple values of an expression, similar to using the OR condition in an if-else statement.\n\nIn the following code, we execute the same code block for cases 'A' and 'B', as well as cases 'C' and 'D'. You can modify the value of the grade variable to observe different outputs.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Switch case statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        let grade = 'C';\n        output.innerHTML += \"Entering switch block<br />\";\n        switch (grade) {\n            case 'A':\n            case 'B':\n                output.innerHTML += \"Passed<br />\";\n                break;\n            case 'C':\n            case 'D':\n                output.innerHTML += \"Failed!<br />\";\n                break;\n            default:\n                output.innerHTML += \"Unknown grade<br />\";\n        }\n        output.innerHTML += \"Exiting switch block\";\n    </script>\n</body>\n</html>\nOutput\nEntering switch block<br />\nFailed!<br />\nExiting switch block"
+                },
+                {
+                    "topic": "Example: Strict Comparison",
+                    "notes": "The switch case statement uses strict equality (===) to compare the value of the expression with the case values.\n\nIn the following code, the 'num' variable contains an integer value. Since all cases are in string format in the switch case statement, the default statement is executed.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Switch case statement </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let num = 10;\n        switch (num) {\n            case '10':\n                output.innerHTML += \"10 Marks!<br />\";\n                break;\n            case '11':\n                output.innerHTML += \"11 Marks!<br />\";\n                break;\n            default:\n                output.innerHTML += \"Input is not a string!<br />\";\n        }\n    </script>\n</body>\n</html>\nOutput\nInput is not a string!"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 33,
+    "fields": {
+        "module_id": 3,
+        "title": "JS User Defines Iterators",
+        "description": "In JavaScript, an iterable is an object which has a Symbol.iterator() method in the object prototype. Some examples of iterables are array, set, map, string, etc. The Symbol.iterator() method returns an object containing the next() method, which is called an iterator. The next() method returns the elements of the iterable in each call.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, we create an array and store the array iterator in the 'iter' variable. We then use the next() method of the iterator object to retrieve the next value.\n\nThe output shows that the next() method returns an object containing 'value' and 'done' properties. The last iteration returns an object containing only the 'done' property.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Iterators </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        const nums = [10, 72, 45];\n        const iter = nums[Symbol.iterator]();\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n    </script>\n</body>\n</html>\nOutput\n{\"value\":10,\"done\":false}\n{\"value\":72,\"done\":false}\n{\"value\":45,\"done\":false}\n{\"done\":true}"
+                },
+                {
+                    "topic": "User-defined Iterators",
+                    "notes": "In the previous example, we saw how iterators work in JavaScript. The Symbol.iterator() method returns an object containing the next() method, and each call to next() returns an object.\n\nSimilarly, we can implement user-defined iterators.\n\nIn the example below, we create a custom iterator using a function. The function returns an object containing the next() method. The next() method returns an object with the array element and a 'done' property set to false if the index 'n' is less than the array length. If 'n' is greater than or equal to the array's length, it returns an object containing only the 'done' property with a true boolean value.\n\nWe then use iter.next() syntax to retrieve the next array element.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - User defined iterators </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        function customIterator(chars) {\n            let n = 0;\n            return {\n                next() {\n                    if (n < chars.length) {\n                        return {\n                            value: chars[n++],\n                            done: false\n                        };\n                    }\n                    return {\n                        done: true\n                    };\n                }\n            };\n        }\n        const chars = ['A', 'C', 'E'];\n        const iter = customIterator(chars);\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n        output.innerHTML += JSON.stringify(iter.next()) + \"<br>\";\n    </script>\n</body>\n</html>\nOutput\n{\"value\":\"A\",\"done\":false}\n{\"value\":\"C\",\"done\":false}\n{\"value\":\"E\",\"done\":false}\n{\"done\":true}\n{\"done\":true}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "In the example below, we define a function as the value of the 'Symbol.iterator' key. The function returns the next() method, which yields odd numbers. When the odd number is 9, the iteration terminates by returning an object {done: true}.\n\nHere, we create an iterator using an object. You can use a for…of loop to automatically execute the next() method of the iterator and retrieve the 'value' property from the object returned by next() method.",
+                    "code": "<html>\n<head>\n    <title> JavaScript - User defined iterators </title>\n</head>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        let oddNum = {};\n        oddNum[Symbol.iterator] = function () {\n            let p = -1;\n            return {\n                next() {\n                    p += 2;\n                    if (p === 9) return { done: true };\n                    return { value: p, done: false };\n                }\n            };\n        };\n        for (const odd of oddNum) {\n            output.innerHTML += odd + \"<br>\";\n        }\n    </script>\n</body>\n</html>\nOutput\n1<br>3<br>5<br>7<br>"
+                }
+            ]
+        }
+    }
+},
+{
+    "model": "lessons.lesson",
+    "pk": 34,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Functions",
+        "description": "A function in JavaScript is a group of reusable code that can be called anywhere in your program. It eliminates the need for writing the same code again and again, making programs more modular. JavaScript supports writing custom functions similar to built-in functions like alert() and write(). This section explains how to define and use your own functions in JavaScript.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Function Definition",
+                    "notes": "Before using a function, it must be defined. The common way to define a function in JavaScript is using the function keyword, followed by a unique function name, a parameter list (which may be empty), and a statement block enclosed in curly braces. All statements that need to be executed on function call should be inside these braces.",
+                    "code": "function functionName(parameter-list) {\n    statements\n}"
+                },
+                {
+                    "topic": "Function Declaration",
+                    "notes": "This type of function definition is called function declaration or function statement. Functions can also be defined using function expressions, which will be discussed in detail in the next chapter.\n\nThe following example defines a function called sayHello that takes no parameters:",
+                    "code": "function sayHello() {\n    alert(\"Hello there\");\n}"
+                },
+                {
+                    "topic": "Function Expression",
+                    "notes": "A function expression in JavaScript allows defining a function as an expression. It is similar to an anonymous function declaration and can be assigned to a variable.\n\nThe syntax of function expression in JavaScript is:",
+                    "code": "const varName = function (parameter-list) {\n    statements\n};"
+                },
+                {
+                    "topic": "Example of Function Expression",
+                    "notes": "In the example below, a JavaScript function is defined using a function expression and assigned to a variable named myFunc:",
+                    "code": "const myFunc = function (x, y) {\n    return x + y;\n};"
+                },
+                {
+                    "topic": "Calling a Function",
+                    "notes": "To invoke a function later in the script, simply write the function name followed by parentheses ().\n\nThe following code demonstrates a button in the output. When clicked, it executes the sayHello() function, which prints \"Hello there!\" to the output.",
+                    "code": "<html>\n<head>\n    <script type=\"text/javascript\">\n        function sayHello() {\n            alert(\"Hello there!\");\n        }\n    </script>\n</head>\n<body>\n    <p>Click the following button to call the function</p>\n    <form>\n        <input type=\"button\" onclick=\"sayHello()\" value=\"Say Hello\">\n    </form>\n    <p>Try using different text in the write method and then try...</p>\n</body>\n</html>"
+                },
+                {
+                    "topic": "Function Parameters",
+                    "notes": "Functions can accept parameters. These parameters are passed during the function call and can be manipulated inside the function. A function can take multiple parameters separated by commas.\n\nThe following example modifies the sayHello function to accept two parameters:",
+                    "code": "<html>\n<head>\n    <script type=\"text/javascript\">\n        function sayHello(name, age) {\n            document.write(name + \" is \" + age + \" years old.\");\n        }\n    </script>\n</head>\n<body>\n    <p>Click the following button to call the function</p>\n    <form>\n        <input type=\"button\" onclick=\"sayHello('Zara', 7)\" value=\"Say Hello\">\n    </form>\n    <p>Use different parameters inside the function and then try...</p>\n</body>\n</html>"
+                },
+                {
+                    "topic": "The return Statement",
+                    "notes": "A JavaScript function can have a return statement, which is used to return a value from the function. This statement should be the last statement in a function. The returned value can then be used in the calling program.\n\nThe code below defines a function concatenate that concatenates two parameters and returns the result. The second function, secondFunction, calls concatenate and alerts the result:",
+                    "code": "<html>\n<head>\n    <script type=\"text/javascript\">\n        function concatenate(first, last) {\n            var full;\n            full = first + last;\n            return full;\n        }\n        function secondFunction() {\n            var result;\n            result = concatenate('Zara ', 'Ali');\n            alert(result);\n        }\n    </script>\n</head>\n<body>\n    <p>Click the following button to call the function</p>\n    <form>\n        <input type=\"button\" onclick=\"secondFunction()\" value=\"Call Function\">\n    </form>\n    <p>Use different parameters inside the function and then try...</p>\n</body>\n</html>"
+                },
+                {
+                    "topic": "Functions as Variable Values",
+                    "notes": "In JavaScript, functions are treated as variables. This feature is known as first-class functions. Functions can be passed as arguments to other functions and assigned as values to variables.\n\nIn the example below, a function is declared using a function expression and used to concatenate with another string:",
+                    "code": "<html>\n<body>\n    <div id=\"output\"></div>\n    <script>\n        const myFunc = function () { return \"Hello \"; };\n        document.getElementById(\"output\").innerHTML = myFunc() + \"Users.\";\n    </script>\n</body>\n</html>"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 35,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Function Expressions",
+        "description": "Function expressions in JavaScript allow defining functions as expressions. They can be stored in variables and used like any other data type. This lesson covers various aspects of function expressions, including anonymous functions, named function expressions, immediately invoked function expressions (IIFE), and examples demonstrating their usage.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax of function expression in JavaScript is as follows:",
+                    "code": "function (parameter-list) {\n    statements\n};"
+                },
+                {
+                    "topic": "Storing Function Expressions in Variables",
+                    "notes": "Function expressions can be stored in variables and invoked using those variables. Here’s an example:",
+                    "code": "const sum = function (x, y) {\n    return x + y;\n};\nlet z = sum(2, 3);"
+                },
+                {
+                    "topic": "Named Function Expression",
+                    "notes": "Named function expressions allow naming the function, but it can only be invoked using the variable name, not the function name itself.",
+                    "code": "const sum = function addNumbers(x, y) {\n    return x + y;\n};\nlet z = sum(2, 3);"
+                },
+                {
+                    "topic": "Immediately Invoked Function Expression (IIFE)",
+                    "notes": "An IIFE is a function expression that is immediately invoked as soon as it is defined. It's typically used to avoid polluting the global namespace.",
+                    "code": "(function greet() {\n    alert(\"Hello World\");\n})();"
+                },
+                {
+                    "topic": "Example: Function Expression",
+                    "notes": "In this example, a function expression calculates the sum of two numbers and displays the result in the HTML output.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const sum = function () {\n            let a = 10;\n            let b = 20;\n            document.getElementById(\"output\").innerHTML =\n                \"The sum of \" + a + \" and \" + b + \" is \" + (a + b);\n        }\n        sum();\n    </script>\n</body>\n</html>\nOutput:\nThe sum of 10 and 20 is 30"
+                },
+                {
+                    "topic": "Example: Using the return statement in function expression",
+                    "notes": "This example demonstrates using the return statement inside a function expression to return the multiplication of two numbers.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const mul = function (a, b) {\n            return a * b;\n        }\n        let result = mul(4, 5);\n        document.getElementById(\"output\").innerHTML =\n            \"The returned value from the function is \" + result;\n    </script>\n</body>\n</html>\nOutput:\nThe returned value from the function is 20"
+                },
+                {
+                    "topic": "Example: Using the function expression as a value",
+                    "notes": "This example demonstrates using a function expression as a value to perform a multiplication operation.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const num = function () {\n            return 2;\n        }\n        let result = num() * 3;\n        document.getElementById(\"output\").innerHTML =\n            \"The multiplication value is \" + result;\n    </script>\n</body>\n</html>\nOutput:\nThe multiplication value is 6"
+                },
+                {
+                    "topic": "Example: Nested function expression",
+                    "notes": "This example demonstrates using a nested function expression where one function expression is defined inside another.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const num = function () {\n            const decimal = function () {\n                return 5;\n            }\n            return decimal();\n        }\n        document.getElementById(\"output\").innerHTML =\n            \"The returned value from the function is \" + num();\n    </script>\n</body>\n</html>\nOutput:\nThe returned value from the function is 5"
+                }
+            ]
+        }
+    }
+},
+
+
+{
+    "model": "lessons.lesson",
+    "pk": 36,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Function Parameters",
+        "description": "Function parameters in JavaScript are variables listed inside the parentheses in the function definition. Functions can have multiple parameters separated by commas. This lesson covers the syntax of function parameters, rules for handling them, examples of function parameters and arguments, using the 'arguments' object, passing arguments by value, and passing arguments by reference.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "The syntax to use function parameters in JavaScript is as follows:",
+                    "code": "function functionName(parameter1, parameter2, parameter3) {\n    // statements\n}"
+                },
+                {
+                    "topic": "Parameter Rules",
+                    "notes": "JavaScript functions do not enforce strict checking of the number of arguments passed. Data types do not need to be specified for function parameters. Arguments are variables or values passed to the function during invocation.",
+                    "code": "functionName(10, b, 'Hello');"
+                },
+                {
+                    "topic": "Example: Function Parameters and Arguments",
+                    "notes": "In this example, the 'mult()' function demonstrates using parameters to multiply values and return a result based on arguments passed during function invocation.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        function mult(a, b, c) {\n            let res = a * b * c;\n            return res;\n        }\n        let ans = mult(2, 3, 4);\n        document.getElementById(\"output\").innerHTML =\n            \"The multiplication of 2, 3, and 4 is \" + ans;\n    </script>\n</body>\n</html>\nOutput:\nThe multiplication of 2, 3, and 4 is 24"
+                },
+                {
+                    "topic": "Argument Object",
+                    "notes": "The 'arguments' object in JavaScript functions contains all passed arguments in an array format, allowing traversal and access to each argument even when parameters are not explicitly defined in the function.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        function merge() {\n            let final = \"\";\n            for (let p = 0; p < arguments.length; p++) {\n                final += arguments[p] + \" \";\n            }\n            return final;\n        }\n        let ans = merge(\"Hi\", \"I\", \"am\", \"John!\");\n        document.getElementById(\"output\").innerHTML =\n            \"The merged string is: \" + ans;\n    </script>\n</body>\n</html>\nOutput:\nThe merged string is: Hi I am John!"
+                },
+                {
+                    "topic": "Passing Arguments by Value",
+                    "notes": "When arguments are passed by value, the function receives a copy of the argument value, which does not affect the original variable outside the function, as demonstrated in this example.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        function update(val1, val2) {\n            val1 = 20;\n            val2 = 30;\n        }\n        var val1 = \"Hello\";\n        var val2 = \"World\";\n        output.innerHTML += \"Before calling the function! <br>\";\n        output.innerHTML += \"val1 = \" + val1 + \", val2 = \" + val2 + \"<br>\";\n        update(val1, val2);\n        output.innerHTML += \"After calling the function! <br>\";\n        output.innerHTML += \"val1 = \" + val1 + \", val2 = \" + val2 + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nBefore calling the function!\nval1 = Hello, val2 = World\nAfter calling the function!\nval1 = Hello, val2 = World"
+                },
+                {
+                    "topic": "Passing Arguments by Reference",
+                    "notes": "When passing objects as arguments, JavaScript passes the reference to the object, allowing modifications to the object's properties to reflect outside the function scope.",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const output = document.getElementById(\"output\");\n        function update(obj) {\n            obj.domain = \"www.tutorialspoint.com\";\n        }\n        var obj = {\n            domain: \"www.google.com\",\n        }\n        output.innerHTML += \"Before calling the function! <br>\";\n        output.innerHTML += \"domain = \" + obj.domain + \"<br>\";\n        update(obj);\n        output.innerHTML += \"After calling the function! <br>\";\n        output.innerHTML += \"domain = \" + obj.domain + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nBefore calling the function!\ndomain = www.google.com\nAfter calling the function!\ndomain = www.tutorialspoint.com"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 37,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Default Parameters",
+        "description": "Default parameters in JavaScript allow you to specify a default value for a function parameter. This feature was introduced in ES6. When a function is called with missing arguments or arguments with 'undefined' values, default parameter values are used. Before ES6, developers had to manually check for 'undefined' and initialize parameters. This lesson covers the syntax, examples, using expressions as default values, handling undefined arguments, function expressions as default parameters, and optional parameters in JavaScript functions.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Introduction Default Parameters Syntax",
+                    "notes": "The syntax to use default parameters in JavaScript functions:",
+                    "code": "function functName(param1 = defaultValue1, param2 = DefaultValue2, ..) {\n    // Use parameters here\n}"
+                },
+                {
+                    "topic": "Example (Default parameters)",
+                    "notes": "Example demonstrating default parameter usage:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        function sum(p = 30, q = 40) {\n            return p + q;\n        }\n        output.innerHTML += \"sum(10, 20)  ->  \" + sum(10, 20) + \"<br>\";\n        output.innerHTML += \"sum(10)  ->  \" + sum(10) + \"<br>\";\n        output.innerHTML += \"sum()  ->  \" + sum() + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nsum(10, 20) -> 30\nsum(10) -> 50\nsum() -> 70"
+                },
+                {
+                    "topic": "Passing an expression as a default parameter value",
+                    "notes": "Example of using an expression as a default parameter value:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        function sum(p = 2, q = p * 2, r = p * q * 2) {\n            return p + q + r;\n        }\n        output.innerHTML += \"sum(5, 10, 15)  ->  \" + sum(5, 10, 15) + \"<br>\";\n        output.innerHTML += \"sum(5, 10)  ->  \" + sum(5, 10) + \"<br>\";\n        output.innerHTML += \"sum()  ->  \" + sum() + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nsum(5, 10, 15) -> 30\nsum(5, 10) -> 115\nsum() -> 22"
+                },
+                {
+                    "topic": "Passing Undefined Argument",
+                    "notes": "Handling undefined arguments in function calls:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        function sum(p = 24, q = 26) {\n            return p + q;\n        }\n        output.innerHTML += \"sum(5, undefined)  ->  \" + sum(5, undefined) + \"<br>\";\n        output.innerHTML += \"sum(undefined)  ->  \" + sum(undefined) + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nsum(5, undefined) -> 31\nsum(undefined) -> 50"
+                },
+                {
+                    "topic": "Function expression as a default parameter",
+                    "notes": "Using function expressions as default parameters:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        function getNum() {\n            return 5;\n        }\n        function mul(p = 5, q = getNum()) {\n            return p * q;\n        }\n        output.innerHTML += \"mul(10)  -> \" + mul(10) + \"<br>\";\n        output.innerHTML += \"mul() -> \" + mul() + \"<br>\";\n    </script>\n</body>\n</html>\nOutput:\nmul(10) -> 50\nmul() -> 25"
+                },
+                {
+                    "topic": "Function Optional Parameters",
+                    "notes": "Optional parameters are also known as default parameters in JavaScript functions. They allow functions to execute without error even if arguments for optional parameters are not provided. Required parameters should precede optional parameters in function calls.",
+                    "code": "function sum(p, q = 10) {\n    return p + q;\n}"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example demonstrating a function with a required parameter and an optional parameter:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        let output = document.getElementById(\"output\");\n        function func(p, q = 10) {\n            return p + q;\n        }\n        output.innerHTML += \"func(10, 20) -> \" + func(10, 20);\n    </script>\n</body>\n</html>\nOutput:\nfunc(10, 20) -> 30"
+                },
+                {
+                    "topic": "Error",
+                    "notes": "Placing an optional parameter at the beginning may result in errors while calling the function with an undefined value.",
+                    "code": "function sum(p = 10, q) {\n    return p + q;\n}\nsum(undefined, 10); // Error\nsum(10); // NaN"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 38,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Function Constructor",
+        "description": "The JavaScript Function() constructor can dynamically create a function object at runtime. Functions created using Function() constructor have global scope. Caution should be exercised with Function() constructor due to potential vulnerabilities in the code. Multiple arguments can be passed to the Function() constructor, where all but the last are parameter names and the last is the function body.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "Syntax",
+                    "notes": "Syntax to use the Function() constructor in JavaScript:",
+                    "code": "const obj = new Function(arg1, arg2..., functionBody);"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example of creating a function using Function() constructor with parameters and a function body:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const func = new Function(\"p\", \"q\", \"return p * q\");\n        document.getElementById(\"output\").innerHTML = \n            \"The value returned from the function is: \" + func(5, 7);\n    </script>\n</body>\n</html>\nOutput:\nThe value returned from the function is: 35"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example of creating a function using Function() constructor with only a function body:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const func = new Function(\"return 10 + 20\");\n        document.getElementById(\"output\").innerHTML = \n            \"The value returned from the function is: \" + func();\n    </script>\n</body>\n</html>\nOutput:\nThe value returned from the function is: 30"
+                },
+                {
+                    "topic": "Function Declaration or Function Expression as Parameter",
+                    "notes": "Using function declarations or function expressions within the function body parameter of the Function() constructor:",
+                    "code": ""
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example of using a function expression passed as a parameter to the Function() constructor:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const add = new Function(\n            \"const sum = function (a, b) { return a + b }; return sum;\"\n        )();\n        document.getElementById(\"output\").innerHTML = add(5, 10); // 15\n    </script>\n</body>\n</html>"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example of using an anonymous function declaration passed as a parameter to the Function() constructor:",
+                    "code": "<html>\n<body>\n    <p id=\"output\"></p>\n    <script>\n        const sayHello = new Function(\n            \"return function (name) { return `Hello, ${name}`; }\"\n        )();\n        document.getElementById(\"output\").innerHTML = sayHello(\"world\"); // Hello, world\n    </script>\n</body>\n</html>"
+                }
+            ]
+        }
+    }
+},
+
+{
+    "model": "lessons.lesson",
+    "pk": 39,
+    "fields": {
+        "module_id": 4,
+        "title": "JS Closures",
+        "description": "Learn about closures in JavaScript.",
+        "content": {
+            "subtopics": [
+                {
+                    "topic": "What is Closure?",
+                    "notes": "The concept of closures in JavaScript allows nested functions to access variables defined in the scope of the parent function, even if the execution of the parent function is finished. Closures can make global variables local or private, leveraging the combination of a function and its lexical environment. Closures are created at function creation time and rely on lexical scoping, nested functions, and returning functions.",
+                    "code": ""
+                },
+                {
+                    "topic": "Nested Function",
+                    "notes": "Example demonstrating nested functions in JavaScript:",
+                    "code": "<html>\n<body>\n    <p id=\"demo\"></p>\n    <script>\n        const output = document.getElementById(\"demo\");\n        function outer() {\n            output.innerHTML += \"The outer function is executed! <br>\";\n            function inner() {\n                output.innerHTML += \"The inner function is executed! <br>\";\n            }\n            inner();\n        }\n        outer();\n    </script>\n</body>\n</html>\nOutput:\nThe outer function is executed!\nThe inner function is executed!"
+                },
+                {
+                    "topic": "Returning Function",
+                    "notes": "Example demonstrating returning functions in JavaScript:",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Returning function </title>\n</head>\n<body>\n    <p id=\"demo\"></p>\n    <script>\n        const output = document.getElementById(\"demo\");\n        function outer() {\n            output.innerHTML += \"The outer function is executed! <br>\";\n            return function inner() {\n                output.innerHTML += \"The inner function is executed! <br>\";\n            }\n        }\n        const func = outer();\n        func();\n        func();\n    </script>\n</body>\n</html>\nOutput:\nThe outer function is executed!\nThe inner function is executed!\nThe inner function is executed!"
+                },
+                {
+                    "topic": "A Counter Dilemma",
+                    "notes": "Example illustrating a counter using global variables:",
+                    "code": "<html>\n<body>\n    <p id=\"demo\"></p>\n    <script>\n        const output = document.getElementById(\"demo\");\n        var cnt = 100;\n        function decrement() {\n            cnt = cnt - 1;\n            output.innerHTML += \"The value of cnt is: \" + cnt + \"<br>\";\n        }\n        decrement();\n        decrement();\n        decrement();\n    </script>\n</body>\n</html>\nOutput:\nThe value of cnt is: 99\nThe value of cnt is: 98\nThe value of cnt is: 97"
+                },
+                {
+                    "topic": "Example: JavaScript Closures",
+                    "notes": "Example demonstrating closures in JavaScript:",
+                    "code": "<html>\n<body>\n    <p id=\"demo\"></p>\n    <script>\n        const output = document.getElementById(\"demo\");\n        function counter() {\n            let cnt = 100;\n            return function decrement() {\n                cnt = cnt - 1;\n                output.innerHTML += \"The value of cnt is: \" + cnt + \"<br>\";\n            }\n        }\n        const func = counter();\n        func();\n        func();\n        func();\n    </script>\n</body>\n</html>\nOutput:\nThe value of cnt is: 99\nThe value of cnt is: 98\nThe value of cnt is: 97"
+                },
+                {
+                    "topic": "Example",
+                    "notes": "Example illustrating closures with function returning full name:",
+                    "code": "<html>\n<head>\n    <title> JavaScript - Closure </title>\n</head>\n<body>\n    <p id=\"demo\"></p>\n    <script>\n        const output = document.getElementById(\"demo\");\n        function name() {\n            let name = \"John\";\n            return function getFullName() {\n                return name + \" Doe\";\n            }\n        }\n        const fullName = name();\n        output.innerHTML += \"The full name is \" + fullName();\n    </script>\n</body>\n</html>\nOutput:\nThe full name is John Doe"
+                },
+                {
+                    "topic": "Benefits of Closure",
+                    "notes": "Benefits of closures in JavaScript:\n- Encapsulation: Allows hiding or encapsulating data, making it private and inaccessible globally.\n- Preserving State: Functions can retain their lexical scope even after the outer function completes, helping maintain state like the counter examples.\n- Improved Memory Efficiency: Efficient memory management by retaining access only to necessary variables without global definitions.",
+                    "code": "function fetchData(url) {\n    let data;\n    fetch(url)\n        .then(response => response.json())\n        .then(json => {\n            data = json;\n            console.log(data);\n        });\n}"
+                }
+            ]
+        }
+    }
 }
+
 
 ]
 

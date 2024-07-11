@@ -1,3 +1,4 @@
+<!-- module_exercise.html -->
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,17 +9,23 @@
     <title>Module Exercise</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/module_exercise.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
+    <style>
+        .title {
+            border-bottom: 1px solid #D7D7D7!important;
+        }
+    </style>
     <div class="container-fluid main-container">
         <div class="row inner-row">
             <div class="col-12">
                 <div class="row title pt-2 pb-2">
                     <div class="col-md-6">
-                        <h2 class=""> {{ module.title }}</h2>
+                        <h2 class="">{{ module.title }}</h2>
                     </div>
-                    <div class=" col-md-6 d-flex justify-content-end mt-3">
+                    <div class="col-md-6 d-flex justify-content-end mt-3">
                         <button class="btn btn-outline-primary mr-2">Start Over</button>
                         <button class="btn btn-link">Exit Page</button>
                     </div>
@@ -28,17 +35,20 @@
                     <div class="col-2 question-list">
                         <div>
                             <div class="row questions d-flex justify-content-center pt-1 pb-2">
-                                <h4>Questions</h4>
+                                <h4>Exercises</h4>
                             </div>
-                            {% for question in questions %}
-                                <a href="#" class="question-link" data-question-id="{{ question.id }}">{{ question.title }}</a>
-                            {% endfor %}
+                            
+                            <ul id="exercise-ul" class="list-group list-group-flush">
+                                {% for exercise in exercises %}
+                                    <li class="list-group-item"><a href="#" class="exercise-link btn" data-exercise-id="{{ exercise.id }}">Exercise {{ exercise.id }}</a></li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
                     <div class="col-5 question-content">
                         <div class="mt-4">
-                            <h3 id="question-title">Question 1</h3>
-                            <p id="question-content">JavaScript Beginner Exercise: What is JavaScript?</p>
+                            <h3 id="exercise-title">Exercise 1</h3>
+                            <p id="exercise-content">Exercise content will be displayed here.</p>
                         </div>
                         <div class="d-flex justify-content-between mt-3">
                             <button class="btn btn-outline-primary" id="skip-button">Skip</button>
@@ -52,8 +62,8 @@
                                     <i class="fas fa-lightbulb"></i>
                                 </span>
                                 <div class="hint-dropdown">
-                                    <p>Hint 1: JavaScript is a programming language used for web development.</p>
-                                    <p>Hint 2: It is commonly used to create interactive effects within web browsers.</p>
+                                    <p id="hint-1">Hint 1: JavaScript is a programming language used for web development.</p>
+                                    <p id="hint-2">Hint 2: It is commonly used to create interactive effects within web browsers.</p>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between mt-3">
@@ -73,34 +83,41 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
         $(document).ready(function() {
-            // Function to load question details by ID
-            function loadQuestion(questionId) {
-                // Dummy data for demonstration; replace with dynamic fetching based on questionId
-                var question = {
-                    id: questionId,
-                    title: "Question " + questionId,
-                    content: "JavaScript Beginner Exercise: What is JavaScript?",
-                };
-
-                // Update question title and content
-                $('#question-title').text(question.title);
-                $('#question-content').text(question.content);
+            // Function to load exercise details by ID
+            function loadExercise(exerciseId) {
+                // Replace with actual AJAX request to fetch exercise details from backend
+                $.ajax({
+                    url: `/api/exercises/${exerciseId}/`,  // Example URL, adjust as per your backend setup
+                    type: 'GET',
+                    success: function(data) {
+                        $('#exercise-title').text(`Exercise ${data.id}`);
+                        $('#exercise-content').text(data.content);
+                        // Update hints if needed
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching exercise details:', error);
+                    }
+                });
             }
 
-            // Handle click events on question links
-            $('.question-link').on('click', function(event) {
+            // Handle click events on exercise links
+            $('.exercise-link').on('click', function(event) {
                 event.preventDefault();
-                var questionId = $(this).data('question-id');
-                loadQuestion(questionId);
+                var exerciseId = $(this).data('exercise-id');
+                loadExercise(exerciseId);
+
+                // Update active state of the exercise links
+                $('.exercise-link').removeClass('active');
+                $(this).addClass('active');
             });
 
             // Handle click event on submit button (for demonstration)
             $('#submit-button').on('click', function() {
-                // Implement logic to handle submission and progression to the next question
-                // Example: Load and display the next question after submission
-                var currentQuestionId = parseInt($('#question-title').text().split(' ')[1]);
-                var nextQuestionId = currentQuestionId + 1;
-                loadQuestion(nextQuestionId);
+                // Implement logic to handle submission and progression to the next exercise
+                // Example: Load and display the next exercise after submission
+                var currentExerciseId = parseInt($('#exercise-title').text().split(' ')[1]);
+                var nextExerciseId = currentExerciseId + 1;
+                loadExercise(nextExerciseId);
             });
         });
     </script>

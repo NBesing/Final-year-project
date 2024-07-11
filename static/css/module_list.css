@@ -15,7 +15,8 @@ body {
 } */
 
 .header{
-    background-color: #365B9A!important;
+    background-color: #427CD4!important;
+    border-bottom: 1px solid #D7D7D7;
 }
 .logo{
     height: 50px;
@@ -40,6 +41,9 @@ body {
     border-radius: 6px;
 }
 
+.module_list{
+    background-color: rgb(240, 240, 240)!important;
+}
 .sidebar {
   
     /* background-color: #fdfdfdd3; */
@@ -55,9 +59,10 @@ body {
 /* .module_list{
     position: fixed;
 } */
-/* .content-section{
-    margin-left: 300px!important;
-} */
+.content-section{
+    padding-left: 120px!important;
+    padding-right: 120px!important;
+}
 .sidebar h2 {
     text-align: center;
 }
@@ -82,14 +87,16 @@ body {
     transition: background-color 0.2s;
 }
 
-.sidebar ul li a:hover {
+/* .sidebar ul li a:hover {
     color: #FFBB00;
     border-left: 4px solid #FFBB00;
+    background-color: aqua!important;
 }
 .sidebar ul li a::after{
     color: #FFBB00;
     border-left: 4px solid #FFBB00;
-}
+} */
+
 .btn-link:focus {
     box-shadow: none;
     
@@ -124,7 +131,7 @@ body {
 }
 
 .btn-group .btn.active {
-    color: #FFBB00 !important; /* Text color for active button */
+    color: #427CD4 !important; /* Text color for active button */
 }
 
 .btn-group .btn.active::after {
@@ -135,7 +142,7 @@ body {
     left: 0;
     width: 100%;
     height: 4px; /* Thickness of the underline */
-    background-color: #FFBB00; /* Color of the underline */
+    background-color: #427CD4; /* Color of the underline */
 }
 
 

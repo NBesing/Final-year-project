@@ -17,6 +17,6 @@ class ModuleExercise(models.Model):
     number_of_attempts = models.IntegerField()
     number_of_hints = models.IntegerField()
     hints = models.JSONField(default=list) # Use JSONField for MySQL
-
+    
     def __str__(self):
         return self.title
