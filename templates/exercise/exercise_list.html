@@ -8,16 +8,23 @@
 
 {% block content %}
 <style>
+        .exercise-card{
+            background-color: #fff6dd;
+            border: none;
+            border-radius:10px;
+        }
+        .card-title{
+            font-weight: 600;
+        }
         .exercise-list-button{
-        background-color: #427CD4;
+        background-color: #dfa505;
         border-radius: 10px;
-        padding-left: 10px!important;
         color: white;
         }
 
 
         .exercise-list-button:hover{
-            background-color: #365B9A;
+            background-color: #b48b1b;
             border-radius: 10px;
             color: white;
         }
@@ -25,10 +32,11 @@
 <div class="row pt-5 exercise-list ">
     {% for module in modules %}
     <div class="col-md-6">
-        <div class="card mb-4">
+        <div class="card exercise-card mb-4">
             <div class="card-body">
-                <h5 class="card-title">{{ module.title }}</h5>
-                <a href="{% url 'modules:module_exercise' module_id=module.id %}" class="btn exercise-list-button  ps-3 pe-3">Start Exercise</a>
+                <h5 class="card-title pb-3 ">Module {{module.id}}: {{ module.title }}</h5>
+                <h6 class="card-text pb-3">{{ module.description }}</h6>
+                <a href="{% url 'modules:module_exercise' module_id=module.id %}" class="btn exercise-list-button  ">Start Exercise</a>
             </div>
         </div>
     </div>

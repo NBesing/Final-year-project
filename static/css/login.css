@@ -2,6 +2,9 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.btn{
+    border-radius: 10px!important;
+}
 .main-container {
     background-color: #427CD4;
     padding-top: 45px;
@@ -14,6 +17,7 @@ body {
 .inner-row {
     background-color: white;
     border-radius: 24px;
+    
 }
 
 .image-col {

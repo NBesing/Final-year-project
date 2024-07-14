@@ -16,7 +16,8 @@ body {
 
 .header{
     background-color: #427CD4!important;
-    border-bottom: 1px solid #D7D7D7;
+    /* border-bottom: 1px solid #D7D7D7; */
+    
 }
 .logo{
     height: 50px;
@@ -41,9 +42,6 @@ body {
     border-radius: 6px;
 }
 
-.module_list{
-    background-color: rgb(240, 240, 240)!important;
-}
 .sidebar {
   
     /* background-color: #fdfdfdd3; */
@@ -86,7 +84,9 @@ body {
     /* border-radius: 4px; */
     transition: background-color 0.2s;
 }
-
+.btn{
+    border-radius: 10px;
+}
 /* .sidebar ul li a:hover {
     color: #FFBB00;
     border-left: 4px solid #FFBB00;
@@ -173,7 +173,5 @@ body {
 .bottom-button-row{
     border-top: 1px solid #D7D7D7!important;
 }
-.token {
-    background: skyblue !important; /* Change background color */
-}
+
 

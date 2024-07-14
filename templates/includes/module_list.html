@@ -9,47 +9,84 @@
 {% block content %}
 
 <style>
-    .accordion.sidebar {
-        max-height: 500px; /* Adjust the max height as per your design */
-        overflow-y: auto; /* Enable vertical scroll */
-    }
+   
     .sidebar ul li a:hover,
     .sidebar ul li a:focus {
         color: #FFBB00;
         border-left: 4px solid #FFBB00;
-        background-color: #fff1c9!important;
+        background-color: #fff1c9 !important;
     }
-    /* .sidebar ul li a:focus {
-        color: #FFBB00;
-        border-left: 4px solid #FFBB00;
-    } */
-    .course-title{
+
+    .course-title {
         background-color: #0e4291;
-        color:white;
+        color: white;
+        padding: 10px; /* Adjust padding as needed */
+        text-align: center; /* Center align text */
+        margin-bottom: 20px; /* Add space below the title */
     }
+    .accordion.sidebar {
+        max-height: 500px; /* Adjust the max height as per your design */
+        overflow-y: auto; /* Enable vertical scroll */
+        width: 300px;
+        margin-left: -30px!important;
+        /* margin-right: -3px!important; */
+        width: 352px;
+        margin-top:-20px!important;
+        padding-left: 10px!important;
+        position: static;
+        top:0;
+    }
+
+
     .accordion.sidebar .btn-link {
         color: black; /* Set text color to black */
         text-decoration: none; /* Remove underline */
+        display: block; /* Make button a block element */
+        width: 100%; /* Occupy full width of parent */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Adjust padding as needed */
+        position: relative; /* Ensure position for icon */
     }
 
     .accordion.sidebar .btn-link:hover,
     .accordion.sidebar .btn-link:focus {
         color: #FFBB00; /* Change text color on hover/focus */
         text-decoration: none; /* Remove underline */
-        position: relative; /* Ensure position for icon */
-        padding-right: 1.5rem; /* Adjust padding for icon space */
-        display: block; /* Make button a block element */
-        width: 100%; /* Occupy full width of parent */
-        text-align: left; /* Align text to the left *
-        
     }
 
-    .accordion.sidebar .btn-link:focus {
-        box-shadow: none; /* Remove focus outline */
+    .active-lesson {
+        background-color: #cce5ff; /* Light blue background for active lesson */
+    }
+
+    .collapse.show {
+        display: block !important; /* Ensure the collapse content is visible */
+    }
+
+    .list-unstyled {
+        padding-left: 20px; /* Adjust left padding for lesson list */
+    }
+
+    .list-unstyled li {
+        margin-bottom: 5px; /* Add space between list items */
+    }
+
+    .list-unstyled li a {
+        display: block; /* Make lesson links block elements */
+        padding: 5px; /* Adjust padding as needed */
+    }
+
+    .list-unstyled li a:hover,
+    .list-unstyled li a:focus {
+        background-color: #b48b1b; /* Light orange background on hover/focus */
+        color: white; /* Text color on hover/focus */
+        border-radius: 5px; /* Rounded corners */
+    }
+    .btn-link{
+        font-weight: 600;
     }
 </style>
 
-<div class="row course-title d-flex justify-content-center pt-2 pb-2">
+<div class="row course-title d-flex justify-content-center pt-3 pb-2">
     <h4>JavaScript Modules</h4>
 </div>
 <div class="accordion sidebar " id="chaptersAccordion">
@@ -57,12 +94,12 @@
     <!-- Loop through modules -->
     {% for module in modules %}
     <div class="card">
-        <div class="card-header ">
+        <div class="card-header  ">
             <h5 class="mb-0">
-                <button class="btn btn-link   text-left" type="button"
+                <button class="btn btn-link   text-left d-flex justify-content-between align-items-center" type="button"
                         data-toggle="collapse" data-target="#chapter{{ module.id }}Collapse"
                         aria-expanded="false" aria-controls="chapter{{ module.id }}Collapse">
-                    {{ module.title }}
+                    Module{{module.id}}: {{ module.title }}
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </h5>
@@ -74,7 +111,12 @@
                 <ul class="list-unstyled">
                     <!-- Loop through lessons of the current module -->
                     {% for lesson in module.lesson_set.all %}
-                    <li><a href="">{{ lesson.title }}</a></li>
+                    <li>
+                        <a href="{% url 'lessons:lesson_detail' module_id=module.id lesson_id=lesson.id %}"
+                           class="lesson-link" data-module-id="{{ module.id }}">
+                            {{ lesson.title }}
+                        </a>
+                    </li>
                     {% endfor %}
                 </ul>
              </h6>
@@ -84,4 +126,43 @@
     {% endfor %}
 
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle click on lesson links
+        let lessonLinks = document.querySelectorAll('.lesson-link');
+        lessonLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Toggle active lesson style
+                let activeLessonLinks = document.querySelectorAll('.lesson-link.active-lesson');
+                activeLessonLinks.forEach(function(activeLink) {
+                    activeLink.classList.remove('active-lesson');
+                });
+                this.classList.add('active-lesson');
+
+                // Get module ID and collapse ID
+                let moduleId = this.getAttribute('data-module-id');
+                let collapseId = `chapter${moduleId}Collapse`;
+
+                // Ensure accordion remains open
+                let accordion = document.getElementById(collapseId);
+                if (accordion) {
+                    $(accordion).collapse('show');
+                    // Scroll to the accordion header for better user experience
+                    accordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+
+                // Navigate to lesson detail page after a short delay (allowing collapse animation)
+                let url = this.getAttribute('href');
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 300); // Adjust delay as needed
+            });
+        });
+    });
+</script>
+    
+
 {% endblock %}
+

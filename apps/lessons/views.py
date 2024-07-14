@@ -6,8 +6,11 @@ def lesson_list(request):
     return render(request, 'lessons/lesson_list.html', {'lessons': lessons})
 
 def lesson_detail(request, module_id, lesson_id):
+    print(f"Requested URL: /lessons/{module_id}/{lesson_id}/")
     lesson = get_object_or_404(Lesson, module_id=module_id, id=lesson_id)
     subtopics = lesson.content.get('subtopics', []) 
+    modules = Module.objects.all()  
+
     
     # Get IDs of previous and next lessons
     previous_lesson_id = lesson.get_previous_lesson_id()
@@ -20,6 +23,7 @@ def lesson_detail(request, module_id, lesson_id):
     
     return render(request, 'lesson_detail.html', {
         'lesson': lesson,
+        'modules': modules,
         'subtopics': subtopics,
         'previous_lesson_id': previous_lesson_id,
         'next_lesson_id': next_lesson_id
