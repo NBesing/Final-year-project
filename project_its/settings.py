@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the OpenAI API key
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -104,6 +115,8 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# AUTH_USER_MODEL = 'accounts.User'  # Replace 'your_app_name' with the actual app name
 
 
 AUTH_PASSWORD_VALIDATORS = [

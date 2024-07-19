@@ -9,6 +9,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.61.0/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/module_exercise.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
@@ -20,26 +24,22 @@
         .question-content{
         
             margin: 50px;
-            border: 1px solid rgb(240, 240, 240);
+            border: 1px solid rgb(221, 221, 221);
             border-radius: 10px;
-            background-color: #f7f9fc;
+            background-color: #fdfdfd;
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* Added to distribute space */
 
         }
-        .response-input{
-            height: 324px!important;
-            background-color: rgb(252, 252, 252);
-            border-radius: 10px!important;
-        }
+        
         .btn{
             border-radius: 10px;
         }
         .btn-previous {
-            background-color: rgb(185, 185, 185);
+            background-color: lightgray;
             /* border: 2px solid lightgrey; */
-            color: #1c1c1c;
+            color: #000000;
             margin-right: 10px;
         }
         .btn-previous:hover {
@@ -71,9 +71,11 @@
         }
         .response-input{
             background-color: rgb(247, 247, 247);
-            border-radius: 10px;
+        
            
+
         }
+        
         .module, .exercise-title{
             font-weight:600;
         }
@@ -87,9 +89,53 @@
             color: white;
             border-radius: 15px;
         }
-        /* .module{
-            color:#427CD4;
-        } */
+        .modal-title{
+            color:#FFBB00;
+            font-weight: 700;
+        }
+        .code-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        textarea.code-input {
+            width: 100%;
+            height: 330px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            background: transparent;
+            color: transparent;
+            caret-color: black;
+            resize: none;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        pre.code-output {
+            width: 100%;
+            height: 330px;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        code.language-js,
+        code.language-html,
+        code.language-css {
+            display: block;
+        }
     </style>
     <div class="container-fluid main-container">
         <div class="row inner-row">
@@ -100,24 +146,28 @@
                     </div>
                     <div class="col-md-6 d-flex justify-content-end mt-3">
                         <button class="btn btn-outline-primary mr-2">Start Over</button>
-                        <button class="btn btn-link">Exit Page</button>
+                        <button class="btn btn-link mr-2">Start Over</button>
+                         <!-- <a href="{% url 'modules:exercise_list' %}"
+                           class="lesson-link" data-module-id="{{ module.id }}">
+                            Exit
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="row">
-                    <div class="col-6 question-content pb-3">
+                    <div class="col-md-6 question-content mt-5 pb-3 ">
                         <div class="mt-4">
                             <div id="exercise-details" class="exercise-details active" data-exercise-id="{{ exercises.0.id }}">
                                 <h5 class="exercise-title">{{ exercises.0.title }}</h5>
                                 <p class="exercise-content">{{ exercises.0.content }}</p>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between mt-3">
-                            <button class="btn btn-previous pl-4 pr-4" id="prev-button" disabled>Previous</button>
-                            <button class="btn btn-next pl-4 pr-4" id="next-button">Next</button>
+                        <div class="d-flex justify-content-end ms-3">
+                            <!-- <button class="btn btn-previous pl-4 pr-4" id="prev-button" disabled>Previous</button> -->
+                            <button class="btn btn-next pl-4 pr-4" id="next-button">Skip</button>
                         </div>
                     </div>
-                    <div class="col-5 pb-3 response-row">
+                    <div class="col-md-5 pb-2 response-row mr-1">
                         <div class="row mt-2 ms-2  pl-3 ">
                             <p>
                                 <a class="btn btn-hint p-2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -129,24 +179,24 @@
                               <div class="collapse" id="collapseExample">
                               
                                 <div class="card card-body">
-                                    <p id="hint-1">Hint 1: Placeholder hint content.</p>
-                                    <p id="hint-2">Hint 2: Placeholder hint content.</p>
+                                    <p id="hint-1">{{ exercises.0.hint1 }}</p>
+                                    <p id="hint-2">{{ exercises.0.hint2 }}</p>
                                 </div>
                               </div>
                         </div>
                         <div class="">
+                            
                             <div class="input-group mt-3  ">
-                                <textarea class="form-control response-input " id="answer" placeholder="Type your answer here..."></textarea>
-                                <span class="hint-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    
-                                </span>
-                                <!-- <div class="hint-dropdown">
-                                    <p id="hint-1">Hint 1: JavaScript is a programming language used for web development.</p>
-                                    <p id="hint-2">Hint 2: It is commonly used to create interactive effects within web browsers.</p>
-                                </div> -->
+                                
+                                <textarea class="code-input mr-5" id="codeInput" placeholder="Enter response here..."></textarea>
+                                <pre class="code-output" id="codeOutput"><code class="language-markup"></code></pre>
+                               
                             </div>
-                            <div class="d-flex justify-content-between mt-3">
-                                <button class="btn btn-submit pl-5 pr-5" id="submit-button">Submit</button>
+                            <div class="d-flex justify-content-end mt-3">
+                                <!-- <button class="btn btn-submit pl-5 pr-5" id="submit-button">Submit</button> -->
+                                <button type="button " class="btn btn-submit pl-5 pr-5" data-toggle="modal" data-target="#exampleModal">
+                                    Submiit
+                                  </button>
                             </div>
                         </div>
                     </div>
@@ -154,13 +204,110 @@
             </div>
         </div>
     </div>
+   
+    <!-- Button trigger modal -->
+    <!-- <a href="{% url 'lessons:level_selection' %}"
+                           class="lesson-link" data-module-id="{{ module.id }}">
+                            okay
+     </a> -->
 
+  
+  <!-- Modal feedback specific exercise -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-bold " id="exampleModalLabel">Your feedback</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <p> You did great in this exercise but check your solution again, you missed out on declaring your variables.<br> 
+            Check the lesson on variable declaration if you find more difficulty<br> <br>
+            You might consider retaking the exercise or go to the next</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-next pr-2 pl-2" data-dismiss="modal">Okay</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+   <!-- Modal feedback entire module-->
+   <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-bold " id="exampleModalLabel">Congratulations!!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <p> You did great in this module. You've completed all 10 exercises <br> 
+            We checked your responses and they were up to standard
+            <br> <br>
+            You can now move on to module 2</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-next pr-2 pl-2" data-dismiss="modal">Close</button>
+           
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  -->
+  <!-- Modal feedback entire module-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-bold " id="exampleModalLabel">Sorry!!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <p> You performed poorly in this module.  We checked your responses and you seem not have mastered the concepts <br> 
+           
+            <br> <br>
+            We recommend you go back to 
+    </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-next pr-2 pl-2" data-dismiss="modal">Close</button>
+           
+        </div>
+        
+      </div>
+    </div>
+  </div>
+ 
+    
     <!-- Include necessary JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Highlighted change -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script> <!-- Highlighted change -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Highlighted change -->
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-javascript.min.js"></script>
     <script>
+        
+        Prism.highlightAll();
+        const codeInput = document.getElementById('codeInput');
+        const codeOutput = document.getElementById('codeOutput').querySelector('code');
+
+        codeInput.addEventListener('input', function() {
+            codeOutput.textContent = codeInput.value;
+            Prism.highlightElement(codeOutput);
+        });
+        
         $(document).ready(function() {
             var exercises = JSON.parse('{{ exercises_json|escapejs }}'); // Retrieve exercises from Django context
             var currentIndex = 0;
@@ -221,6 +368,10 @@
             $('.btn-hint').on('click', function() {
                 $('#collapseExample').collapse('toggle');
                 displayNextHint();
+            });
+            // Handle submit button click event
+            $('#submit-button').on('click', function() {
+                $('#feedbackModal').modal('show');
             });
         });
     </script>

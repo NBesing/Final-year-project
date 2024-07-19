@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Lesson,Module
+from django.contrib.auth.decorators import login_required
 
 def lesson_list(request):
     lessons = Lesson.objects.all()
@@ -7,6 +8,7 @@ def lesson_list(request):
 
 def lesson_detail(request, module_id, lesson_id):
     print(f"Requested URL: /lessons/{module_id}/{lesson_id}/")
+
     lesson = get_object_or_404(Lesson, module_id=module_id, id=lesson_id)
     subtopics = lesson.content.get('subtopics', []) 
     modules = Module.objects.all()  
@@ -29,6 +31,8 @@ def lesson_detail(request, module_id, lesson_id):
         'next_lesson_id': next_lesson_id
     })
 
+
+@login_required
 def level_selection(request):
     selected_module = Module.objects.first()  # Replace with your logic
     selected_lesson = Lesson.objects.filter(module=selected_module).first() if selected_module else None

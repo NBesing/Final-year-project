@@ -10,18 +10,34 @@
     <!-- Custom styles -->
     <link href="{% static 'css/level_selection.css' %}" rel="stylesheet">
 </head>
+<style>
+    .level-row{
+        margin: 60px;
+    }
+   .btn{
+        color: white;
+        background-color: #427CD4;
+        border-radius: 10px;
+    }
+    .btn:hover{
+        color: white;
+        background-color: #0e4291;
+        border-radius: 10px;
+    }
+</style>
 <body>
     <div class="container-fluid card-container">
-        <div class="row justify-content-center">
+        <div class="row level-row d-flex justify-content-center">
             <div class="col-12 content-container">
                 <div class="row justify-content-center">
-                    <div class="col-12 text-center mb-4">
+                    <div class="col-12 text-center mb-5
+                    ">
                         <h2 style="font-weight: 800;">What Level do you want to enroll in?</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <!-- Card 1 -->
-                    <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-5">
                         <div class="card" id="card1">
                             <img src="{% static 'images/beginner.svg' %}" class="card-img-top" alt="Illustration">
                             <div class="card-body">
@@ -32,7 +48,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-5">
                         <div class="card" id="card2">
                             <img src="{% static 'images/intermediate.svg' %}" class="card-img-top" alt="Illustration">
                             <div class="card-body">
@@ -43,7 +59,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-5">
                         <div class="card" id="card3">
                             <img src="{% static 'images/advanced.svg' %}" class="card-img-top" alt="Illustration">
                             <div class="card-body">
@@ -57,7 +73,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
                         {% if selected_module and selected_lesson %}
-                        <a href="{% url 'lessons:lesson_detail' module_id=selected_module.id lesson_id=selected_lesson.id %}" class="btn w-50">Enroll</a>
+                        <a href="{% url 'lessons:lesson_detail' module_id=selected_module.id lesson_id=selected_lesson.id %}" class="btn w-50 disabled" id="enrollButton">Enroll</a>
                         {% else %}
                         <p>No lessons available to enroll.</p>
                         {% endif %}
@@ -77,14 +93,41 @@
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
             const radioButtons = document.querySelectorAll('input[type="radio"]');
-
+            const enrollButton = document.querySelector('.btn');
+    
+            // Function to check if any radio button is selected
+            function checkSelection() {
+                let selected = false;
+                radioButtons.forEach(radio => {
+                    if (radio.checked) {
+                        selected = true;
+                    }
+                });
+                return selected;
+            }
+    
+            // Add event listener to radio buttons
             radioButtons.forEach(radio => {
                 radio.addEventListener('change', function() {
                     cards.forEach(card => card.classList.remove('selected'));
                     this.closest('.card').classList.add('selected');
+                    
+                    // Enable or disable enroll button based on selection
+                    if (checkSelection()) {
+                        enrollButton.classList.remove('disabled');
+                        enrollButton.removeAttribute('disabled');
+                    } else {
+                        enrollButton.classList.add('disabled');
+                        enrollButton.setAttribute('disabled', 'disabled');
+                    }
                 });
             });
+    
+            // Initial state of the enroll button
+            enrollButton.classList.add('disabled');
+            enrollButton.setAttribute('disabled', 'disabled');
         });
     </script>
+    
 </body>
 </html>

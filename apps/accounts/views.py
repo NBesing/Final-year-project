@@ -9,29 +9,18 @@ def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password1']
+            # user = form.save(commit=False)  # Do not save to the database yet
+            # user.first_name = form.cleaned_data['first_name']
+            # user.last_name = form.cleaned_data['last_name']
+            # user.username = f"{user.firstname}{user.lastname}"  # Combine first name and last name to create the username
+            form.save()  # Save the user to the database
 
-            username = f"{first_name}{last_name}"  # Combine first name and last name to create the username
-
-            user = User.objects.create_user(
-                username=username,
-                email=email,
-                password=password,
-                first_name=first_name,
-                last_name=last_name
-            )
-
-            print(f"User {username} signed up successfully.")
-
+            print(f"User {User.username} signed up successfully.")
 
             return redirect('accounts:login')  # Redirect to login page after successful signup
         else:
             # Print statement for unsuccessful signup
             print("Signup form is not valid. Errors:", form.errors)
-
     else:
         form = SignUpForm()
     return render(request, 'accounts/signup.html', {'form': form})
@@ -40,20 +29,20 @@ def login_view(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data['username']
+            email = form.cleaned_data['username']
             password = form.cleaned_data['password']
 
-            user = authenticate(request, username=username, password=password)
-            print("Attempting login with username: {username}")
+            user = authenticate(request, username=email, password=password)
+            print(f"Attempting login with username: {email}")
 
             if user is not None:
-                print("User {username} authenticated successfully.")
+                print("User {email} authenticated successfully.")
                 login(request, user)
-                request.session['username'] = user.username
+                request.session['email'] = user.email
                 request.session['user_id'] = user.id
-                return redirect('lessons:level_selection')  # Redirect to your desired URL after successful login
+                return redirect('level_selection')  # Redirect to your desired URL after successful login
             else:
-                print("Authentication failed for username: {username}")
+                print("Authentication failed for username: {email}")
                 messages.error(request, 'Invalid username or password.')
     else:
         form = LoginForm()

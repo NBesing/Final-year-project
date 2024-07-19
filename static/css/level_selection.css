@@ -6,7 +6,7 @@ body {
 
 .card-container {
     background-color: #427CD4;
-    padding: 20px;
+    /* padding: 50px; */
 }
 
 .content-container {
@@ -95,4 +95,10 @@ body {
 .btn{
     color: white;
     background-color: #427CD4;
+    border-radius: 10px;
+}
+.btn:hover{
+    color: white;
+    background-color: #0e4291;
+    border-radius: 10px;
 }

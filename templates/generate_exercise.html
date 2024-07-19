@@ -1,0 +1,21 @@
+<!-- templates/generate_exercise.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Exercise</title>
+</head>
+<body>
+    <h1>Generate a New Exercise</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Generate Exercise</button>
+    </form>
+    {% if exercise %}
+        <h2>Exercise</h2>
+        <p>{{ exercise.question }}</p>
+        <p>{{ exercise.hint1 }}</p>
+        <p>{{ exercise.hint2 }}</p>
+    {% endif %}
+</body>
+</html>

@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="{% static 'css/module_list.css' %}">
     <style>
         .module_list {
-            /* max-height: 1500px;  */
-            overflow-y: auto;
-            position: -webkit-sticky; /* For Safari */
+            max-height: 600px; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scroll */
+           
             position: sticky;
             top: 0; /* Sticks to the top */
             background-color: rgb(248, 247, 247);
-            
+        }
+        .content {
+            overflow-y: auto;
+            height: calc(100vh - 70px); /* Adjust based on the header height */
         }
     </style>
 </head>
@@ -44,7 +47,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-   >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
     <script>
@@ -53,3 +55,4 @@
     </script>
 </body>
 </html>
+
