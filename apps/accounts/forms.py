@@ -36,5 +36,5 @@ class SignUpForm(UserCreationForm):
         return user
 
 class LoginForm(AuthenticationForm):
-    username = forms.EmailField(label="Email", max_length=254, required=True)
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
+    username = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))

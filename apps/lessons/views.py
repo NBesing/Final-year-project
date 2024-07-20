@@ -17,6 +17,10 @@ def lesson_detail(request, module_id, lesson_id):
     # Get IDs of previous and next lessons
     previous_lesson_id = lesson.get_previous_lesson_id()
     next_lesson_id = lesson.get_next_lesson_id()
+
+     # Get the user's first and last name
+    user_first_name = request.session.get('user_first_name', '')
+    user_last_name = request.session.get('user_last_name', '')
     
     # Print statements for debugging (optional)
     print('Lesson:', lesson)

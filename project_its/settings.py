@@ -167,7 +167,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/AUTH_USER_MODEL = 'accounts.CustomUser'
 
-# AUTH_USER_MODEL = 'accounts.User'  # Replace 'your_app_name' with the actual app name
+AUTH_USER_MODEL = 'accounts.User'  # Replace 'your_app_name' with the actual app name
 
 
 AUTH_PASSWORD_VALIDATORS = [

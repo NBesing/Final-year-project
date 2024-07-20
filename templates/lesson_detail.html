@@ -9,21 +9,20 @@
 
 {% block content %}
 <style>
-     .top-button-row{
+    .top-button-row{
         border-bottom: 1px solid #D7D7D7;     
-        
     }
     .bottom-button-row{
         border-top: 1px solid #D7D7D7;
     }
    
     .completed-text {
-            display: none;
-            color: rgb(10, 190, 10);
-            font-weight: 500;
+        display: none;
+        color: rgb(10, 190, 10);
+        font-weight: 500;
     }
     .btn{
-            border-radius: 10px;
+        border-radius: 10px;
     }
     .btn-previous {
         background-color: lightgrey;
@@ -37,10 +36,10 @@
         border-color: grey;
     }
     .btn-next {
-            background-color: #FFBB00;
-            border: 2px solid #FFBB00;
-            color: white;
-     }
+        background-color: #FFBB00;
+        border: 2px solid #FFBB00;
+        color: white;
+    }
     .btn-next:hover {
         background-color: rgb(255, 255, 255);
         color: #FFBB00;
@@ -49,29 +48,21 @@
     .h1{
         font-weight: 800;
     }
-    
     .btn-mark-read{
-   
         color: white;
     } 
     .btn-mark-read:focus{
         outline: none!important;
-       
         background-color: #427CD4;
         color: white;
     } 
-            /* .btn-outline-orange {
-            border-color: orange;
-            color: orange;
-        } */ 
 </style>
 
 <div class="col-12 content-section">
-    
-    <div class="row d-flex justify-content-between  mt-5 mb-5 pt-2 pb-2  top-button-row" >
-        <div class="col-md-6 "><h5 id="completed-above-title" class="completed-text">Completed<i class="fas fa-check"></i><i class="fas fa-check"></i> </h5></div>
+    <div class="row d-flex justify-content-between mt-5 mb-5 pt-2 pb-2 top-button-row">
+        <div class="col-md-6 "><h5 id="completed-above-title" class="completed-text">Completed<i class="fas fa-check"></i><i class="fas fa-check"></i></h5></div>
         <div class="col-md-6">
-            <div class="row d-flex justify-content-end ">
+            <div class="row d-flex justify-content-end">
                 {% if previous_lesson_id %}
                     <a href="{% url 'lessons:lesson_detail' module_id=lesson.module.id lesson_id=previous_lesson_id %}" class="btn btn-previous">
                         <i class="fas fa-angle-left"></i> Previous 
@@ -83,20 +74,17 @@
                         Next <i class="fas fa-angle-right"></i>
                     </a>
                 {% endif %}
-                        
-                    
             </div>
         </div> 
     </div>
-   
 
-    <div class="row ">
+    <div class="row">
         <h1 class="d-flex align-items-center">{{ lesson.title }}</h1>
         <p>{{ lesson.description }}</p>
 
         {% for subtopic in subtopics %}
-        <h4>{{ subtopic.title }}</h3>
-        <p>{{ subtopic.notes|linebreaks }}</p> <!-- Converts line breaks to <br> tags -->
+        <h4>{{ subtopic.title }}</h4>
+        <p>{{ subtopic.notes|linebreaks }}</p>
         
         {% if subtopic.code %}
         <pre class="language-html"><code>{{ subtopic.code|escape }}</code></pre>
@@ -104,9 +92,8 @@
         
         {% endfor %}
     </div>
-   
 
-    <div class="col-12 d-flex justify-content-between bottom-button-row mt-5 mb-5 pt-3" >
+    <div class="col-12 d-flex justify-content-between bottom-button-row mt-5 mb-5 pt-3">
         <div class="row">
             <button type="button" id="mark-as-read" class="btn btn-primary btn-mark-read">
                 Mark as Read 
@@ -126,11 +113,8 @@
                     Next <i class="fas fa-angle-right"></i>
                 </a>
             {% endif %}
-                    
-                
         </div>
     </div>
-   
 </div>
 
 <script>
@@ -138,6 +122,13 @@
         var markAsReadButton = document.getElementById('mark-as-read');
         var completedTextAboveTitle = document.getElementById('completed-above-title');
         var completedTextBesideButton = document.getElementById('completed-beside-button');
+        
+        // Welcome alert
+        var userFirstName = "{{ user_first_name }}";
+        var userLastName = "{{ user_last_name }}";
+        if (userFirstName && userLastName) {
+            alert("Welcome " + userFirstName + " " + userLastName + "!");
+        }
 
         markAsReadButton.addEventListener('click', function() {
             // Change button style to orange
