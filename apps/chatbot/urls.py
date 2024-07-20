@@ -10,8 +10,8 @@
 # ]
 
 from django.urls import path
-from .views import GenerateExerciseView
+from .views import exercise_view
 
 urlpatterns = [
-    path('generate/', GenerateExerciseView.as_view(), name='generate_exercise'),
+    path('generate/', exercise_view, name='generate_exercise'),
 ]

@@ -14,18 +14,69 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
-
-
-# Load environment variables from .env file
-load_dotenv()
-
-# Access the OpenAI API key
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-
-
+from decouple import config
+import logging
+import logging.config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+OPENAI_API_KEY = config('OPENAI_API_KEY')
+
+# Load environment variables from .env file
+# load_dotenv()
+
+# # Access the OpenAI API key
+# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] '
+                       'pathname=%(pathname)s lineno=%(lineno)s '
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose'
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'myproject': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    }
+}
+
 
 # Add the custom management commands directory to Django settings
 MANAGEMENT_COMMANDS_DIRS = [
